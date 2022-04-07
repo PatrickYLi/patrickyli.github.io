@@ -1,3 +1,9 @@
+---
+layout: post
+title: A ML Spectral Noise Optimization Study
+tags: [work]
+---
+
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <script type="text/x-mathjax-config">
@@ -10,13 +16,6 @@
     </script>
 </head>
 
----
-layout: post
-title: A ML Spectral Noise Optimization Study
-subtitle: New method other than SNR
-tags: [work]
----
-
 $ e = m c^2 $
 
 ![A simple spectral noise optimization example using SNR method](../imgs/MLNoiseOptimization/simpleeg.png)
@@ -28,6 +27,6 @@ SNR = signal / noise
 ```
 
 ### The Beer-Lambert Law
-
+$ e = m c^2 $
 
 ### The Interferometry
