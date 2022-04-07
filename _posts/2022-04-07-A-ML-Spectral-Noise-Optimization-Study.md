@@ -16,7 +16,6 @@ tags: [work]
     </script>
 </head>
 
-$ e = m c^2 $
 
 ![A simple spectral noise optimization example using SNR method](../imgs/MLNoiseOptimization/simpleeg.png)
 
