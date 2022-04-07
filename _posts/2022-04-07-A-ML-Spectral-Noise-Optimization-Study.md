@@ -5,4 +5,4 @@ subtitle: New method other than SNR
 tags: [work]
 ---
 
-test
+![A simple spectral noise optimization example using SNR method](../imgs/MLNoiseOptimization/simpleeg.png)
