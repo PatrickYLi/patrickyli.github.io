@@ -40,13 +40,13 @@ I=I_{o} \exp \left(-\varepsilon^{\prime} C l\right)=I_{o} 10^{-\varepsilon C l} 
 
 Where *A* is the **absorbance** or **optical density** of the sample ($ A = \varepsilon C l$) and $ \varepsilon $ is called the **molar extinction coefficient** or **molar absorption coefficient** ($ \varepsilon = \varepsilon^{\prime} / ln(10) $). The absorbance is a dimensionaless quantity, so if $ C $ is given in units of molarity (1 **M** = 1 mol/l) and $ c $ in cm, $ \varepsilon $ thus has dimensions of **M**<sup>-1</sup> cm<sup>-1</sup>.
 
-**How do we apply the Beer-Lambert law in spectral cross-section measurement?**
+**How do we apply the Beer-Lambert law to spectral cross-section measurement?**
 
 The Beer-Lambert law can be derived from an appproximation for the absorption coefficient for a molecule by approximating the molecule by an opaque disk whose cross-sectional area, $\sigma$, represents the effective area seen by a photon of frequency $w$. If the frequency of the light is far from resonance, the area is approximately 0, and if $w$ is close to resonance the area is a maximum. Taking an infinitesimal slab, $dz$, of sample:
 
 ![Derivation of the Beer-Lambert Law](../imgs/MLNoiseOptimization/DerivationBeerLaw.gif)
 
-Where $ I<sub>o</sub> $ is the light intensity entering the sample at $ z = 0 $, $ I<sub>z</sub> $ is the intensity enthering the infinitesimal slab at $ z $, $ dI $ is the light intensity absorbed in the slab, and $ I $ is the intensity of light leaving the sample. Then the toal opaue area on the slab due to the absorbers is $/sigma * N * A * dz$. Then, the fraction of photons absorbed will be $ \sigma * N * A * dz / A $ so,
+Where *I<sub>o</sub>* is the light intensity entering the sample at $ z = 0 $, $ I<sub>z</sub> $ is the intensity enthering the infinitesimal slab at $ z $, $ dI $ is the light intensity absorbed in the slab, and $ I $ is the intensity of light leaving the sample. Then the toal opaue area on the slab due to the absorbers is $/sigma * N * A * dz$. Then, the fraction of photons absorbed will be $ \sigma * N * A * dz / A $ so,
 
 \begin{equation}
 d I / I_{z}=-\sigma * N * d z
