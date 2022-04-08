@@ -52,13 +52,13 @@ Where $I_o$ is the light intensity entering the sample at $ z = 0 $, $ I_z $ is 
 d I / I_{z}=-\sigma * N * d z
 \end{equation}
 
-Integrating this equation from $z = 0$ to $z = b$ gives:
+Integrating this equation from $z = 0$ to $z = b$ gives,
 
 \begin{equation}
 \ln (I)-\ln \left(I_{a}\right) &=-\sigma * N * b
 \end{equation}
 
-**or**  
+or
 
 \begin{equation}
 -\ln \left(I / I_{0}\right) &=\sigma * N * b
