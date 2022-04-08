@@ -46,7 +46,7 @@ The Beer-Lambert law can be derived from an appproximation for the absorption co
 
 ![Derivation of Beer-Lambert Law](../imgs/MLNoiseOptimization/DerivationBeerLaw.gif)
 
-Where $I_o$ is the light intensity entering the sample at $ z = 0 $, $ I_z $ is the intensity enthering the infinitesimal slab at $ z $, $ dI $ is the light intensity absorbed in the slab, and $ I $ is the intensity of light leaving the sample. Then the toal opaue area on the slab due to the absorbers is $\sigma \cdot N \cdot A \cdot dz$. Then, the fraction of photons absorbed will be $\sigma \cdot N \cdot A  dz / A $ so,
+Where $I_o$ is the light intensity entering the sample at $ z = 0 $, $ I_z $ is the intensity enthering the infinitesimal slab at $ z $, $ dI $ is the light intensity absorbed in the slab, and $ I $ is the intensity of light leaving the sample. Then the toal opaue area on the slab due to the absorbers is $\sigma \cdot N \cdot A \cdot dz$. Then, the fraction of photons absorbed will be $\sigma \cdot N \cdot A \cdot dz / A $ so,
 
 \begin{equation}
 d I / I_{z}=-\sigma  N  d z
