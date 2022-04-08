@@ -82,10 +82,10 @@ We assume a beam of light passes through sample cell in the spectrometer, and wh
 
 ![Simple Illustration of a Sample Cell](../imgs/MLNoiseOptimization/SampleCell.png)
 
-The term absorbance is used for illustrating the phenomenon, given the symbol, A. Expressed as:
+The term absorbance is used for illustrating the phenomenon, given the symbol, A. Expressed as
 
 \begin{equation}
-A=\log _{10}\left(\frac{I_{o}}{I}\right)=\epsilon l c
+A= log_{10}(\frac{I_{o}}{I})=\epsilon l c
 \end{equation}
 
 Where $A$ is the absorbance, $ε$ is the molar attenuation coefficient or absorptivity of the attenuating species, $l$ is the optical path length in cm, and $c$ is the concentration of the attenuating species. From the above equation, it can be deduced that absorbance $A$ is directly proportional to the concentration $c$.
