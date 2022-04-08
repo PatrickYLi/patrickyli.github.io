@@ -42,11 +42,11 @@ Where *A* is the **absorbance** or **optical density** of the sample ($ A = \var
 
 **How do we apply the Beer-Lambert law in spectral cross-section measurement?**
 
-The Beer-Lambert law can be derived from an appproximation for the absorption coefficient for a molecule by approximating the molecule by an opaque disk whose cross-sectional area, $/sigma$, represents the effective area seen by a photon of frequency $w$. If the frequency of the light is far from resonance, the area is approximately 0, and if $w$ is close to resonance the area is a maximum. Taking an infinitesimal slab, $dz$, of sample:
+The Beer-Lambert law can be derived from an appproximation for the absorption coefficient for a molecule by approximating the molecule by an opaque disk whose cross-sectional area, $\sigma$, represents the effective area seen by a photon of frequency $w$. If the frequency of the light is far from resonance, the area is approximately 0, and if $w$ is close to resonance the area is a maximum. Taking an infinitesimal slab, $dz$, of sample:
 
 ![Derivation of the Beer-Lambert Law](../imgs/MLNoiseOptimization/DerivationBeerLaw.gif)
 
-Where $ I<sub>o</sub> $ is the light intensity entering the sample at $ z = 0 $, $ I<sub>z</sub> $ is the intensity enthering the infinitesimal slab at $ z $, $ dI $ is the light intensity absorbed in the slab, and $ I $ is the intensity of light leaving the sample. Then the toal opaue area on the slab due to the absorbers is $/sigma * N * A * dz$. Then, the fraction of photons absorbed will be $ /sigma * N * A * dz / A $ so,
+Where $ I<sub>o</sub> $ is the light intensity entering the sample at $ z = 0 $, $ I<sub>z</sub> $ is the intensity enthering the infinitesimal slab at $ z $, $ dI $ is the light intensity absorbed in the slab, and $ I $ is the intensity of light leaving the sample. Then the toal opaue area on the slab due to the absorbers is $/sigma * N * A * dz$. Then, the fraction of photons absorbed will be $ \sigma * N * A * dz / A $ so,
 
 \begin{equation}
 d I / I_{z}=-\sigma * N * d z
@@ -55,10 +55,11 @@ d I / I_{z}=-\sigma * N * d z
 Integrating this equation from $z = 0$ to $z = b$ gives:
 
 \begin{equation}
-\begin{aligned}
-\ln (I)-\ln \left(I_{a}\right) &=-\sigma * N * b \\
-**or**  -\ln \left(I / I_{0}\right) &=\sigma * N * b
-\end{aligned}
+\ln (I)-\ln \left(I_{a}\right) &=-\sigma * N * b
+\end{equation}
+**or**  
+\begin{equation}
+-\ln \left(I / I_{0}\right) &=\sigma * N * b
 \end{equation}
 
 
