@@ -72,7 +72,7 @@ Let's organize cross-section $\sigma$ to one side of the equation and replace $b
 
 Where $N$ is the number density of absorbing molecules, $z$ is the path length of the cell, $R$ is the gas constant, $T$ is the temperature, $N_{A}$ is the Avagadro number and $P$ is the pressure. Noted the calculation of number density uses the ideal gas law with the elements provided as following. Hence the cross-section $\sigma$ can be easily derived from measuring the incident lignt intensity and detected intensity after energy absorbing.
 
-### The Interferometry
+<!-- ### The Interferometry -->
 
 ### Data Filtering Using Gradient Descent
 
