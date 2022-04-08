@@ -70,6 +70,27 @@ Let's organize cross-section $\sigma$ to one side of the equation and replace $b
 \sigma=-\frac{1}{N z} \ln \frac{I}{I_{o}}=-\frac{R T}{P N_{A} z} \ln \frac{I}{I_{0}}
 \end{equation}
 
-Where $N$ is the number density of absorbing molecules, $z$ is the path length of the cell, $R$ is the gas constant, $T$ is the temperature, $N_{A}$ is the Avagadro number and $P$ is the pressure.
+Where $N$ is the number density of absorbing molecules, $z$ is the path length of the cell, $R$ is the gas constant, $T$ is the temperature, $N_{A}$ is the Avagadro number and $P$ is the pressure. Noted the calculation of number density uses the ideal gas law with the elements provided as following. Hence the cross-section $\sigma$ can be easily derived from measuring the incident lignt intensity and detected intensity after energy absorbing.
 
 ### The Interferometry
+
+### Data Filtering Using Gradient Descent
+
+####Linearity of Absorbance and Concentration####
+
+We assume a beam of light passes through sample cell in the spectrometer, and when part of the energy, which represents a specific wavelength of light, is absorbed by the sample, the intensity of the light emitted from the sample cell $I$ will be lower than the incident light intensity $I_{o}$.
+
+![Simple Illustration of a Sample Cell](../imgs/MLNoiseOptimization/SampleCell.png)
+
+The term absorbance is used for illustrating the phenomenon, given the symbol, A. Expressed as:
+
+\begin{equation}
+A=\log _{10}\left(\frac{I_{o}}{I}\right)=\epsilon l c
+\end{equation}
+
+Where $A$ is the absorbance, $ε$ is the molar attenuation coefficient or absorptivity of the attenuating species, $l$ is the optical path length in cm, and $c$ is the concentration of the attenuating species. From the above equation, it can be deduced that absorbance $A$ is directly proportional to the concentration $c$.
+
+![Linearity of Absorbance and Concentration](../imgs/MLNoiseOptimization/AbsoConc.png)
+
+In the actual absorption spectroscopy measurements, intercepting the spectra data at a particular wavelength under all concentration environments yields a plot demonstrating a linear relationship between absorbance and concentration, and the fitted linear relationship has an intercept of 0.
+
