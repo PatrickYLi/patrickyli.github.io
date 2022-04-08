@@ -76,7 +76,7 @@ Where $N$ is the number density of absorbing molecules, $z$ is the path length o
 
 ### Data Filtering Using Gradient Descent
 
-####Linearity of Absorbance and Concentration####
+#### Linearity of Absorbance and Concentration
 
 We assume a beam of light passes through sample cell in the spectrometer, and when part of the energy, which represents a specific wavelength of light, is absorbed by the sample, the intensity of the light emitted from the sample cell $I$ will be lower than the incident light intensity $I_{o}$.
 
