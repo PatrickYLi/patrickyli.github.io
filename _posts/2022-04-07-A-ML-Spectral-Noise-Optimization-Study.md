@@ -94,3 +94,6 @@ Where $A$ is the absorbance, $ε$ is the molar attenuation coefficient or absorp
 
 In the actual absorption spectroscopy measurements, intercepting the spectra data at a particular wavelength under all concentration environments yields a plot demonstrating a linear relationship between absorbance and concentration, and the fitted linear relationship has an intercept of 0.
 
+#### Linear Regression using LAD algorithm 
+
+
