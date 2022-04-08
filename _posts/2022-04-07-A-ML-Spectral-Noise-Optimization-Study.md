@@ -55,7 +55,7 @@ d I / I_{z}=-\sigma * N * d z
 Integrating this equation from $z = 0$ to $z = b$ gives,
 
 \begin{equation}
-\ln (I)-\ln \left(I_{a}\right) &=-\sigma * N * b
+ln(I) - ln(I_o) = -\sigma * N * b
 \end{equation}
 
 
