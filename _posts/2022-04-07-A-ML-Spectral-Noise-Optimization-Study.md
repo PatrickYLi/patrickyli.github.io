@@ -44,7 +44,8 @@ Where $A$ is the **absorbance** or **optical density** of the sample ($ A = \var
 
 The Beer-Lambert law can be derived from an appproximation for the absorption coefficient for a molecule by approximating the molecule by an opaque disk whose cross-sectional area, $\sigma$, represents the effective area seen by a photon of frequency $w$. If the frequency of the light is far from resonance, the area is approximately 0, and if $w$ is close to resonance the area is a maximum. Taking an infinitesimal slab, $dz$, of sample:
 
-![Derivation of the Beer-Lambert Law](../imgs/MLNoiseOptimization/DerivationBeerLaw.gif)
+
+<p align="center">![Derivation of the Beer-Lambert Law](../imgs/MLNoiseOptimization/DerivationBeerLaw.gif)</p>
 
 Where $I_o$ is the light intensity entering the sample at $ z = 0 $, $ I_z $ is the intensity enthering the infinitesimal slab at $ z $, $ dI $ is the light intensity absorbed in the slab, and $ I $ is the intensity of light leaving the sample. Then the toal opaue area on the slab due to the absorbers is $\sigma * N * A * dz$. Then, the fraction of photons absorbed will be $\sigma * N * A * dz / A $ so,
 
@@ -58,5 +59,16 @@ Integrating this equation from $z = 0$ to $z = b$ gives,
 ln(I) - ln(I_o) = -\sigma * N * b
 \end{equation}
 
+or,
+
+\begin{equation}
+-ln(\frac{I}{I_o}) = \sigma * N * b
+\end{equation}
+
+Let's organize cross-section $\sigma$ to one side of the equation,
+
+\begin{equation}
+\sigma=-\frac{1}{\rho z} \ln \frac{I}{I_{0 a v e}}=-\frac{R T}{P N_{A} z} \ln \frac{2 I}{I_{0 b}+I_{0 a}}
+\end{equation}
 
 ### The Interferometry
