@@ -44,7 +44,7 @@ Where $A$ is the **absorbance** or **optical density** of the sample ($ A = \var
 
 The Beer-Lambert law can be derived from an appproximation for the absorption coefficient for a molecule by approximating the molecule by an opaque disk whose cross-sectional area, $\sigma$, represents the effective area seen by a photon of frequency $w$. If the frequency of the light is far from resonance, the area is approximately 0, and if $w$ is close to resonance the area is a maximum. Taking an infinitesimal slab, $dz$, of sample:
 
-![Derivation of Beer-Lambert Law](../imgs/MLNoiseOptimization/DerivationBeerLaw.gif)
+![Derivation of Beer-Lambert Law](../imgs/MLNoiseOptimization/DerivationBeerLaw.png)
 
 Where $I_o$ is the light intensity entering the sample at $ z = 0 $, $ I_z $ is the intensity enthering the infinitesimal slab at $ z $, $ dI $ is the light intensity absorbed in the slab, and $ I $ is the intensity of light leaving the sample. Then the toal opaue area on the slab due to the absorbers is $\sigma \cdot N \cdot A \cdot dz$. Then, the fraction of photons absorbed will be $\sigma \cdot N \cdot A \cdot dz / A $ so,
 
