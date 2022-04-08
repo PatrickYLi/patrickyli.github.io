@@ -58,11 +58,5 @@ Integrating this equation from $z = 0$ to $z = b$ gives,
 \ln (I)-\ln \left(I_{a}\right) &=-\sigma * N * b
 \end{equation}
 
-or
-
-\begin{equation}
--\ln \left(I / I_{0}\right) &=\sigma * N * b
-\end{equation}
-
 
 ### The Interferometry
