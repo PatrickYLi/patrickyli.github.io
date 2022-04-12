@@ -74,10 +74,17 @@ Where $N$ is the number density of absorbing molecules, $z$ is the path length o
 
 <!-- ### The Interferometry -->
 ### From Raw Signal to Cross-Sections
-The general workflow of calculating cross-sections from the raw data is simplely illustrated as the figure below. The measuring procedure is designed to work against the deuterium lamp (the UV light souce) intensity drifting. Considering the light intensity keeps decreasing during the measurements, the same time interval is used to measure the background signal and the sample signal sequentially, and the average of the two adjacent background signals is used to represent the reference background signal of the sample signal measured in the middle of the two background signal measurements. So that this can reduce the drifting effect.
+The general workflow of calculating cross-sections from the raw data is simplely illustrated as the figure below. 
 
 ![Workflow of Calculating Cross-Sections](../imgs/MLNoiseOptimization/Workflow.png)
 
+#### Drifting Effect Precaution
+
+The measuring procedure is designed to work against the deuterium lamp (the UV light souce) intensity drifting. Considering the light intensity keeps decreasing during the measurements, the same time interval is used to measure the background signal and the sample signal sequentially, and the average of the two adjacent background signals is used to represent the reference background signal of the sample signal measured in the middle of the two background signal measurements. So that this can reduce the drifting effect.
+
+#### Signal-to-Noise Ratio and Dynamic Range Definition
+
+The Signal-to-Noise Ratio (SNR) and Dynamic Range (DR) are two common parameters used to spefify the electrical performance of a spectrometer. Although a consensus seems to have been reached, it is very rare to find decent description of how to calculating noise. Here we will talk about how they are defined and how to measure and calculte them in the spectral measurements.
 
 
 ### Data Filtering Using Gradient Descent
