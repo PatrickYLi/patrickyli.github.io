@@ -73,6 +73,12 @@ Let's organize cross-section $\sigma$ to one side of the equation and replace $b
 Where $N$ is the number density of absorbing molecules, $z$ is the path length of the cell, $R$ is the gas constant, $T$ is the temperature, $N_{A}$ is the Avagadro number and $P$ is the pressure. Noted the calculation of number density uses the ideal gas law with the elements provided as following. Hence the cross-section $\sigma$ can be easily derived from measuring the incident lignt intensity and detected intensity after energy absorbing.
 
 <!-- ### The Interferometry -->
+### From Raw Signal to Cross-Sections
+The general workflow of calculating cross-sections from the raw data is simplely illustrated as the figure below. The measuring procedure is designed to work against the deuterium lamp (the UV light souce) intensity drifting. Considering the light intensity keeps decreasing during the measurements, the same time interval is used to measure the background signal and the sample signal sequentially, and the average of the two adjacent background signals is used to represent the reference background signal of the sample signal measured in the middle of the two background signal measurements. So that this can reduce the drifting effect.
+
+![Workflow of Calculating Cross-Sections](../imgs/MLNoiseOptimization/Workflow.png)
+
+
 
 ### Data Filtering Using Gradient Descent
 
@@ -92,8 +98,11 @@ Where $A$ is the absorbance, $ε$ is the molar attenuation coefficient or absorp
 
 ![Linearity of Absorbance and Concentration](../imgs/MLNoiseOptimization/AbsoConc.png)
 
-In the actual absorption spectroscopy measurements, intercepting the spectra data at a particular wavelength under all concentration environments yields a plot demonstrating a linear relationship between absorbance and concentration, and the fitted linear relationship has an intercept of 0.
+In the actual absorption spectroscopy measurements, intercepting the spectra data at a particular wavelength under all concentration environments yields a plot demonstrating a linear relationship between absorbance and concentration, and the fitted linear relationship has an intercept of 0. During high resolution measurements, tens of thousand lines of dataset needs to be analyzed, generizing numerous dataset comparison and filtering work, which is ideal for machine learning workflow.
 
 #### Linear Regression using LAD algorithm 
+
+
+
 
 
