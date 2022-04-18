@@ -126,7 +126,7 @@ p \cdot V=\frac{N}{N_{A}} \cdot R \cdot T=N \cdot k \cdot T \quad \text { where 
 Where
 
 | $N$ | Molecule numbers | |
-| $N<sub>A</sub>$ | Avogadro constant | 6.022×10<sup>23</sup> [mol<sup>-1</sup>] |
+| $N_{A}$ | Avogadro constant | 6.022×10<sup>23</sup> [mol<sup>-1</sup>] |
 | $k$ | Boltzmann constant | 1.381×10<sup>-23</sup> [J K<sup>-1</sup>] |
 
 When both sides of the ideal gas equation are divided by the volume, then we can obtain the ideal gas equation II, which is expressed as:
@@ -145,21 +145,21 @@ In experiments for spectral measurements, the concentration of the sample to be 
 
 According to the equations above, the pressure is proportional to the molecule number density. Notes that even at a pressure of 10-12 hPa, there is still 26,500 molecule per cm-3 be present. It is increasingly ineffective to express pressure in the unit of Pascal at extremely low pressure, it is better to be recorded by the particle number density.
 
-<center> **Conversion table for unit of pressure** </center>
+<center> Conversion table for unit of pressure </center>
 
 |        |    Pa    |    bar    |    hPa    |   µbar   |    Torr   |  micron  |    atm    |     at    |   mm WS   |    psi    |    psf    |
 |:------:|:--------:|:---------:|:---------:|:--------:|:---------:|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| Pa     | 1        | 1·10-5    | 1·10-2    | 10       | 7.5·10-3  | 7.5      | 9.87·10-6 | 1.02·10-5 | 0.102     | 1.45·10-4 | 2.09·10-2 |
-| bar    | 1·105    | 1         | 1·103     | 1·106    | 750       | 7.5·105  | 0.987     | 1.02      | 1.02·104  | 14.5      | 2.09·103  |
-| hPa    | 100      | 1·10-3    | 1         | 1,000    | 0.75      | 750      | 9.87·10-4 | 1.02·10-3 | 10.2      | 1.45·10-2 | 2.09      |
-| µbar   | 0.1      | 1·10-6    | 1·10-3    | 1        | 7.5·10-4  | 0.75     | 9.87·10-7 | 1.02·10-6 | 1.02·10-2 | 1.45·10-5 | 2.09·10-3 |
-| Torr   | 1.33·102 | 1.33·10-3 | 1.33      | 1,330    | 1         | 1,000    | 1.32·10-3 | 1.36·10-3 | 13.6      | 1.93·10-2 | 2.78      |
-| micron | 0.133    | 1.33·10-6 | 1.33·10-3 | 1.33     | 1·10-3    | 1        | 1.32·10-6 | 1.36·10-6 | 1.36·10-2 | 1.93·10-5 | 2.78·10-3 |
-| atm    | 1.01·105 | 1.013     | 1,013     | 1.01·106 | 760       | 7.6·105  | 1         | 1.03      | 1.03·104  | 14.7      | 2.12·103  |
-| at     | 9.81·104 | 0.981     | 981       | 9.81·105 | 735.6     | 7.36·105 | 0.968     | 1         | 1·10-4    | 14.2      | 2.04·103  |
-| mm WS  | 9.81     | 9.81·10-5 | 9.81·10-2 | 98.1     | 7.36·10-2 | 73.6     | 9.68·10-5 | 1·10-4    | 1         | 1.42·10-3 | 0.204     |
-| psi    | 6.89·103 | 6.89·10-2 | 68.9      | 6.89·104 | 51.71     | 5.17·104 | 6.8·10-2  | 7.02·10-2 | 702       | 1         | 144       |
-| psf    | 47.8     | 4.78·10-4 | 0.478     | 478      | 0.359     | 359      | 4.72·10-4 | 4.87·10-4 | 4.87      | 6.94·10-3 | 1         |
+| Pa     | 1        | 1·10<sup>-5</sup>    | 1·10<sup>-2</sup>    | 10       | 7.5·10<sup>-3</sup>  | 7.5      | 9.87·10<sup>-6</sup> | 1.02·10<sup>-5</sup> | 0.102     | 1.45·10<sup>-4</sup> | 2.09·10<sup>-2</sup> |
+| bar    | 1·10<sup>5</sup>    | 1         | 1·10<sup>3</sup>     | 1·10<sup>6</sup>    | 750       | 7.5·10<sup>5</sup>  | 0.987     | 1.02      | 1.02·10<sup>4</sup>  | 14.5      | 2.09·10<sup>3</sup>  |
+| hPa    | 100      | 1·10<sup>-3</sup>    | 1         | 1,000    | 0.75      | 750      | 9.87·10<sup>-4</sup> | 1.02·10<sup>-3</sup> | 10.2      | 1.45·10<sup>-2</sup> | 2.09      |
+| µbar   | 0.1      | 1·10<sup>-6</sup>    | 1·10<sup>-3</sup>    | 1        | 7.5·10<sup>-4</sup>  | 0.75     | 9.87·10<sup>-7</sup> | 1.02·10<sup>-6</sup> | 1.02·10<sup>-2</sup> | 1.45·10<sup>-5</sup> | 2.09·10<sup>-3</sup> |
+| Torr   | 1.33·10<sup>2</sup> | 1.33·10<sup>-3</sup> | 1.33      | 1,330    | 1         | 1,000    | 1.32·10<sup>-3</sup> | 1.36·10<sup>-3</sup> | 13.6      | 1.93·10<sup>-2</sup> | 2.78      |
+| micron | 0.133    | 1.33·10<sup>-6</sup> | 1.33·10<sup>-3</sup> | 1.33     | 1·10<sup>-3</sup>    | 1        | 1.32·10<sup>-6</sup> | 1.36·10<sup>-6</sup> | 1.36·10<sup>-2</sup> | 1.93·10<sup>-5</sup> | 2.78·10<sup>-3</sup> |
+| atm    | 1.01·10<sup>5</sup> | 1.013     | 1,013     | 1.01·10<sup>6</sup> | 760       | 7.6·10<sup>5</sup>  | 1         | 1.03      | 1.03·10<sup>4</sup>  | 14.7      | 2.12·10<sup>3</sup>  |
+| at     | 9.81·10<sup>4</sup> | 0.981     | 981       | 9.81·10<sup>5</sup> | 735.6     | 7.36·10<sup>5</sup> | 0.968     | 1         | 1·10<sup>-4</sup>    | 14.2      | 2.04·10<sup>3</sup>  |
+| mm WS  | 9.81     | 9.81·10<sup>-5</sup> | 9.81·10<sup>-2</sup> | 98.1     | 7.36·10<sup>-2</sup> | 73.6     | 9.68·10<sup>-5</sup> | 1·10<sup>-4</sup>    | 1         | 1.42·10<sup>-3</sup> | 0.204     |
+| psi    | 6.89·10<sup>3</sup> | 6.89·10<sup>-2</sup> | 68.9      | 6.89·10<sup>4</sup> | 51.71     | 5.17·10<sup>4</sup> | 6.8·10<sup>-2</sup>  | 7.02·10<sup>-2</sup> | 702       | 1         | 144       |
+| psf    | 47.8     | 4.78·10<sup>-4</sup> | 0.478     | 478      | 0.359     | 359      | 4.72·10<sup>-4</sup> | 4.87·10<sup>-4</sup> | 4.87      | 6.94·10<sup>-3</sup> | 1         |
 
 
 
