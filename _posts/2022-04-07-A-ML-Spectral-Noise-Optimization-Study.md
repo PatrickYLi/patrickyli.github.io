@@ -79,7 +79,7 @@ The gas molecule inside an enclosed vessel follows thermal movement, bringing co
 One mole of substance contains 6.022×1023 molecules or atoms, speaking of gas, under standard atmosphere condition (101,325 Pa; 273.15 K), one mole of an ideal gas fills a volume of 22.414 L. Back in 1664, Robert Boyle did research on the relationship between gas pressure and gas volume and reached the Boyle-Mariotte law:
 
 \begin{equation}
-p \cdot v= const.
+p \cdot v= \text{ const. }
 \end{equation}
 
 Which expresses that the volume of a given quantity of a gas at the constant temperature is inversely proportional to the pressure.
@@ -87,7 +87,7 @@ Which expresses that the volume of a given quantity of a gas at the constant tem
 One hundred years later, Jacques Charles and Joseph Gay-Lussac stated the temperature dependence of the volume of a quantity of gas that the volume of a given quantity of gas at a constant pressure is directly proportional to the absolute temperature, which is expressed as the Gay-Lussac’s law:
 
 \begin{equation}
-V = const. \cdot T
+V = \text{ const. } \cdot T
 \end{equation}
 
 Subjecting a certain amount of gas to continuous pressure changes and temperature changes, we get:
@@ -99,7 +99,7 @@ Subjecting a certain amount of gas to continuous pressure changes and temperatur
 When we consider the molecule number of the gas, we obtain that the volume of the gas is proportional to the amount of substance ν of the gas molecules for a given temperature and a given pressure. The expression is:
 
 \begin{equation}
-\frac{p \cdot V}{T}= $\nu$ \cdot \text { const. }
+\frac{p \cdot V}{T}= \nu \cdot \text { const. }
 \end{equation}
 
 It can also be written as:
@@ -109,6 +109,7 @@ p \cdot V=\frac{m}{M} \cdot R \cdot T
 \end{equation}
 
 Where
+
 | $p$ | Pressure | [Pa] |
 | $V$ | Volume | [m<sup>3</sup>] |
 | $m$ | Mass | [kg] |
@@ -123,6 +124,7 @@ p \cdot V=\frac{N}{N_{A}} \cdot R \cdot T=N \cdot k \cdot T \quad \text { where 
 \end{equation}
 
 Where
+
 | $N$ | Molecule numbers | |
 | $N<sub>A</sub>$ | Avogadro constant | 6.022×10<sup>23</sup> [mol<sup>-1</sup>] |
 | $k$ | Boltzmann constant | 1.381×10<sup>-23</sup> [J K<sup>-1</sup>] |
@@ -134,6 +136,7 @@ p = n \cdot k \cdot T
 \end{equation}
 
 Where
+
 | $n$ | Particle number density | [molecule m<sup>-3</sup>] |
 
 **Why do we use molecule number density as the expression of pressure?**
@@ -143,6 +146,7 @@ In experiments for spectral measurements, the concentration of the sample to be 
 According to the equations above, the pressure is proportional to the molecule number density. Notes that even at a pressure of 10-12 hPa, there is still 26,500 molecule per cm-3 be present. It is increasingly ineffective to express pressure in the unit of Pascal at extremely low pressure, it is better to be recorded by the particle number density.
 
 <center> **Conversion table for unit of pressure** </center>
+
 |        |    Pa    |    bar    |    hPa    |   µbar   |    Torr   |  micron  |    atm    |     at    |   mm WS   |    psi    |    psf    |
 |:------:|:--------:|:---------:|:---------:|:--------:|:---------:|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | Pa     | 1        | 1·10-5    | 1·10-2    | 10       | 7.5·10-3  | 7.5      | 9.87·10-6 | 1.02·10-5 | 0.102     | 1.45·10-4 | 2.09·10-2 |
