@@ -139,6 +139,14 @@ Where
 
 | $n$ | Particle number density | [molecule m<sup>-3</sup>] |
 
+Let's rearrange the equation here and we can obtain the derivation of molecule number density $n$, expressed as:
+
+\begin{equation}
+n = \frac{p}{k \cdot T}
+\end{equation}
+
+Assume the number of molecules of an ideal gas in a given volume, quoted at standard temperature and pressure, The 2014 CODATA recommended the value 2.6867811(15)×10<sup>25</sup> cm<sup>-3</sup> at 0 &deg;C and 1 atm, named after the physicist Johann Josef Loschmidt, known as the term **Loschmidt Constant** ($n_{0}$).
+
 **Why do we use molecule number density as the expression of pressure?**
 
 In experiments for spectral measurements, the concentration of the sample to be measured is usually reduced in order to avoid complete absorption of the light source signal due to high sample concentration. Also, to avoid the influence of oxygen, carbon dioxide and moisture in the air on the spectrogram, many high-precision spectrometers generate a vacuum-like environment with extremely low air pressure inside. 
