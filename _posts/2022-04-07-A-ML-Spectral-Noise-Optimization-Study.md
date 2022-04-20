@@ -143,7 +143,7 @@ Where
 
 In experiments for spectral measurements, the concentration of the sample to be measured is usually reduced in order to avoid complete absorption of the light source signal due to high sample concentration. Also, to avoid the influence of oxygen, carbon dioxide and moisture in the air on the spectrogram, many high-precision spectrometers generate a vacuum-like environment with extremely low air pressure inside. 
 
-According to the equations above, the pressure is proportional to the molecule number density. Notes that even at a pressure of 10-12 hPa, there is still 26,500 molecule per cm-3 be present. It is increasingly ineffective to express pressure in the unit of Pascal at extremely low pressure, it is better to be recorded by the particle number density.
+According to the equations above, the pressure is proportional to the molecule number density. Notes that even at a pressure of 10<sup>-12</sup> hPa, there is still 26,500 molecule per cm<sup>-3</sup> be present. It is increasingly ineffective to express pressure in the unit of Pascal at extremely low pressure, it is better to be recorded by the particle number density.
 
 <center> Conversion table for unit of pressure </center>
 
