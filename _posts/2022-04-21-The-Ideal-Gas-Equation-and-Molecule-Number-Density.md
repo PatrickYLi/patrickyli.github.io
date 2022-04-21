@@ -17,10 +17,12 @@ tags: [work]
     </script>
 </head>
 
+
+
 The gas molecule inside an enclosed vessel follows thermal movement, bringing collsion and exerting a force on the wall of the vessel. The large number of collisions that occur in all gas molecule results in the same pressure at any point in the vessel, regardless of where and in what direction the measurement is made.
 
 
-One mole of substance contains 6.022×1023 molecules or atoms, speaking of gas, under standard atmosphere condition (101,325 Pa; 273.15 K), one mole of an ideal gas fills a volume of 22.414 L. Back in 1664, Robert Boyle did research on the relationship between gas pressure and gas volume and reached the Boyle-Mariotte law:
+One mole of substance contains 6.022×1023 molecules or atoms, speaking of gas, under standard atmosphere condition (101,325 Pa; 273.15 K), one mole of an ideal gas fills a volume of 22.414 L. Back in 1664, Robert Boyle did research on the relationship between gas pressure and gas volume and reached the **Boyle-Mariotte law**:
 
 \begin{equation}
 p \cdot v= \text{ const. }
@@ -28,7 +30,7 @@ p \cdot v= \text{ const. }
 
 Which expresses that the volume of a given quantity of a gas at the constant temperature is inversely proportional to the pressure.
 
-One hundred years later, Jacques Charles and Joseph Gay-Lussac stated the temperature dependence of the volume of a quantity of gas that the volume of a given quantity of gas at a constant pressure is directly proportional to the absolute temperature, which is expressed as the Gay-Lussac’s law:
+One hundred years later, Jacques Charles and Joseph Gay-Lussac stated the temperature dependence of the volume of a quantity of gas that the volume of a given quantity of gas at a constant pressure is directly proportional to the absolute temperature, which is expressed as the **Gay-Lussac’s law**:
 
 \begin{equation}
 V = \text{ const. } \cdot T
@@ -61,7 +63,7 @@ Where
 | $R$ | General gas constant | [kJ kmol<sup>-1</sup> K<sup>-1</sup>] |
 | $T$ | Absolute temperature | [K] |
 
-Besides, the substance amount ν can be indicated as the molecule number in relation to the Avogadro constant N_A, and it is expressed as (also known as the ideal gas equation $I$):
+Besides, the substance amount ν can be indicated as the molecule number in relation to the Avogadro constant N_A, and it is expressed as (also known as the **ideal gas equation $I$**):
 
 \begin{equation}
 p \cdot V=\frac{N}{N_{A}} \cdot R \cdot T=N \cdot k \cdot T \quad \text { where } k=\frac{R}{N_{A}}
@@ -73,7 +75,7 @@ Where
 | $N_{A}$ | Avogadro constant | 6.022×10<sup>23</sup> [mol<sup>-1</sup>] |
 | $k$ | Boltzmann constant | 1.381×10<sup>-23</sup> [J K<sup>-1</sup>] |
 
-When both sides of the ideal gas equation are divided by the volume, then we can obtain the ideal gas equation II, which is expressed as:
+When both sides of the ideal gas equation are divided by the volume, then we can obtain the **ideal gas equation $II$**, which is expressed as:
 
 \begin{equation}
 p = n \cdot k \cdot T
