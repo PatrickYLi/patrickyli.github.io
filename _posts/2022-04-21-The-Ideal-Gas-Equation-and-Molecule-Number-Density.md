@@ -18,6 +18,7 @@ tags: [work]
 </head>
 
 
+<!-- https://www.pfeiffer-vacuum.com/en/know-how/introduction-to-vacuum-technology/fundamentals/general-gas-equation/ -->
 
 The gas molecule inside an enclosed vessel follows thermal movement, bringing collsion and exerting a force on the wall of the vessel. The large number of collisions that occur in all gas molecule results in the same pressure at any point in the vessel, regardless of where and in what direction the measurement is made.
 
