@@ -19,6 +19,7 @@ tags: [work]
 
 The gas molecule inside an enclosed vessel follows thermal movement, bringing collsion and exerting a force on the wall of the vessel. The large number of collisions that occur in all gas molecule results in the same pressure at any point in the vessel, regardless of where and in what direction the measurement is made.
 
+
 One mole of substance contains 6.022×1023 molecules or atoms, speaking of gas, under standard atmosphere condition (101,325 Pa; 273.15 K), one mole of an ideal gas fills a volume of 22.414 L. Back in 1664, Robert Boyle did research on the relationship between gas pressure and gas volume and reached the Boyle-Mariotte law:
 
 \begin{equation}
