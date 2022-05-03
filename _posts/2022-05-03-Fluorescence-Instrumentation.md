@@ -16,14 +16,14 @@ The transmissive fluorescence spectroscopy has the configuration that the sample
 
 A fluorescence spectroscopy instrument consists of the following basic components:
 
-1. [Light sources](#LightSources)
-2. [Excitation filters](#ExcitationFilters)
-3. [Sample holder](#SampleHolder)
-4. [Dichroic filter](#DichroicFilter)
-5. [Emission filters](#EmissionFilters)
+1. [Light Sources](#LightSources)
+2. [Excitation Filters](#ExcitationFilters)
+3. [Sample Holder](#SampleHolder)
+4. [Dichroic Filter](#DichroicFilter)
+5. [Emission Filters](#EmissionFilters)
 6. [Detectors](#Detectors)
 
-# Light sources {#LightSources}
+# Light Sources {#LightSources}
 
 Fluorescence spectroscopy can use almost all types of light sources so the best choice depends on the actual requirements of spectral wavelength coverage, intensity, size, cost, efficiency, and whether the light source needs to be pulsed.
 
@@ -48,17 +48,17 @@ In summary, the excitation filters are divided into two categories:
 1. Fixed low pass/band  pass filters
 2. Variable band pass filters
 
-# Sample holder {#SampleHolder}
+# Sample Holder {#SampleHolder}
 
 The choice of sample holder really depends on the application. The main issue to consider is that in the case of a transmissive cuvette or flow cell, you must make sure that the material of the sample holder is transparent to both excitation and emission wavelengths. 
 This is especially important for UV wavelengths, as most glasses absorb light, so special types of materials need to be used.
 
-# Dichroic filter {#DichroicFilter}
+# Dichroic Filter {#DichroicFilter}
 
 Dichroic filters are used in a 45 degree configuration. The function of a dichroic filter is to reflect the excitation light (shorter wavelengths) and transmit the emission light (longer wavelengths). 
 For really simple systems, dichroic filters can actually be used as both excitation and emission filters.
 
-# Emission filters {#EmissionFilters}
+# Emission Filters {#EmissionFilters}
 
 Variable optical band pass filters are mostly realized as scanning grating monochromators and are used to select the right peak emission wavelength. The main benefit is the flexibility to choose any wavelength but the drawback is a high cost, large size, need for electronics control and stability issues due to the moving parts inside the monochromator. Therefore, variable bandpass filters are mostly used in versatile large laboratory instruments.
 
