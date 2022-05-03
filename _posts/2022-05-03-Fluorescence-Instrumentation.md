@@ -16,14 +16,14 @@ The transmissive fluorescence spectroscopy has the configuration that the sample
 
 A fluorescence spectroscopy instrument consists of the following basic components:
 
-1. [Light sources](##Light sources)
-2. [Excitation filters](##Excitation Filters)
-3. [Sample holder](##Sample holder)
-4. [Dichroic filter](##Dichroic filter)
-5. [Emission filters](##Emission filters)
-6. [Detectors](##Detectors)
+1. [Light sources](#LightSources)
+2. [Excitation filters](#ExcitationFilters)
+3. [Sample holder](#SampleHolder)
+4. [Dichroic filter](#DichroicFilter)
+5. [Emission filters](#EmissionFilters)
+6. [Detectors](#Detectors)
 
-## Light sources {##Light sources}
+# Light sources {#LightSources}
 
 Fluorescence spectroscopy can use almost all types of light sources so the best choice depends on the actual requirements of spectral wavelength coverage, intensity, size, cost, efficiency, and whether the light source needs to be pulsed.
 
@@ -33,7 +33,7 @@ And broadband sources are the best choice if you need the flexibility to analyze
 
 ![Table-of-light-sources](../imgs/FluorescenceSpectroscopy/FluorescenceInstrumentation/Table-of-light-sources-1-800x293.jpg)
 
-## Excitation Filters {##Excitation Filters}
+# Excitation Filters {#ExcitationFilters}
 
 Variable optical band pass filters are mostly realized as scanning grating monochromators and are used together with broadband light sources to select the right excitation wavelength. 
 The main benefit is of course the flexibility to choose any wavelength but the drawback is the high cost, large size, need for electronics control, 
@@ -48,17 +48,17 @@ In summary, the excitation filters are divided into two categories:
 1. Fixed low pass/band  pass filters
 2. Variable band pass filters
 
-## Sample holder {##Sample holder}
+# Sample holder {#SampleHolder}
 
 The choice of sample holder really depends on the application. The main issue to consider is that in the case of a transmissive cuvette or flow cell, you must make sure that the material of the sample holder is transparent to both excitation and emission wavelengths. 
 This is especially important for UV wavelengths, as most glasses absorb light, so special types of materials need to be used.
 
-## Dichroic filter {##Dichroic filter}
+# Dichroic filter {#DichroicFilter}
 
 Dichroic filters are used in a 45 degree configuration. The function of a dichroic filter is to reflect the excitation light (shorter wavelengths) and transmit the emission light (longer wavelengths). 
 For really simple systems, dichroic filters can actually be used as both excitation and emission filters.
 
-## Emission filters {##Emission filters}
+# Emission filters {#EmissionFilters}
 
 Variable optical band pass filters are mostly realized as scanning grating monochromators and are used to select the right peak emission wavelength. The main benefit is the flexibility to choose any wavelength but the drawback is a high cost, large size, need for electronics control and stability issues due to the moving parts inside the monochromator. Therefore, variable bandpass filters are mostly used in versatile large laboratory instruments.
 
@@ -72,7 +72,7 @@ In summary, the emission filters are divided into 3 categories:
 2. Variable band pass filters
 3. Full spectrum diode array spectrophotometers
 
-## Detectors {##Detectors}
+# Detectors {#Detectors}
 
 In fluorescence spectroscopy, it is common to use **Photo Multiplying Tubes** (PMT) as detectors due to the high sensitivity and fast response of these detectors. However, **Silicon-based solid-state detectors** can also be used.
 
