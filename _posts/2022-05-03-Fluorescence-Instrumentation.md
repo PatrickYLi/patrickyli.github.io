@@ -23,7 +23,7 @@ A fluorescence spectroscopy instrument consists of the following basic component
 5. Emission filters
 6. Detectors
 
-### Light sources ###
+## Light sources
 
 Fluorescence spectroscopy can use almost all types of light sources so the best choice depends on the actual requirements of spectral wavelength coverage, intensity, size, cost, efficiency, and whether the light source needs to be pulsed.
 
@@ -33,7 +33,7 @@ And broadband sources are the best choice if you need the flexibility to analyze
 
 ![Table-of-light-sources](../imgs/FluorescenceSpectroscopy/FluorescenceInstrumentation/Table-of-light-sources-1-800x293.jpg)
 
-### Excitation Filters ###
+## Excitation Filters
 
 Variable optical band pass filters are mostly realized as scanning grating monochromators and are used together with broadband light sources to select the right excitation wavelength. 
 The main benefit is of course the flexibility to choose any wavelength but the drawback is the high cost, large size, need for electronics control, 
