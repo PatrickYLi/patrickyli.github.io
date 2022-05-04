@@ -13,6 +13,8 @@ tags: [work]
 4. [Energy Diagram (*Jablonski*)](#diagram)
 5. [Timing](#time)
 
+****
+
 ## What is fluorescence? {#what}
 
 **Fluorescence** is the phenomenon that a material emits light at one wavelength when it is illuminated at another. 
