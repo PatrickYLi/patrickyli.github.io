@@ -47,7 +47,7 @@ E = \mathrm{h} \frac{c}{\lambda}
 Where $\mathrm{h}$ is the Plank’s constant. This equation indicates that the energy of the photon is inversely proportional to its wavelength,
 which means the longer the wavelength, the lower the energy the photon carries.
 
-## Energy Diagram (*Jablonski*) (#diagram)
+## Energy Diagram (*Jablonski*) {#diagram}
 
 Normally, the fluorophore molecule will be in its ground state, when it is excited by a photon with a specific wavelength, 
 which also means the photon carries a specific amount of energy, the fluorophore molecule can absorb that amount of energy and the energy 
