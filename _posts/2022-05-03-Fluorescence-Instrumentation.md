@@ -23,6 +23,8 @@ A fluorescence spectroscopy instrument consists of the following basic component
 5. [Emission Filters](#EmissionFilters)
 6. [Detectors](#Detectors)
 
+****
+
 ## Light Sources {#LightSources}
 
 Fluorescence spectroscopy can use almost all types of light sources so the best choice depends on the actual requirements of spectral wavelength coverage, intensity, size, cost, efficiency, and whether the light source needs to be pulsed.
