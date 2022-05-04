@@ -11,14 +11,18 @@ tags: [work]
 **Fluorescence** is the phenomenon that a material emits light at one wavelength when it is illuminated at another. 
 The material which has this ability is called fluorophore (*aka* fluorescent dyes, labeling reagents, stains, *etc.*)
 
-![Fluorescence-Illustration](../imgs/FluorescenceSpectroscopy/FluorescenceBasics/Fluorescence_Illustration.png)
+<p align="center">
+  <img width="500" height="200" src="https://github.com/PatrickYLi/patrickyli.github.io/blob/368380896897d8528c051eb98ebe16e27d6b5e68/imgs/FluorescenceSpectroscopy/FluorescenceBasics/Fluorescence_Illustration.png">
+</p>
 
 ### Excitation & Emission Spectra ###
 
 Here shows an excitation and emission spectra example. The fluorophore always absorbs light at a lower wavelength 
 (excitation, blue line) and emits light at a longer wavelength (emission, red line).
 
-![Excitation-And-Emission-Spectra](../imgs/FluorescenceSpectroscopy/FluorescenceBasics/ExcitationAndEmissionSpectra.png)
+<p align="center">            
+  <img width="500" height="290" src="https://github.com/PatrickYLi/patrickyli.github.io/blob/368380896897d8528c051eb98ebe16e27d6b5e68/imgs/FluorescenceSpectroscopy/FluorescenceBasics/ExcitationAndEmissionSpectra.png">
+</p>
 
 So how do molecules exchange energy with light and produce such characteristic spectrograms? 
 We can explain this by looking at electromagnetic waves and how they carry energy.
@@ -27,11 +31,13 @@ We can explain this by looking at electromagnetic waves and how they carry energ
 
 Light can be described as electromagnetic waves with a wavelength $\lambda$ and a speed $c$ (the speed of light).
 
-![Photon](../imgs/FluorescenceSpectroscopy/FluorescenceBasics/photon1.png)
+<p align="center">            
+  <img width="500" height="160" src="https://github.com/PatrickYLi/patrickyli.github.io/blob/368380896897d8528c051eb98ebe16e27d6b5e68/imgs/FluorescenceSpectroscopy/FluorescenceBasics/photon1.png">
+</p>
 
 Meanwhile, light can be described as a particle which is called a photon. 
 Each photon carries a small amount of energy that is related to its speed and wavelength. 
-The relationship between photon’s energy \red{$E$}, speed $c$, and wavelength $\lambda$ is given as:
+The relationship between photon’s energy $E$, speed $c$, and wavelength $\lambda$ is given as:
 
 \begin{equation}
 E = \mathrm{h} \frac{c}{\lambda}
@@ -49,7 +55,9 @@ state of the fluorophore molecule can raise to the excited state (Green arrow).
 Typically, the excited state molecule will relax a bit to an upper steady state, and then the molecule energy state can go down to the ground state again 
 (Red arrow). By doing so, it will emit a smaller amount of energy or a photon with a longer wavelength.
 
-![Fluorescence Diagram](../imgs/FluorescenceSpectroscopy/FluorescenceBasics/diagram1.png)
+<p align="center">            
+  <img width="500" height="270" src="https://github.com/PatrickYLi/patrickyli.github.io/blob/368380896897d8528c051eb98ebe16e27d6b5e68/imgs/FluorescenceSpectroscopy/FluorescenceBasics/diagram1.png">
+</p>
 
 This process can occur repeatedly, the key point here is that the energy that is absorbed is higher than the energy that is emitted. 
 When it converts to wavelength, the fluorophore always absorbs light with a shorter wavelength and emits light with a longer wavelength. 
