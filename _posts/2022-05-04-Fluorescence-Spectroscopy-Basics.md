@@ -62,6 +62,7 @@ Typically, the excited state molecule will relax a bit to an upper steady state,
 
 This process can occur repeatedly, the key point here is that the energy that is absorbed is higher than the energy that is emitted. 
 When it converts to wavelength, the fluorophore always absorbs light with a shorter wavelength and emits light with a longer wavelength. 
+
 Noted that not all molecules fluoresce. Many fluorophore molecules absorb excitation light and then the energy is lost to random vibration (heat). Only those with delocalized electrons can absorb and then re-emit the energy.
 
 ## Timing {#time}
