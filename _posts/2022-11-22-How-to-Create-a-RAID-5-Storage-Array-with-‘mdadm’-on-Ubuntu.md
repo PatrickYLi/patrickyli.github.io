@@ -78,7 +78,7 @@ As we can see, the new filesystem is mounted and accessible.
 Now we can scan the active array and append the file with the below command
 
 ```
-$ sudo mdadm –details –scan | sudo tee –a /etc/mdadm/mdadm.conf
+$ sudo mdadm –-detail –-scan | sudo tee –a /etc/mdadm/mdadm.conf
 ```
 
 We needed to update the ‘initramfs’ file so that the RADI array will be available when 
