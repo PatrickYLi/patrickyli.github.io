@@ -18,8 +18,8 @@ Here are all the links to his work and projects.
 </a>
 
 
-<a href="[https://b23.tv/S4k0WAI](https://www.xiaohongshu.com/user/profile/5936190250c4b424ac4752c7?xsec_token=YBLTgbIzj2kFeQob1Vbw_w7BiSxaWVa9aovQevPd6NmK8=&xsec_source=app_share&xhsshare=CopyLink&appuid=5936190250c4b424ac4752c7&apptime=1741314966&share_id=0c7c1f5c7236487e9ade87cd0d2218b8
-)" target="_blank" title="RedNote">
+<a href="https://www.xiaohongshu.com/user/profile/5936190250c4b424ac4752c7?xsec_token=YBLTgbIzj2kFeQob1Vbw_w7BiSxaWVa9aovQevPd6NmK8=&xsec_source=app_share&xhsshare=CopyLink&appuid=5936190250c4b424ac4752c7&apptime=1741314966&share_id=0c7c1f5c7236487e9ade87cd0d2218b8
+" target="_blank" title="RedNote">
   <img src="assets/img/xiaohongshu-logo.png" alt="RedNote" style="width:150px;height:150px;">
 </a>
 
