@@ -33,8 +33,18 @@ This is the website of **LI Yuanzhe**, as known as **Patrick**.
   </a>
 </div>
 
-<div style="text-align: center; margin-bottom: 10px;">
+<div style="text-align: center; margin-bottom: 15px;">
   <a href="https://www.xiaohongshu.com/user/profile/5936190250c4b424ac4752c7?xsec_token=..." target="_blank" title="RedNote">
     <img src="/assets/img/xiaohongshu-logo.png" alt="RedNote" style="width:50px;height:50px;">
+  </a>
+</div>
+
+<div style="text-align: center;">
+  Fuel my creativity with your kind support ❤️
+</div>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://www.patreon.com/c/soundwavestudio" target="_blank" title="Patreon">
+    <img src="/assets/img/Patreon-logo.svg" alt="Patreon" style="width:50px;height:50px;">
   </a>
 </div>
