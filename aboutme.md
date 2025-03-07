@@ -10,7 +10,7 @@ title: About me
   </blockquote>
 </div>
 
-This is the website of **Li Yuanzhe**, as known as **Patrick**. 
+This is the website of **LI Yuanzhe**, as known as **Patrick**. 
 
 <div style="text-align: center;">
   Here is the link to his research work
@@ -21,7 +21,7 @@ This is the website of **Li Yuanzhe**, as known as **Patrick**.
     <img src="/assets/img/Google_Scholar_logo.svg" alt="Google Scholar" style="width:50px;height:50px;">
   </a>
 </div>
-<be>
+<br>
 
 <div style="text-align: center;">
   Also, here are the links to his music project contents
