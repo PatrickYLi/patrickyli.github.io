@@ -15,7 +15,7 @@ title: About me
 </div>
 <br>
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-bottom: 5px;">
   Here is the link to his research work
 </div>
 
@@ -25,7 +25,7 @@ title: About me
   </a>
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-bottom: 5px;">
   Also, here are the links to his music project contents
 </div>
 
@@ -41,7 +41,7 @@ title: About me
   </a>
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-bottom: 5px;">
   Fuel his creativity with your kind support ❤️
 </div>
 
