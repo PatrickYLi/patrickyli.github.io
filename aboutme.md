@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle:>
+subtitle: |
   悟已往之不谏 知来者之可追<br>Let the bygones be beyond regret, the days ahead are ours to seek.
 ---
 
