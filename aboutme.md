@@ -6,6 +6,11 @@ subtitle: |
   <span style="font-size:90%;color:gray;">Let the bygones be beyond regret, the days ahead are ours to seek.</span>
 ---
 
+<blockquote>
+  <span style="font-weight:bold;">悟已往之不谏 知来者之可追</span><br>
+  <span style="font-size:90%;color:gray;">Let the bygones be beyond regret, the days ahead are ours to seek.</span>
+</blockquote>
+
 This is the website of **Li Yuanzhe**, as known as **Patrick**. 
 
 Here are all the links to his work and projects.
