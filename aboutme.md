@@ -40,7 +40,7 @@ This is the website of **LI Yuanzhe**, as known as **Patrick**.
 </div>
 
 <div style="text-align: center;">
-  Fuel my creativity with your kind support ❤️
+  Fuel his creativity with your kind support ❤️
 </div>
 
 <div style="text-align: center; margin-bottom: 10px;">
