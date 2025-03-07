@@ -11,7 +11,7 @@ title: About me
 </div>
 
 <div style="text-align: center;">
-  This is the website of **LI Yuanzhe**, as known as **Patrick**， a researcher dedicated to atmospheric chemistry and environmental sciences. Here, you will find his academic work, creative projects, and thoughts on science, music, and life. Feel free to explore and connect through his various platforms.
+  This is the website of **LI Yuanzhe**, as known as **Patrick**, a researcher dedicated to atmospheric chemistry and environmental sciences. Here, you will find his academic work, creative projects, and thoughts on science, music, and life. Feel free to explore and connect through his various platforms.
 </div>
 <br>
 
