@@ -17,18 +17,17 @@ This is the website of **LI Yuanzhe**, as known as **Patrick**.
   Here is the link to his research work
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-bottom: 10px;">
   <a href="https://scholar.google.com/citations?user=gAskz6UAAAAJ&hl=en" target="_blank" title="Scholar">
     <img src="/assets/img/Google_Scholar_logo.svg" alt="Google Scholar" style="width:50px;height:50px;">
   </a>
 </div>
-<br>
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-bottom: 15px;">
   Also, here are the links to his music project contents
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-bottom: 10px;">
   <a href="https://b23.tv/S4k0WAI" target="_blank" title="哔哩哔哩">
     <img src="/assets/img/bilibili-logo.svg" alt="Bilibili" style="width:51.2px;height:23.42px;">
   </a>
