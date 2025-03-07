@@ -11,6 +11,7 @@ title: About me
 </div>
 
 This is the website of **LI Yuanzhe**, as known as **Patrick**. 
+<br>
 
 <div style="text-align: center;">
   Here is the link to his research work
@@ -32,7 +33,6 @@ This is the website of **LI Yuanzhe**, as known as **Patrick**.
     <img src="/assets/img/bilibili-logo.svg" alt="Bilibili" style="width:51.2px;height:23.42px;">
   </a>
 </div>
-<br>
 
 <div style="text-align: center;">
   <a href="https://www.xiaohongshu.com/user/profile/5936190250c4b424ac4752c7?xsec_token=..." target="_blank" title="RedNote">
