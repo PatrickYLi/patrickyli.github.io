@@ -31,7 +31,7 @@ title: About me
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://www.youtube.com/@PatrickYLi" target="_blank" title="Youtube">
-    <img src="/assets/img/youtube_logo.png" alt="Youtube" style="width:422px;height:100px;">
+    <img src="/assets/img/youtube_logo.png" alt="Youtube" style="width:105.5px;height:25px;">
   </a>
 </div>
 
