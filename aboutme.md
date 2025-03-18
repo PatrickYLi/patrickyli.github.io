@@ -30,6 +30,12 @@ title: About me
 </div>
 
 <div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://www.youtube.com/@PatrickYLi" target="_blank" title="Youtube">
+    <img src="/assets/img/youtube_logo.png" alt="Youtube" style="width:422px;height:100px;">
+  </a>
+</div>
+
+<div style="text-align: center; margin-bottom: 10px;">
   <a href="https://b23.tv/S4k0WAI" target="_blank" title="哔哩哔哩">
     <img src="/assets/img/bilibili-logo.svg" alt="Bilibili" style="width:51.2px;height:23.42px;">
   </a>
