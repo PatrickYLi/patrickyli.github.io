@@ -37,7 +37,7 @@ title: About me
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://b23.tv/S4k0WAI" target="_blank" title="哔哩哔哩">
-    <img src="/assets/img/bilibili-logo.svg" alt="Bilibili" style="width:51.2px;height:23.42px;">
+    <img src="/assets/img/bilibili_logo.png" alt="Bilibili" style="width:51.2px;height:23.42px;">
   </a>
 </div>
 
