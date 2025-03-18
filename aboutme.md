@@ -20,7 +20,7 @@ title: About me
 </div>
 
 <div style="text-align: center; margin-bottom: 15px;">
-  <a href="https://scholar.google.com/citations?user=gAskz6UAAAAJ&hl=en" target="_blank" title="Scholar">
+  <a href="https://scholar.google.com/citations?user=gAskz6UAAAAJ&hl=en" target="_blank" title="Google Scholar">
     <img src="/assets/img/Google_Scholar_logo.svg" alt="Google Scholar" style="width:50px;height:50px;">
   </a>
 </div>
