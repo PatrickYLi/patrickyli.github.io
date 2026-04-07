@@ -9,7 +9,7 @@ markdown: kramdown
 permalink: pretty
 
 navbar-links:
-  Home: ""
+  Home: "/"
   Music: "/music/"
   Work: "/work/"
 
