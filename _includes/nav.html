@@ -1,0 +1,28 @@
+<nav class="site-nav">
+  <div class="container-md">
+    <div class="nav-frame">
+      <a class="site-brand" href="{{ '' | absolute_url }}">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">{{ site.title }}</span>
+          <span class="brand-subtitle">Tokyo // Research // Sound</span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        {%- for link in site.navbar-links -%}
+          {% assign href = link[1] | relative_url %}
+          {% assign is_active = false %}
+          {% if page.url == href %}
+            {% assign is_active = true %}
+          {% elsif href != '/' and page.url contains href %}
+            {% assign is_active = true %}
+          {% endif %}
+          <a class="nav-link{% if is_active %} is-active{% endif %}" href="{{ href }}">{{ link[0] }}</a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</nav>
+
+{% include search.html %}

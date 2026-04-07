@@ -1,0 +1,37 @@
+{% assign date_format = site.date_format | default: "%Y-%m-%d" %}
+
+{% if page.title %}
+<header class="page-hero">
+  <div class="container-md">
+    <div class="hero-frame">
+      <p class="page-kicker">
+        {% if include.type == "post" %}
+          {{ page.collection | default: "entry" | upcase }}
+        {% else %}
+          PROFILE NODE
+        {% endif %}
+      </p>
+
+      <h1>{{ page.title | strip_html }}</h1>
+
+      {% if page.subtitle %}
+        <p class="page-subtitle">{{ page.subtitle | strip_html }}</p>
+      {% endif %}
+
+      {% if include.type == "post" %}
+        <div class="page-meta">
+          {% if page.date %}
+            <span class="page-meta-item"><strong>Date</strong> {{ page.date | date: date_format }}</span>
+          {% endif %}
+          {% if page.status %}
+            <span class="page-meta-item"><strong>Status</strong> {{ page.status }}</span>
+          {% endif %}
+          {% if page.stack %}
+            <span class="page-meta-item"><strong>Stack</strong> {{ page.stack }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</header>
+{% endif %}

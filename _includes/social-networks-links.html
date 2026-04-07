@@ -1,0 +1,19 @@
+<ul class="footer-links">
+  {%- if site.social-network-links.email -%}
+    <li>
+      <a class="social-link" href="mailto:{{ site.social-network-links.email }}" title="Email">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span class="sr-only">Email</span>
+      </a>
+    </li>
+  {%- endif -%}
+
+  {%- if site.social-network-links.github -%}
+    <li>
+      <a class="social-link" href="https://github.com/{{ site.social-network-links.github }}" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+        <span class="sr-only">GitHub</span>
+      </a>
+    </li>
+  {%- endif -%}
+</ul>
