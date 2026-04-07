@@ -10,7 +10,6 @@ permalink: pretty
 
 navbar-links:
   Home: ""
-  About: "/aboutme/"
   Music: "/music/"
   Work: "/work/"
 

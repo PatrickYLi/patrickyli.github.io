@@ -2,95 +2,85 @@
 layout: default
 title: Patrick Li
 meta-title: Patrick Li | Research + Music + Projects
-description: Atmospheric chemistry researcher, music producer, and builder based in Tokyo.
+description: About Patrick Li, with research links, music platforms, and support channels.
 ---
 
-{% assign latest_music = site.music | sort: "date" | reverse %}
-{% assign latest_work = site.work | sort: "date" | reverse %}
-
-<section class="home-hero">
+<section class="about-grid">
   <div class="panel">
-    <p class="section-label">Signal Online</p>
-    <h1>Cyberpunk pixel polish for a personal lab on the web.</h1>
-    <p class="lead">
-      This site is now organized around three things: research, music, and active work.
-      It keeps the visual language lean, but gives it a sharper neon edge.
+    <p class="section-label">Identity</p>
+    <h1>LI Yuanzhe / Patrick</h1>
+    <blockquote>
+      悟已往之不谏 知来者之可追<br>
+      Let the bygones be beyond regret, the days ahead are ours to seek.
+    </blockquote>
+    <p>
+      I am a researcher focused on atmospheric chemistry and environmental science, while also building a parallel lane for music and creative experiments.
+      This page is designed to work like a compact digital calling card: fast to scan, easy to revisit, and stable enough to keep on print.
     </p>
-    <div class="hero-actions">
-      <a class="pixel-button" href="{{ '/aboutme/' | relative_url }}">Enter About Me</a>
-      <a class="pixel-button secondary" href="{{ '/music/' | relative_url }}">Open Music Projects</a>
-      <a class="pixel-button ghost" href="{{ '/work/' | relative_url }}">Browse Work Logs</a>
+    <p>
+      If you are here for publications, performances, or collaboration context, the quick links below will take you straight to the right channel.
+    </p>
+
+    <div class="link-grid">
+      <a class="platform-link" href="https://scholar.google.com/citations?user=gAskz6UAAAAJ&hl=en" target="_blank" rel="noreferrer">
+        <span class="platform-kicker">Research</span>
+        <strong>Google Scholar</strong>
+        <span class="platform-meta">Publications, citations, and academic profile.</span>
+      </a>
+
+      <a class="platform-link" href="{{ '/work/' | relative_url }}">
+        <span class="platform-kicker">Projects</span>
+        <strong>Work Logs</strong>
+        <span class="platform-meta">Ongoing technical and professional writing collected on this site.</span>
+      </a>
+
+      <a class="platform-link" href="https://www.youtube.com/@PatrickYLi" target="_blank" rel="noreferrer">
+        <span class="platform-kicker">Music</span>
+        <strong>YouTube</strong>
+        <span class="platform-meta">Video releases, demos, and channel updates.</span>
+      </a>
+
+      <a class="platform-link" href="https://b23.tv/S4k0WAI" target="_blank" rel="noreferrer">
+        <span class="platform-kicker">Music</span>
+        <strong>Bilibili</strong>
+        <span class="platform-meta">Chinese platform archive for music-related content.</span>
+      </a>
+
+      <a class="platform-link" href="https://www.xiaohongshu.com/user/profile/5936190250c4b424ac4752c7" target="_blank" rel="noreferrer">
+        <span class="platform-kicker">Social</span>
+        <strong>RedNote</strong>
+        <span class="platform-meta">Short-form updates, snapshots, and side-channel sharing.</span>
+      </a>
+
+      <a class="platform-link" href="https://www.patreon.com/c/soundwavestudio" target="_blank" rel="noreferrer">
+        <span class="platform-kicker">Support</span>
+        <strong>Patreon</strong>
+        <span class="platform-meta">A direct way to support ongoing creative work.</span>
+      </a>
     </div>
   </div>
 
-  <div class="signal-stack">
-    <div class="panel">
-      <p class="card-label">Core Modes</p>
-      <h2 class="card-title">Researcher / Soundmaker / Builder</h2>
-      <p class="card-text">
-        Atmospheric chemistry in the lab, music projects after hours, and a cleaner public archive for both.
-      </p>
+  <div class="stat-list">
+    <div class="stat-card">
+      <img class="about-avatar" src="{{ '/assets/img/avatar-icon.png' | relative_url }}" alt="Portrait illustration for Patrick Li">
     </div>
 
-    <div class="panel">
-      <p class="card-label">Status</p>
+    <div class="stat-card">
+      <p class="card-label">Focus</p>
       <div class="inline-meta">
-        <span class="meta-chip">Tokyo based</span>
-        <span class="meta-chip">Minimal cyberpunk UI</span>
-        <span class="meta-chip">Legacy notes archived</span>
+        <span class="meta-chip">Atmospheric chemistry</span>
+        <span class="meta-chip">Environmental science</span>
+        <span class="meta-chip">Music production</span>
+        <span class="meta-chip">Creative systems</span>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="section-block">
-  <div class="section-heading">
-    <h2>Launch Paths</h2>
-  </div>
-
-  <div class="collection-grid">
-    <article class="collection-card">
-      <p class="card-label">About</p>
-      <h3 class="card-title">Digital Calling Card</h3>
-      <p class="card-text">
-        The printed-card URL stays stable at <code>/aboutme/</code>, now with cleaner structure and stronger visual hierarchy.
-      </p>
-      <p class="read-hint"><a href="{{ '/aboutme/' | relative_url }}">Visit about page</a></p>
-    </article>
-
-    <article class="collection-card">
-      <p class="card-label">Collections</p>
-      <h3 class="card-title">Music + Work</h3>
-      <p class="card-text">
-        Two dedicated landing pages separate creative output from professional project logs.
-      </p>
-      <p class="read-hint"><a href="{{ '/music/' | relative_url }}">Music</a> / <a href="{{ '/work/' | relative_url }}">Work</a></p>
-    </article>
-  </div>
-</section>
-
-<section class="section-block">
-  <div class="section-heading">
-    <h2>Latest Nodes</h2>
-  </div>
-
-  <div class="collection-grid">
-    {% for item in latest_music limit: 1 %}
-      <article class="entry-card">
-        <p class="entry-meta">Music Entry</p>
-        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-        <p>{{ item.excerpt | strip_html | truncatewords: 26 }}</p>
-        <p class="read-hint"><a href="{{ item.url | relative_url }}">Open music article</a></p>
-      </article>
-    {% endfor %}
-
-    {% for item in latest_work limit: 1 %}
-      <article class="entry-card">
-        <p class="entry-meta">Work Entry</p>
-        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-        <p>{{ item.excerpt | strip_html | truncatewords: 26 }}</p>
-        <p class="read-hint"><a href="{{ item.url | relative_url }}">Open work article</a></p>
-      </article>
-    {% endfor %}
+    <div class="stat-card">
+      <p class="card-label">Quick Contact</p>
+      <p class="muted">Email</p>
+      <p><a href="mailto:liyuanzhe@sophia.ac.jp">liyuanzhe@sophia.ac.jp</a></p>
+      <p class="muted">GitHub</p>
+      <p><a href="https://github.com/PatrickYLi" target="_blank" rel="noreferrer">@PatrickYLi</a></p>
+    </div>
   </div>
 </section>
