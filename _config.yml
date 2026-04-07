@@ -1,0 +1,64 @@
+title: Patrick Li
+author: Patrick
+description: Atmospheric chemistry researcher, music producer, and builder based in Tokyo.
+url: "https://patrickyli.github.io"
+baseurl: ""
+language: en
+timezone: Asia/Tokyo
+markdown: kramdown
+permalink: pretty
+
+navbar-links:
+  Home: ""
+  About: "/aboutme/"
+  Music: "/music/"
+  Work: "/work/"
+
+avatar: "/assets/img/avatar-icon.png"
+round-avatar: false
+
+social-network-links:
+  email: "liyuanzhe@sophia.ac.jp"
+  github: PatrickYLi
+
+rss-description: Research notes, music sketches, and project logs from Patrick Li.
+excerpt_length: 28
+feed_show_excerpt: true
+feed_show_tags: false
+post_search: false
+remove-ads: true
+mobile-theme-col: "#0a0814"
+
+share-links-active:
+  twitter: false
+  facebook: false
+  linkedin: false
+  vk: false
+
+collections:
+  music:
+    output: true
+    permalink: /music/:name/
+  work:
+    output: true
+    permalink: /work/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: music
+    values:
+      layout: post
+      social-share: false
+  - scope:
+      path: ""
+      type: work
+    values:
+      layout: post
+      social-share: false
+
+exclude:
+  - docs
+  - README.md
+  - CHANGELOG.md
+  - LICENSE

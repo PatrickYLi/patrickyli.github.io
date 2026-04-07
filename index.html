@@ -1,0 +1,96 @@
+---
+layout: default
+title: Patrick Li
+meta-title: Patrick Li | Research + Music + Projects
+description: Atmospheric chemistry researcher, music producer, and builder based in Tokyo.
+---
+
+{% assign latest_music = site.music | sort: "date" | reverse %}
+{% assign latest_work = site.work | sort: "date" | reverse %}
+
+<section class="home-hero">
+  <div class="panel">
+    <p class="section-label">Signal Online</p>
+    <h1>Cyberpunk pixel polish for a personal lab on the web.</h1>
+    <p class="lead">
+      This site is now organized around three things: research, music, and active work.
+      It keeps the visual language lean, but gives it a sharper neon edge.
+    </p>
+    <div class="hero-actions">
+      <a class="pixel-button" href="{{ '/aboutme/' | relative_url }}">Enter About Me</a>
+      <a class="pixel-button secondary" href="{{ '/music/' | relative_url }}">Open Music Projects</a>
+      <a class="pixel-button ghost" href="{{ '/work/' | relative_url }}">Browse Work Logs</a>
+    </div>
+  </div>
+
+  <div class="signal-stack">
+    <div class="panel">
+      <p class="card-label">Core Modes</p>
+      <h2 class="card-title">Researcher / Soundmaker / Builder</h2>
+      <p class="card-text">
+        Atmospheric chemistry in the lab, music projects after hours, and a cleaner public archive for both.
+      </p>
+    </div>
+
+    <div class="panel">
+      <p class="card-label">Status</p>
+      <div class="inline-meta">
+        <span class="meta-chip">Tokyo based</span>
+        <span class="meta-chip">Minimal cyberpunk UI</span>
+        <span class="meta-chip">Legacy notes archived</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="section-heading">
+    <h2>Launch Paths</h2>
+  </div>
+
+  <div class="collection-grid">
+    <article class="collection-card">
+      <p class="card-label">About</p>
+      <h3 class="card-title">Digital Calling Card</h3>
+      <p class="card-text">
+        The printed-card URL stays stable at <code>/aboutme/</code>, now with cleaner structure and stronger visual hierarchy.
+      </p>
+      <p class="read-hint"><a href="{{ '/aboutme/' | relative_url }}">Visit about page</a></p>
+    </article>
+
+    <article class="collection-card">
+      <p class="card-label">Collections</p>
+      <h3 class="card-title">Music + Work</h3>
+      <p class="card-text">
+        Two dedicated landing pages separate creative output from professional project logs.
+      </p>
+      <p class="read-hint"><a href="{{ '/music/' | relative_url }}">Music</a> / <a href="{{ '/work/' | relative_url }}">Work</a></p>
+    </article>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="section-heading">
+    <h2>Latest Nodes</h2>
+  </div>
+
+  <div class="collection-grid">
+    {% for item in latest_music limit: 1 %}
+      <article class="entry-card">
+        <p class="entry-meta">Music Entry</p>
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+        <p>{{ item.excerpt | strip_html | truncatewords: 26 }}</p>
+        <p class="read-hint"><a href="{{ item.url | relative_url }}">Open music article</a></p>
+      </article>
+    {% endfor %}
+
+    {% for item in latest_work limit: 1 %}
+      <article class="entry-card">
+        <p class="entry-meta">Work Entry</p>
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+        <p>{{ item.excerpt | strip_html | truncatewords: 26 }}</p>
+        <p class="read-hint"><a href="{{ item.url | relative_url }}">Open work article</a></p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
