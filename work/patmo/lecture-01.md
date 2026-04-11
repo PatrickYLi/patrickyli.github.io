@@ -3,6 +3,7 @@ layout: page
 title: Lecture 1: What PATMO Is
 subtitle: Student handout for understanding PATMO, its scope, and why the modern sulfur cycle anchors the course.
 permalink: /work/patmo/lecture-01/
+body_class: patmo-reading-theme
 description: Lecture 1 of the PATMO student course, introducing PATMO and the role of the modern sulfur cycle.
 ---
 
