@@ -608,7 +608,10 @@ hr {
 
 .course-overview-grid,
 .lesson-grid,
-.course-roadmap {
+.course-roadmap,
+.outline-grid,
+.model-comparison,
+.resource-list {
   display: grid;
   gap: 1rem;
 }
@@ -624,6 +627,19 @@ hr {
 
 .course-roadmap {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.outline-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.model-comparison {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resource-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1rem;
 }
 
 .takeaway-box,
@@ -676,6 +692,34 @@ hr {
 
 .course-roadmap-card.is-upcoming {
   opacity: 0.92;
+}
+
+.model-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.model-illustration {
+  margin: 0 0 1rem;
+  min-height: 15rem;
+}
+
+.outline-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.outline-link:hover,
+.outline-link:focus {
+  transform: translateY(-2px);
+  border-color: var(--cyan);
+  text-shadow: none;
 }
 
 .course-status {
@@ -810,7 +854,10 @@ footer {
   .link-grid,
   .course-overview-grid,
   .lesson-grid,
-  .course-roadmap {
+  .course-roadmap,
+  .outline-grid,
+  .model-comparison,
+  .resource-list {
     grid-template-columns: 1fr;
   }
 
