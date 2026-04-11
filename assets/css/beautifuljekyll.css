@@ -94,6 +94,31 @@ body.patmo-reading-theme h6 {
   line-height: 1.3;
 }
 
+body.patmo-reading-theme .patmo-course h1,
+body.patmo-reading-theme .patmo-course h2,
+body.patmo-reading-theme .patmo-course h3,
+body.patmo-reading-theme .patmo-course h4,
+body.patmo-reading-theme .patmo-course h5,
+body.patmo-reading-theme .patmo-course h6,
+body.patmo-reading-theme .blog-post h1,
+body.patmo-reading-theme .blog-post h2,
+body.patmo-reading-theme .blog-post h3,
+body.patmo-reading-theme .blog-post h4,
+body.patmo-reading-theme .content-panel h1,
+body.patmo-reading-theme .content-panel h2,
+body.patmo-reading-theme .content-panel h3,
+body.patmo-reading-theme .content-panel h4,
+body.patmo-reading-theme .section-heading h2,
+body.patmo-reading-theme .entry-card h2,
+body.patmo-reading-theme .entry-card h3,
+body.patmo-reading-theme .panel h2,
+body.patmo-reading-theme .panel h3,
+body.patmo-reading-theme .takeaway-box h2,
+body.patmo-reading-theme .takeaway-box h3,
+body.patmo-reading-theme .quiz-block h3 {
+  color: #18242d !important;
+}
+
 body.patmo-reading-theme::before {
   opacity: 0.05;
   background-image:
