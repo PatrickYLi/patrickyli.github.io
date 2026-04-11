@@ -1,0 +1,205 @@
+<style>
+  body {
+    background: #f6f1e7 !important;
+    color: #21303a !important;
+  }
+
+  body::before {
+    opacity: 0.05 !important;
+    background-image:
+      linear-gradient(rgba(132, 111, 81, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(132, 111, 81, 0.07) 1px, transparent 1px) !important;
+    background-size: 32px 32px, 32px 32px !important;
+  }
+
+  main,
+  .site-main,
+  .page-hero,
+  article,
+  .markdown-body,
+  .content,
+  .post-content,
+  .blog-post {
+    background: transparent !important;
+    color: #21303a !important;
+  }
+
+  .nav-frame,
+  .hero-frame,
+  .content-panel,
+  .site-shell,
+  .panel,
+  .entry-card,
+  .stat-card,
+  .platform-link,
+  .takeaway-box,
+  .quiz-block,
+  .footer-frame {
+    background: rgba(255, 250, 242, 0.96) !important;
+    border-color: rgba(132, 111, 81, 0.18) !important;
+    box-shadow: 0 0 0 1px rgba(132, 111, 81, 0.08), 0 18px 48px rgba(88, 65, 37, 0.09) !important;
+  }
+
+  .hero-frame {
+    background:
+      linear-gradient(135deg, rgba(148, 102, 52, 0.08), transparent 35%),
+      linear-gradient(180deg, rgba(15, 95, 115, 0.08), transparent 100%),
+      rgba(255, 250, 242, 0.98) !important;
+  }
+
+  .hero-frame::before {
+    background: linear-gradient(135deg, rgba(15, 95, 115, 0.12), transparent 60%) !important;
+  }
+
+  .site-brand,
+  .page-meta-item,
+  .footer-copy,
+  p,
+  li,
+  blockquote,
+  td,
+  th {
+    color: #21303a !important;
+  }
+
+  .page-subtitle,
+  .muted,
+  .brand-subtitle,
+  .nav-link,
+  .platform-meta {
+    color: #5d6c75 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .section-heading h2,
+  .panel h2,
+  .panel h3,
+  .entry-card h2,
+  .entry-card h3,
+  .takeaway-box h2,
+  .takeaway-box h3,
+  .quiz-block h3,
+  .blog-post h2,
+  .blog-post h3,
+  .blog-post h4 {
+    color: #18242d !important;
+    font-family: "Baskerville", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif !important;
+    letter-spacing: 0.01em !important;
+    text-transform: none !important;
+    line-height: 1.3 !important;
+  }
+
+  .content-panel,
+  .blog-post,
+  .panel,
+  .entry-card,
+  .page-subtitle,
+  .page-meta-item,
+  .quiz-option {
+    font-family: "Baskerville", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif !important;
+  }
+
+  a {
+    color: #0f5f73 !important;
+  }
+
+  a:hover,
+  a:focus {
+    color: #0b4a59 !important;
+    text-shadow: none !important;
+  }
+
+  .nav-link:hover,
+  .nav-link.is-active,
+  .outline-link:hover,
+  .outline-link:focus {
+    color: #18242d !important;
+    background: rgba(15, 95, 115, 0.08) !important;
+  }
+
+  .outline-link,
+  .social-link,
+  .quiz-option {
+    background: rgba(255, 255, 255, 0.56) !important;
+  }
+
+  .pixel-button {
+    border-color: #0f5f73 !important;
+    background: rgba(15, 95, 115, 0.08) !important;
+    color: #18242d !important;
+    box-shadow: 5px 5px 0 rgba(15, 95, 115, 0.12) !important;
+  }
+
+  .pixel-button.secondary {
+    border-color: #946634 !important;
+    background: rgba(148, 102, 52, 0.08) !important;
+    box-shadow: 5px 5px 0 rgba(148, 102, 52, 0.12) !important;
+  }
+
+  .pixel-button.ghost {
+    border-color: rgba(132, 111, 81, 0.18) !important;
+    background: rgba(255, 255, 255, 0.45) !important;
+    color: #5d6c75 !important;
+    box-shadow: none !important;
+  }
+
+  code {
+    background: #efe4d2 !important;
+    color: #3e2f22 !important;
+    padding: 0.12rem 0.35rem !important;
+    border-radius: 0.3rem !important;
+  }
+
+  pre {
+    background: #ede3d4 !important;
+    color: #21303a !important;
+    border: 1px solid #d8cdbd !important;
+    border-radius: 0.75rem !important;
+    padding: 1rem 1.1rem !important;
+    overflow-x: auto !important;
+  }
+
+  pre code {
+    background: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+  }
+
+  blockquote {
+    background: #f1e8da !important;
+    border-left: 4px solid #b48a5a !important;
+    color: #31424c !important;
+  }
+
+  th {
+    background: #efe4d2 !important;
+    color: #18242d !important;
+  }
+
+  .takeaway-box,
+  .lesson-flow {
+    background:
+      linear-gradient(135deg, rgba(182, 138, 90, 0.09), transparent 42%),
+      linear-gradient(180deg, rgba(15, 95, 115, 0.06), transparent 100%),
+      rgba(255, 250, 242, 0.98) !important;
+    border-color: rgba(148, 102, 52, 0.22) !important;
+  }
+
+  .quiz-option.correct-choice {
+    border-color: #5d9b67 !important;
+    background: #edf7ef !important;
+  }
+
+  .quiz-feedback.correct {
+    color: #2f6a3b !important;
+  }
+
+  .quiz-feedback.incorrect {
+    color: #9a3e2f !important;
+  }
+</style>
