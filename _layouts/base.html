@@ -12,7 +12,15 @@ common-ext-css:
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
 {% include head.html %}
 
-<body>
+{% assign body_classes = "" %}
+{% if page.body_class %}
+  {% assign body_classes = body_classes | append: " " | append: page.body_class %}
+{% endif %}
+{% if page.url contains '/work/patmo' %}
+  {% assign body_classes = body_classes | append: " patmo-reading-theme" %}
+{% endif %}
+
+<body{% if body_classes != "" %} class="{{ body_classes | strip }}"{% endif %}>
   {% include gtm_body.html %}
   {% include nav.html %}
   {{ content }}
