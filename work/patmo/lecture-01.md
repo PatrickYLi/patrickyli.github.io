@@ -6,7 +6,7 @@ permalink: /work/patmo/lecture-01/
 description: Lecture 1 of the PATMO student course, introducing PATMO and the role of the modern sulfur cycle.
 ---
 
-<div class="patmo-course" markdown="1">
+<div class="patmo-course">
 
 <section class="panel">
   <div class="lesson-breadcrumb">
@@ -16,201 +16,274 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
   </div>
   <p class="section-label">Student Handout</p>
   <p>
-    This page is written for direct reading on the website rather than as a teacher's presentation script.
-    Its job is simple: to help students understand what <code>PATMO</code> is, what it is useful for,
-    what it is not designed to do, and why this course uses the <code>modern sulfur cycle</code> as its main case study.
-  </p>
-  <div class="lesson-anchor-nav">
-    <a href="#learning-goals">Goals</a>
-    <a href="#takeaway">Takeaway</a>
-    <a href="#what-is-patmo">What PATMO Is</a>
-    <a href="#what-patmo-can-do">Uses</a>
-    <a href="#modern-sulfur-cycle">Case Study</a>
-    <a href="#summary">Summary</a>
-  </div>
-</section>
-
-<section id="learning-goals" class="course-overview-grid">
-  <div class="panel">
-    <p class="section-label">By The End</p>
-    <h2>What You Should Learn From This Lecture</h2>
-    <ul>
-      <li>explain what kind of model <code>PATMO</code> is</li>
-      <li>understand why <code>PATMO</code> is useful as a research tool</li>
-      <li>distinguish between what <code>PATMO</code> can and cannot do</li>
-      <li>understand why the <code>modern sulfur cycle</code> is used throughout the course</li>
-      <li>see how the seven lectures fit together</li>
-    </ul>
-  </div>
-
-  <div class="panel">
-    <p class="section-label">Check Yourself</p>
-    <h2>Three Questions To Keep In Mind</h2>
-    <ol>
-      <li>What kind of model is <code>PATMO</code>?</li>
-      <li>What can <code>PATMO</code> help you do?</li>
-      <li>What will you learn in the rest of this course?</li>
-    </ol>
-    <p>
-      If you can answer those three questions clearly by the end of the page, then you have understood the main point of Lecture 1.
-    </p>
-  </div>
-</section>
-
-<section id="takeaway" class="takeaway-box">
-  <p class="section-label">Most Important Takeaway</p>
-  <p>
-    <strong><code>PATMO</code> is a one-dimensional atmospheric photochemistry model that you can use as a platform
-    for controlled computational experiments.</strong>
+    This page is the student-facing handout for Lecture 1 of the course.
+    It is written for you to read directly on a website, not as a teacher's presentation script.
   </p>
   <p>
-    That sentence contains the three most important ideas of this lecture:
-    <code>one-dimensional</code>, <code>atmospheric photochemistry model</code>, and <code>controlled computational experiments</code>.
-    Everything else on this page is an explanation of those three ideas.
+    This first lecture has one job: to help you understand what <code>PATMO</code> is,
+    what it is useful for, what it is not designed to do,
+    and why this course uses the <code>modern sulfur cycle</code> as its main case study.
   </p>
-</section>
-
-<section class="section-block">
-  <div class="section-heading">
-    <h2>Why The Course Starts With PATMO Itself</h2>
-  </div>
+  <p>
+    If you finish this page and can clearly answer the following three questions, then you have understood the main point of Lecture 1:
+  </p>
 
   <div class="lesson-grid">
+    <article class="entry-card">
+      <p class="card-label">Question 1</p>
+      <p><strong>What kind of model is <code>PATMO</code>?</strong></p>
+      <p><code>PATMO</code> is a one-dimensional atmospheric photochemistry model.</p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Question 2</p>
+      <p><strong>What can <code>PATMO</code> help you do?</strong></p>
+      <p>It helps you run controlled computational experiments on atmospheric chemistry problems.</p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Question 3</p>
+      <p><strong>What will you learn in the rest of this course?</strong></p>
+      <p>You will learn how to understand <code>PATMO</code>, run a case, read its outputs, and do a simple comparison experiment.</p>
+    </article>
+  </div>
+
+  <div class="lesson-anchor-nav">
+    <a href="#outline">Outline</a>
+    <a href="#goals">Goals</a>
+    <a href="#core-takeaway">Takeaway</a>
+    <a href="#understanding-what-patmo-is">What PATMO Is</a>
+    <a href="#what-patmo-can-help-you-do">Uses</a>
+    <a href="#what-patmo-cannot-do">Limits</a>
+    <a href="#why-we-use-the-modern-sulfur-cycle">Sulfur Cycle</a>
+    <a href="#what-to-expect-from-this-course">Course Scope</a>
+    <a href="#lecture-summary">Summary</a>
+  </div>
+</section>
+
+<section id="outline" class="section-block">
+  <div class="section-heading">
+    <h2>Lecture Outline</h2>
+  </div>
+
+  <div class="outline-grid">
+    <a class="outline-link" href="#core-takeaway">The Most Important Takeaway</a>
+    <a class="outline-link" href="#understanding-what-patmo-is">Understanding What PATMO Is</a>
+    <a class="outline-link" href="#what-patmo-can-help-you-do">What PATMO Can Help You Do</a>
+    <a class="outline-link" href="#what-patmo-cannot-do">What PATMO Cannot Do</a>
+    <a class="outline-link" href="#why-we-use-the-modern-sulfur-cycle">Why We Use the Modern Sulfur Cycle</a>
+    <a class="outline-link" href="#where-patmo-sits-in-the-research-process">Where PATMO Sits in the Research Process</a>
+    <a class="outline-link" href="#what-to-expect-from-this-course">What to Expect From This Course</a>
+    <a class="outline-link" href="#how-the-seven-lectures-fit-together">How the Seven Lectures Fit Together</a>
+    <a class="outline-link" href="#check-your-understanding">Check Your Understanding</a>
+    <a class="outline-link" href="#lecture-summary">Lecture Summary</a>
+    <a class="outline-link" href="#after-class-task">After-Class Task</a>
+    <a class="outline-link" href="#final-reminder">Final Reminder</a>
+  </div>
+</section>
+
+<section id="goals" class="section-block">
+  <div class="section-heading">
+    <h2>What You Should Learn From This Lecture</h2>
+  </div>
+
+  <div class="course-overview-grid">
     <div class="panel">
-      <p>
-        This course does not begin with a broad introduction to atmospheric science,
-        and it does not try to teach the full theory of atmospheric sulfur chemistry first.
-        It begins with <code>PATMO</code> itself.
-      </p>
-      <p>
-        The reason is practical: if students do not first understand what the model is,
-        then the later directories, files, commands, and outputs will feel like a black box.
-      </p>
+      <p class="section-label">By The End</p>
+      <ul>
+        <li>explain what kind of model <code>PATMO</code> is</li>
+        <li>understand why <code>PATMO</code> is useful as a research tool</li>
+        <li>distinguish between what <code>PATMO</code> can and cannot do</li>
+        <li>understand why the <code>modern sulfur cycle</code> is used throughout the course</li>
+        <li>see how the seven lectures fit together</li>
+      </ul>
     </div>
 
-    <div class="panel">
-      <p class="section-label">Orientation</p>
-      <p>Lecture 1 gives direction before technical detail. It clarifies:</p>
-      <ul>
-        <li>what the course is really about</li>
-        <li>what is not the focus of the course</li>
-        <li>what <code>PATMO</code> is</li>
-        <li>what level students are expected to reach by the end</li>
-      </ul>
+    <div class="takeaway-box">
+      <p class="section-label">Reading Goal</p>
+      <p>
+        This lecture is mainly about orientation.
+        It gives you the conceptual frame you need before you touch case files, commands, runtime steps, or outputs.
+      </p>
     </div>
   </div>
 </section>
 
-<section id="what-is-patmo" class="section-block">
+<section id="core-takeaway" class="section-block">
   <div class="section-heading">
-    <h2>What PATMO Is</h2>
+    <h2>The Most Important Takeaway</h2>
+  </div>
+
+  <div class="takeaway-box">
+    <p>If you only remember one statement from this lecture, remember this:</p>
+    <p>
+      <strong><code>PATMO</code> is a one-dimensional atmospheric photochemistry model that you can use as a platform for controlled computational experiments.</strong>
+    </p>
+    <p>
+      That sentence contains the three most important ideas:
+      <code>one-dimensional</code>, <code>atmospheric photochemistry model</code>, and <code>controlled computational experiments</code>.
+      Everything else in this lecture is just an explanation of those three ideas.
+    </p>
+  </div>
+
+  <div class="panel">
+    <p class="section-label">External Overview</p>
+    <p>If you want a quick external overview of common atmospheric model types, you can read:</p>
+    <div class="resource-list">
+      <a class="outline-link" href="https://ac2.iqfr.csic.es/en/research/climate-modelling" target="_blank" rel="noreferrer">Box modelling</a>
+      <a class="outline-link" href="https://ac2.iqfr.csic.es/en/research/climate-modelling" target="_blank" rel="noreferrer">1-dimensional modelling</a>
+      <a class="outline-link" href="https://ac2.iqfr.csic.es/en/research/climate-modelling" target="_blank" rel="noreferrer">3-dimensional global modelling</a>
+    </div>
+  </div>
+
+  <div class="model-comparison">
+    <article class="entry-card model-card">
+      <p class="card-label">Box Model</p>
+      <pre class="model-illustration"><code>+-----------+
+|   single  |
+| well-mixed|
+|    box    |
++-----------+</code></pre>
+      <p>
+        A box model treats the system as one mixed region.
+        It is useful when you want a very simple first approximation and do not need vertical structure.
+      </p>
+    </article>
+
+    <article class="entry-card model-card">
+      <p class="card-label">1D Model</p>
+      <pre class="model-illustration"><code>     top
+      |
+   +-----+
+   |layer|
+   +-----+
+   |layer|
+   +-----+
+   |layer|
+   +-----+
+   |layer|
+   +-----+
+      |
+   surface</code></pre>
+      <p>
+        A 1D model treats the atmosphere as a vertical column divided into layers.
+        This is the basic structure used by <code>PATMO</code>.
+      </p>
+    </article>
+
+    <article class="entry-card model-card">
+      <p class="card-label">3D Model</p>
+      <pre class="model-illustration"><code>             altitude (z)
+                 ^
+                 |
+          +---+---+---+
+         /|  /|  /|  /|
+        +---+---+---+ |
+        | +---+---+---+
+        |/|  /|  /|  /|
+        +---+---+---+ |
+        | +---+---+---+
+        |/  |/  |/  |/
+        +---+---+---+
+          &lt;---- x ----&gt;
+         /
+        /
+       y</code></pre>
+      <p>
+        A 3D model resolves structure across longitude, latitude, and altitude at the same time.
+        It can represent much more spatial complexity, but it is also much more difficult to build, run, and interpret.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="understanding-what-patmo-is" class="section-block">
+  <div class="section-heading">
+    <h2>Understanding What PATMO Is</h2>
   </div>
 
   <div class="lesson-grid">
     <article class="entry-card">
+      <p class="card-label">Why Start Here</p>
+      <p>
+        This course starts with <code>PATMO</code> itself because later parts of the workflow only make sense
+        if you already know what kind of tool you are dealing with.
+      </p>
+    </article>
+
+    <article class="entry-card">
       <p class="card-label">Basic Definition</p>
       <p>
-        At the most basic level, <code>PATMO</code> is a numerical model for studying chemistry and related physical processes in atmospheres.
-      </p>
-      <p>
-        It lets you describe a scientific setup in a structured way and then compute how that setup evolves.
+        At the most basic level, <code>PATMO</code> is a numerical model for atmospheric chemistry and related physical processes.
+        It is a structured way to describe a scientific setup and compute how that setup evolves.
       </p>
     </article>
 
     <article class="entry-card">
       <p class="card-label">What It Is Not</p>
-      <ul>
-        <li>an observational instrument</li>
-        <li>a database</li>
-        <li>a plotting tool</li>
-        <li>a program that automatically gives final scientific truth</li>
-      </ul>
+      <p>
+        It is not an observational instrument, not a database,
+        and not a machine that automatically produces scientific truth.
+      </p>
     </article>
-  </div>
 
-  <div class="panel">
-    <p class="section-label">Questions PATMO Can Represent</p>
-    <ul>
-      <li>How does the vertical distribution of a species change under a given radiation field?</li>
-      <li>What happens if I change an emission term?</li>
-      <li>What happens if I modify a deposition setting?</li>
-    </ul>
-    <p>
-      In other words, <code>PATMO</code> gives you a way to turn scientific questions into controlled numerical experiments.
-    </p>
+    <article class="entry-card">
+      <p class="card-label">What A Model Means Here</p>
+      <p>
+        In this course, a model means a simplified representation of reality
+        that lets you run repeatable and comparable experiments under clearly defined assumptions.
+      </p>
+    </article>
   </div>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label">What A Scientific Model Means Here</p>
+      <p class="card-label">One-Dimensional</p>
       <p>
-        A model is not a perfect copy of reality and it is not a machine that automatically gives the correct answer.
-        It is a simplified representation of reality that includes selected processes and ignores many others.
+        When we say that <code>PATMO</code> is one-dimensional, we mean that it focuses on the vertical direction.
+        Instead of representing the entire atmosphere in longitude, latitude, and height,
+        it treats the atmosphere as a single vertical column divided into layers.
       </p>
       <ul>
-        <li>model output depends on assumptions</li>
-        <li>model output depends on inputs</li>
-        <li>model output still needs interpretation</li>
+        <li>temperature can vary by layer</li>
+        <li>density can vary by layer</li>
+        <li>species abundances can vary by layer</li>
+        <li>radiation conditions can vary by layer</li>
       </ul>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">Why Models Matter</p>
+      <p class="card-label">Photochemistry</p>
       <p>
-        The value of a model is not that it replaces reality. Its value is that it lets you run repeatable,
-        editable, and comparable experiments under clearly defined conditions.
+        When we say that <code>PATMO</code> is a photochemistry model,
+        we mean that radiation directly affects chemistry.
+        Some molecules absorb photons, change chemically, and then alter the rest of the reaction network.
       </p>
       <p>
-        That is exactly why models are useful in both research and teaching.
+        So radiation is not just a background setting in <code>PATMO</code>;
+        it is one of the active drivers of chemical evolution.
       </p>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">What One-Dimensional Means</p>
-      <p>
-        When we say <code>PATMO</code> is one-dimensional, we mainly mean that it focuses on the vertical direction.
-        The atmosphere is treated as a single vertical column divided into layers.
-      </p>
-      <ul>
-        <li>temperature can vary with altitude</li>
-        <li>density can vary with altitude</li>
-        <li>species abundances can vary with altitude</li>
-        <li>radiation conditions can vary with altitude</li>
-      </ul>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">What Photochemistry Means</p>
-      <p>
-        Photochemistry means radiation directly affects chemistry. Some molecules absorb photons
-        at specific wavelengths and then break apart or change chemically, which reshapes the reaction network.
-      </p>
-      <ul>
-        <li>light conditions change with altitude</li>
-        <li>different molecules respond to different parts of the spectrum</li>
-        <li>photochemistry can strongly affect which processes dominate</li>
-      </ul>
     </article>
   </div>
 
   <div class="takeaway-box">
-    <p class="section-label">Why A 1D Photochemistry Model Is Worth Learning</p>
+    <p class="section-label">Why This Model Is Good For Learning</p>
     <p>
-      A one-dimensional model is more realistic than a simple box model, but still far easier to understand
-      than a full 3D model. That makes <code>PATMO</code> especially useful when the goal is not only to generate output,
-      but to understand how and why that output changes.
+      A 1D photochemistry model is much more structured than a single box model,
+      but still much easier to understand than a full 3D model.
+      It gives you a way to study mechanisms clearly without getting buried in spatial complexity too early.
     </p>
   </div>
 </section>
 
-<section id="what-patmo-can-do" class="section-block">
+<section id="what-patmo-can-help-you-do" class="section-block">
   <div class="section-heading">
     <h2>What PATMO Can Help You Do</h2>
   </div>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label">1. Vertical Profiles</p>
+      <p class="card-label">1. Compute Vertical Variation</p>
       <p>
         If you provide a reaction network, an initial atmospheric profile, and relevant parameters,
         the model can compute how species evolve across altitude.
@@ -219,24 +292,29 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
 
     <article class="entry-card">
       <p class="card-label">2. Compare Setups</p>
-      <p>
-        You can change emission parameters, deposition parameters, radiation-related settings,
-        or other case-specific inputs and compare how the results respond.
-      </p>
+      <p>You can change case-specific settings and compare how the results respond:</p>
+      <ul>
+        <li>emission parameters</li>
+        <li>deposition parameters</li>
+        <li>radiation-related settings</li>
+        <li>other case-specific inputs</li>
+      </ul>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">3. Sensitivity Experiments</p>
+      <p class="card-label">3. Perform Sensitivity Experiments</p>
       <p>
         A sensitivity experiment means changing one factor while keeping the rest as fixed as possible,
-        then examining how the result changes. This is one of the most important uses of <code>PATMO</code> in the course.
+        then examining how the result changes.
       </p>
+      <p>This is one of the most important uses of <code>PATMO</code> in this course.</p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">4. Practice A Workflow</p>
+      <p class="card-label">4. Practice A Research Workflow</p>
       <p>
-        <code>PATMO</code> is useful not only because it produces numbers. It helps students practice a basic research workflow.
+        <code>PATMO</code> is not only useful because it produces numbers.
+        It is useful because it helps you practice a basic research workflow.
       </p>
     </article>
   </div>
@@ -249,7 +327,7 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
 -> interpret the results</code></pre>
 </section>
 
-<section class="section-block">
+<section id="what-patmo-cannot-do" class="section-block">
   <div class="section-heading">
     <h2>What PATMO Cannot Do</h2>
   </div>
@@ -258,7 +336,7 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
     <article class="entry-card">
       <p class="card-label">1. Not A Full 3D Global Model</p>
       <p>
-        <code>PATMO</code> is not designed to directly answer global weather questions
+        <code>PATMO</code> is not designed to directly answer global weather
         or full three-dimensional transport questions.
       </p>
     </article>
@@ -274,13 +352,13 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
     <article class="entry-card">
       <p class="card-label">3. Not Meaningful Without Meaningful Inputs</p>
       <p>
-        If inputs, parameters, or boundary conditions are poorly chosen,
+        If the inputs, parameters, or boundary conditions are poorly chosen,
         the output will not become scientifically useful by itself.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">4. Not Its Own Interpreter</p>
+      <p class="card-label">4. It Does Not Interpret For You</p>
       <p>
         <code>PATMO</code> computes results under a chosen setup.
         It does not decide whether those results are scientifically reasonable or how they should be explained.
@@ -289,75 +367,78 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
   </div>
 
   <div class="takeaway-box">
-    <p class="section-label">Important Reminder</p>
     <p><strong><code>PATMO</code> is a tool, not a judge.</strong></p>
-    <p>
-      It helps you run a controlled experiment, but it does not think on your behalf.
-    </p>
+    <p>It helps you run a controlled experiment, but it does not think on your behalf.</p>
   </div>
 </section>
 
-<section id="modern-sulfur-cycle" class="section-block">
+<section id="why-we-use-the-modern-sulfur-cycle" class="section-block">
   <div class="section-heading">
-    <h2>Why This Course Uses The Modern Sulfur Cycle</h2>
+    <h2>Why We Use the Modern Sulfur Cycle</h2>
   </div>
 
   <div class="lesson-grid">
     <div class="panel">
       <p>
         This course uses the <code>modern sulfur cycle</code> as its running case study,
-        but that does not mean the course is trying to teach the entire theory of modern sulfur chemistry in full detail.
+        but it is important to understand what that means.
       </p>
       <p>
-        Instead, the case is used because it is practical, scientifically meaningful,
-        and rich enough to show several important parts of <code>PATMO</code> without becoming overwhelming for beginners.
+        The course is not trying to teach the entire theory of sulfur chemistry in full detail.
+        Instead, it uses this case because it is scientifically meaningful and also practical for training.
+      </p>
+    </div>
+
+    <article class="entry-card">
+      <p class="card-label">Why It Is A Good Teaching Case</p>
+      <ul>
+        <li>a reaction network</li>
+        <li>vertical profile inputs</li>
+        <li>radiation-related inputs</li>
+        <li>source and sink settings</li>
+        <li>outputs that can be compared and interpreted</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="panel">
+    <p>
+      It is also useful because the same case can be revisited throughout the course.
+      That means you do not need to constantly adapt to new scientific contexts.
+      Instead, you can move step by step from recognizing the case, to reading its files, to running it, and finally to modifying it.
+    </p>
+    <p>
+      So the <code>modern sulfur cycle</code> is not the whole course.
+      It is the main case through which you learn how to work with <code>PATMO</code>.
+    </p>
+  </div>
+</section>
+
+<section id="where-patmo-sits-in-the-research-process" class="section-block">
+  <div class="section-heading">
+    <h2>Where PATMO Sits in the Research Process</h2>
+  </div>
+
+  <div class="lesson-grid">
+    <div class="panel">
+      <p>
+        A common misunderstanding is to think that “running the model” is the whole research activity.
+        It is not.
+      </p>
+      <p>
+        <code>PATMO</code> is not the beginning and it is not the end.
+        It is the middle step that connects a scientific question to interpretable results.
       </p>
     </div>
 
     <div class="panel">
-      <p class="section-label">Why It Works As A Teaching Case</p>
-      <ul>
-        <li>it is connected to a real research topic</li>
-        <li>it involves several important <code>PATMO</code> components</li>
-        <li>it is rich enough to feel realistic</li>
-        <li>it is still manageable for beginners</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="panel">
-    <p class="section-label">What Students Can See In This One Case</p>
-    <ul>
-      <li>a reaction network</li>
-      <li>vertical profile inputs</li>
-      <li>radiation-related inputs</li>
-      <li>source and sink settings</li>
-      <li>model outputs that can be compared and interpreted</li>
-    </ul>
-    <p>
-      So the <code>modern sulfur cycle</code> is not the whole course.
-      It is the main case through which students learn the model.
-    </p>
-  </div>
-
-  <div class="lesson-grid">
-    <article class="entry-card">
-      <p class="card-label">How The Case Reappears</p>
-      <ul>
-        <li>Lecture 1: the scientific problem the course centers on</li>
-        <li>Later lectures: the concrete example for files and inputs</li>
-        <li>Later still: the first case students actually run</li>
-        <li>Final stage: the basis for a simple sensitivity experiment</li>
-      </ul>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">Where PATMO Sits In Research</p>
+      <p class="section-label">Why This Matters</p>
       <p>
-        Running the model is not the whole research activity.
-        <code>PATMO</code> sits in the middle of a larger process.
+        That way of thinking will matter throughout the course.
+        It will help you remember that output is not the end of the task.
+        Output is the start of analysis.
       </p>
-    </article>
+    </div>
   </div>
 
   <pre class="lesson-flow"><code>scientific question
@@ -369,34 +450,32 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
 -> interpret the results</code></pre>
 </section>
 
-<section class="section-block">
+<section id="what-to-expect-from-this-course" class="section-block">
   <div class="section-heading">
-    <h2>What You Do Not Need To Know Yet</h2>
+    <h2>What to Expect From This Course</h2>
   </div>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label">Not Required Yet</p>
-      <ul>
-        <li><code>Fortran</code></li>
-        <li><code>Python</code> programming</li>
-        <li>advanced atmospheric chemistry</li>
-        <li>advanced numerical analysis</li>
-        <li>advanced command-line skills</li>
-      </ul>
+      <p class="card-label">You Do Not Need Yet</p>
+      <p>
+        Before moving on, it helps to be clear about the starting point.
+        You do <strong>not</strong> need to know <code>Fortran</code>, <code>Python</code>,
+        advanced atmospheric chemistry, numerical analysis, or advanced command-line skills before continuing.
+      </p>
     </article>
 
     <article class="entry-card">
       <p class="card-label">What You Do Need</p>
-      <ul>
-        <li>willingness to learn from one case step by step</li>
-        <li>willingness to connect files, workflow, and output meaningfully</li>
-        <li>willingness to ask questions when something is unclear</li>
-      </ul>
+      <p>
+        You need something much simpler:
+        willingness to learn step by step from one case,
+        and willingness to connect files, workflow, and output meaningfully.
+      </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">Expected By The End Of The Course</p>
+      <p class="card-label">Target By The End</p>
       <ul>
         <li>explain what <code>PATMO</code> is for</li>
         <li>recognize the structure of a <code>PATMO</code> case directory</li>
@@ -412,18 +491,22 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
       <p class="card-label">Outside The Main Path</p>
       <ul>
         <li>a full atmospheric chemistry course</li>
-        <li>a full theory course on the modern sulfur cycle</li>
+        <li>a full sulfur-cycle theory course</li>
         <li>mathematical derivations of numerical solvers</li>
         <li>3D global model systems</li>
         <li>advanced source-code development</li>
       </ul>
+      <p>
+        You may also hear brief mention of modules that are still under development,
+        such as volcano-related functionality, but those will not be major topics in this course.
+      </p>
     </article>
   </div>
 </section>
 
-<section class="section-block">
+<section id="how-the-seven-lectures-fit-together" class="section-block">
   <div class="section-heading">
-    <h2>How The Seven Lectures Fit Together</h2>
+    <h2>How the Seven Lectures Fit Together</h2>
   </div>
 
   <div class="course-roadmap">
@@ -437,42 +520,42 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
     <article class="entry-card course-roadmap-card is-upcoming">
       <p class="card-label">Lecture 2</p>
       <h3>The Overall Architecture of PATMO</h3>
-      <p>How the major parts of the model fit together.</p>
+      <p>How the major parts of <code>PATMO</code> fit together.</p>
       <span class="course-status">Planned</span>
     </article>
 
     <article class="entry-card course-roadmap-card is-upcoming">
       <p class="card-label">Lecture 3</p>
       <h3>The Input File System of PATMO</h3>
-      <p>What the main files are and why each one matters.</p>
+      <p>How the main input files are organized and what role each one plays.</p>
       <span class="course-status">Planned</span>
     </article>
 
     <article class="entry-card course-roadmap-card is-upcoming">
       <p class="card-label">Lecture 4</p>
-      <h3>How the Modern Sulfur Cycle Is Written into PATMO</h3>
-      <p>How the scientific case becomes model-ready inputs.</p>
+      <h3>How the Modern Sulfur Cycle Case Is Written into PATMO</h3>
+      <p>How the scientific case is encoded inside model-ready inputs.</p>
       <span class="course-status">Planned</span>
     </article>
 
     <article class="entry-card course-roadmap-card is-upcoming">
       <p class="card-label">Lecture 5</p>
-      <h3>The Runtime Workflow and Output System</h3>
-      <p>What the model does when it runs and where the outputs appear.</p>
+      <h3>The Runtime Workflow and Output System of PATMO</h3>
+      <p>What happens when the model runs and how to read its outputs.</p>
       <span class="course-status">Planned</span>
     </article>
 
     <article class="entry-card course-roadmap-card is-upcoming">
       <p class="card-label">Lecture 6</p>
-      <h3>Hands-On Practice</h3>
-      <p>Run the prepared modern sulfur cycle case for the first time.</p>
+      <h3>Hands-On Practice: Running the Modern Sulfur Cycle Case</h3>
+      <p>Run the prepared case and connect model setup to model output.</p>
       <span class="course-status">Planned</span>
     </article>
 
     <article class="entry-card course-roadmap-card is-upcoming">
       <p class="card-label">Lecture 7</p>
-      <h3>First Research-Style Exercise</h3>
-      <p>Modify a case, rerun it, and compare a simple sensitivity experiment.</p>
+      <h3>A First Research-Style Exercise</h3>
+      <p>Modify a case and run a simple sensitivity experiment.</p>
       <span class="course-status">Planned</span>
     </article>
   </div>
@@ -483,64 +566,103 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
 -> use PATMO in the simplest research-style way</code></pre>
 </section>
 
-<section id="summary" class="section-block">
+<section id="check-your-understanding" class="section-block">
   <div class="section-heading">
     <h2>Check Your Understanding</h2>
   </div>
 
   <div class="lesson-grid">
     <div class="panel">
-      <p>
-        By the end of this lecture, students should be able to answer these questions in their own words:
-      </p>
+      <p>By the end of this lecture, you should be able to answer these questions in your own words:</p>
       <ol>
         <li>What is <code>PATMO</code>?</li>
         <li>Why is <code>PATMO</code> useful in research?</li>
         <li>Why is the <code>modern sulfur cycle</code> used in this course?</li>
         <li>What are you expected to be able to do by the end of the course?</li>
       </ol>
-      <p>
-        If the answers are not clear yet, read the key sections again and try to reduce each answer to one or two sentences.
-      </p>
     </div>
 
     <div class="panel">
-      <p class="section-label">Lecture Summary</p>
+      <p class="section-label">Reading Advice</p>
+      <p>
+        If you cannot answer them yet, that is fine.
+        Read the key sections again and try to reduce the answers to one or two sentences each.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="lecture-summary" class="section-block">
+  <div class="section-heading">
+    <h2>Lecture Summary</h2>
+  </div>
+
+  <div class="lesson-grid">
+    <div class="panel">
+      <p>The main ideas of Lecture 1 can be reduced to five statements:</p>
       <ol>
         <li><code>PATMO</code> is a one-dimensional atmospheric photochemistry model.</li>
         <li>It is used to study chemistry and related processes in a vertical atmospheric column.</li>
         <li>Its value lies in controlled and comparable computational experiments.</li>
-        <li>The <code>modern sulfur cycle</code> is the running case study of the course, not the whole course content.</li>
-        <li>The rest of the course moves step by step from understanding the model to running it and then using it in a simple experiment.</li>
+        <li>The <code>modern sulfur cycle</code> is the running case study of this course, not the whole course content.</li>
+        <li>The rest of the course will move step by step from understanding the model to running it and then using it in a simple experiment.</li>
       </ol>
     </div>
+
+    <div class="takeaway-box">
+      <p>
+        If those five ideas are clear to you, then you are ready for Lecture 2.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="after-class-task" class="section-block">
+  <div class="section-heading">
+    <h2>After-Class Task</h2>
   </div>
 
-  <div class="takeaway-box">
-    <p class="section-label">After-Class Task</p>
-    <p>
-      Write a short answer, in no more than 200 words, to the following two questions:
-    </p>
-    <ol>
-      <li>What is <code>PATMO</code> in your own understanding?</li>
-      <li>What role does the <code>modern sulfur cycle</code> play in this course?</li>
-    </ol>
-    <p>
-      Use your own words. The answer does not need to be perfect, but it should show understanding.
-    </p>
+  <div class="lesson-grid">
+    <div class="panel">
+      <p>Write a short answer, in no more than 200 words, to the following two questions:</p>
+      <ol>
+        <li>What is <code>PATMO</code> in your own understanding?</li>
+        <li>What role does the <code>modern sulfur cycle</code> play in this course?</li>
+      </ol>
+    </div>
+
+    <div class="panel">
+      <p class="section-label">Requirements</p>
+      <ul>
+        <li>use your own words</li>
+        <li>do not simply copy section headings</li>
+        <li>your answer does not need to be perfect, but it should show understanding</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="final-reminder" class="section-block">
+  <div class="section-heading">
+    <h2>Final Reminder</h2>
   </div>
 
-  <section class="panel">
-    <p class="section-label">Final Reminder</p>
-    <p>
-      At this stage, students do not need to know how to run the model yet, they do not need to know the file system yet,
-      and they do not need solver details yet. What they need from Lecture 1 is orientation:
-      what <code>PATMO</code> is, why it matters, and how the course is structured.
-    </p>
+  <div class="panel">
+    <p>At this stage, you do not need to know how to run the model yet.</p>
+    <p>You do not need to know the file system yet.</p>
+    <p>You do not need to know the solver details yet.</p>
+    <p>What you need from Lecture 1 is orientation:</p>
+    <ul>
+      <li>what <code>PATMO</code> is</li>
+      <li>why it matters</li>
+      <li>how this course is structured</li>
+    </ul>
+    <p>Once that orientation is clear, the rest of the course will make much more sense.</p>
+
     <div class="hero-actions">
       <a class="pixel-button ghost" href="{{ '/work/patmo/' | relative_url }}">Back to course hub</a>
     </div>
-  </section>
+  </div>
 </section>
 
 </div>
