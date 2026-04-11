@@ -58,7 +58,9 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
     <a href="#what-patmo-cannot-do">Limits</a>
     <a href="#why-we-use-the-modern-sulfur-cycle">Sulfur Cycle</a>
     <a href="#what-to-expect-from-this-course">Course Scope</a>
+    <a href="#how-the-seven-lectures-fit-together">Flow</a>
     <a href="#lecture-summary">Summary</a>
+    <a href="#quick-check-quiz">Quiz</a>
   </div>
 </section>
 
@@ -80,6 +82,7 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
     <a class="outline-link" href="#lecture-summary">Lecture Summary</a>
     <a class="outline-link" href="#after-class-task">After-Class Task</a>
     <a class="outline-link" href="#final-reminder">Final Reminder</a>
+    <a class="outline-link" href="#quick-check-quiz">Quick Check Quiz</a>
   </div>
 </section>
 
@@ -510,61 +513,72 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
     <h2>How the Seven Lectures Fit Together</h2>
   </div>
 
-  <div class="course-roadmap">
-    <article class="entry-card course-roadmap-card is-live">
+  <p>The course follows a deliberate sequence:</p>
+
+  <div class="lecture-flowchart">
+    <article class="entry-card flow-step is-live">
       <p class="card-label">Lecture 1</p>
       <h3>What PATMO Is</h3>
       <p>Orientation: model identity, scope, and the role of the modern sulfur cycle.</p>
       <span class="course-status is-live">Current lecture</span>
     </article>
 
-    <article class="entry-card course-roadmap-card is-upcoming">
+    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+    <article class="entry-card flow-step">
       <p class="card-label">Lecture 2</p>
-      <h3>The Overall Architecture of PATMO</h3>
-      <p>How the major parts of <code>PATMO</code> fit together.</p>
-      <span class="course-status">Planned</span>
+      <h3>The Overall Architecture of <code>PATMO</code></h3>
+      <p>See how the major parts of the model fit together.</p>
     </article>
 
-    <article class="entry-card course-roadmap-card is-upcoming">
+    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+    <article class="entry-card flow-step">
       <p class="card-label">Lecture 3</p>
-      <h3>The Input File System of PATMO</h3>
-      <p>How the main input files are organized and what role each one plays.</p>
-      <span class="course-status">Planned</span>
+      <h3>The Input File System of <code>PATMO</code></h3>
+      <p>Learn how the main input files are organized and what each one does.</p>
     </article>
 
-    <article class="entry-card course-roadmap-card is-upcoming">
+    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+    <article class="entry-card flow-step">
       <p class="card-label">Lecture 4</p>
-      <h3>How the Modern Sulfur Cycle Case Is Written into PATMO</h3>
-      <p>How the scientific case is encoded inside model-ready inputs.</p>
-      <span class="course-status">Planned</span>
+      <h3>How the <code>modern sulfur cycle</code> Case Is Written into <code>PATMO</code></h3>
+      <p>Connect the scientific case to model-ready inputs.</p>
     </article>
 
-    <article class="entry-card course-roadmap-card is-upcoming">
+    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+    <article class="entry-card flow-step">
       <p class="card-label">Lecture 5</p>
-      <h3>The Runtime Workflow and Output System of PATMO</h3>
-      <p>What happens when the model runs and how to read its outputs.</p>
-      <span class="course-status">Planned</span>
+      <h3>The Runtime Workflow and Output System of <code>PATMO</code></h3>
+      <p>Understand what happens when the model runs and where the outputs appear.</p>
     </article>
 
-    <article class="entry-card course-roadmap-card is-upcoming">
+    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+    <article class="entry-card flow-step">
       <p class="card-label">Lecture 6</p>
-      <h3>Hands-On Practice: Running the Modern Sulfur Cycle Case</h3>
-      <p>Run the prepared case and connect model setup to model output.</p>
-      <span class="course-status">Planned</span>
+      <h3>Hands-On Practice: Running the <code>modern sulfur cycle</code> Case</h3>
+      <p>Run the prepared case and connect setup to output.</p>
     </article>
 
-    <article class="entry-card course-roadmap-card is-upcoming">
+    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+    <article class="entry-card flow-step">
       <p class="card-label">Lecture 7</p>
       <h3>A First Research-Style Exercise</h3>
       <p>Modify a case and run a simple sensitivity experiment.</p>
-      <span class="course-status">Planned</span>
     </article>
   </div>
 
-  <pre class="lesson-flow"><code>meet PATMO
+  <div class="takeaway-box flow-summary">
+    <p class="section-label">Course Logic</p>
+    <pre class="lesson-flow"><code>meet PATMO
 -> understand PATMO
 -> run PATMO
 -> use PATMO in the simplest research-style way</code></pre>
+  </div>
 </section>
 
 <section id="check-your-understanding" class="section-block">
@@ -665,5 +679,82 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
     </div>
   </div>
 </section>
+
+<section id="quick-check-quiz" class="section-block">
+  <div class="section-heading">
+    <h2>Quick Check Quiz</h2>
+  </div>
+
+  <div class="panel">
+    <p>
+      Before you move on to Lecture 2, use this short quiz to check whether the main ideas of Lecture 1 are clear.
+    </p>
+  </div>
+
+  <div class="quiz-block" data-answer="b">
+    <h3>Question 1</h3>
+    <p>What kind of model is <code>PATMO</code> in this course?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. A full 3D global weather prediction model</button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. A one-dimensional atmospheric photochemistry model</button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. A database of sulfur chemistry observations</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz-block" data-answer="c">
+    <h3>Question 2</h3>
+    <p>What is one of the main values of <code>PATMO</code>?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. It automatically tells you which scientific interpretation is correct</button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. It replaces real atmospheric observations</button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. It lets you run controlled and comparable computational experiments</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz-block" data-answer="a">
+    <h3>Question 3</h3>
+    <p>Why does this course use the <code>modern sulfur cycle</code>?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. It is the main training case through which you learn how to work with <code>PATMO</code></button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. It is the only atmospheric chemistry topic that <code>PATMO</code> can simulate</button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. It replaces the need to understand model inputs and outputs</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz-block" data-answer="b">
+    <h3>Question 4</h3>
+    <p>What should you expect to be able to do by the end of the course?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. Develop new PATMO modules from scratch</button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. Understand a case, run it, inspect outputs, and perform a simple comparison experiment</button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. Replace all atmospheric chemistry seminars with PATMO alone</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+</section>
+
+<script>
+  function checkPatmoQuiz(button) {
+    const block = button.closest('.quiz-block');
+    const answer = block.dataset.answer;
+    const choice = button.dataset.choice;
+    const feedback = block.querySelector('.quiz-feedback');
+    const options = block.querySelectorAll('.quiz-option');
+
+    options.forEach((option) => option.classList.remove('correct-choice'));
+
+    if (choice === answer) {
+      button.classList.add('correct-choice');
+      feedback.textContent = 'Correct. You can move on.';
+      feedback.className = 'quiz-feedback correct';
+    } else {
+      feedback.textContent = 'Not quite. Try again.';
+      feedback.className = 'quiz-feedback incorrect';
+    }
+  }
+</script>
 
 </div>
