@@ -51,6 +51,133 @@ body::before {
   background-size: 28px 28px, 28px 28px, 100% 6px;
 }
 
+body.patmo-reading-theme {
+  --bg: #f6f1e7;
+  --bg-accent: #efe7d7;
+  --surface: rgba(255, 252, 246, 0.92);
+  --surface-strong: rgba(255, 250, 242, 0.98);
+  --line: rgba(132, 111, 81, 0.18);
+  --line-strong: rgba(148, 102, 52, 0.24);
+  --text: #21303a;
+  --muted: #5d6c75;
+  --cyan: #0f5f73;
+  --pink: #946634;
+  --green: #5b7745;
+  --yellow: #86663a;
+  --shadow: 0 0 0 1px rgba(132, 111, 81, 0.08), 0 18px 48px rgba(88, 65, 37, 0.09);
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(148, 102, 52, 0.07), transparent 28%),
+    radial-gradient(circle at top right, rgba(15, 95, 115, 0.08), transparent 25%),
+    linear-gradient(180deg, #faf6ee 0%, var(--bg) 42%, #f0e7da 100%);
+}
+
+body.patmo-reading-theme .content-panel,
+body.patmo-reading-theme .blog-post,
+body.patmo-reading-theme .panel,
+body.patmo-reading-theme .entry-card,
+body.patmo-reading-theme .page-subtitle,
+body.patmo-reading-theme .page-meta-item {
+  font-family: "Baskerville", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+}
+
+body.patmo-reading-theme::before {
+  opacity: 0.05;
+  background-image:
+    linear-gradient(rgba(132, 111, 81, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(132, 111, 81, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px;
+}
+
+body.patmo-reading-theme .nav-frame {
+  background: rgba(251, 247, 239, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+body.patmo-reading-theme .site-brand,
+body.patmo-reading-theme .nav-link,
+body.patmo-reading-theme .footer-copy,
+body.patmo-reading-theme .social-link {
+  color: var(--text);
+}
+
+body.patmo-reading-theme a:hover,
+body.patmo-reading-theme a:focus {
+  color: #0b4a59;
+  text-shadow: none;
+}
+
+body.patmo-reading-theme .brand-subtitle,
+body.patmo-reading-theme .nav-link {
+  color: var(--muted);
+}
+
+body.patmo-reading-theme .nav-link:hover,
+body.patmo-reading-theme .nav-link.is-active {
+  color: var(--text);
+  background: rgba(15, 95, 115, 0.08);
+}
+
+body.patmo-reading-theme .hero-frame {
+  background:
+    linear-gradient(135deg, rgba(148, 102, 52, 0.08), transparent 35%),
+    linear-gradient(180deg, rgba(15, 95, 115, 0.08), transparent 100%),
+    var(--surface-strong);
+}
+
+body.patmo-reading-theme .hero-frame::before {
+  background: linear-gradient(135deg, rgba(15, 95, 115, 0.12), transparent 60%);
+}
+
+body.patmo-reading-theme blockquote {
+  background: #f1e8da;
+  border-left-color: #b48a5a;
+  color: #31424c;
+}
+
+body.patmo-reading-theme code {
+  background: #efe4d2;
+  color: #4f3924;
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.3rem;
+}
+
+body.patmo-reading-theme pre {
+  background: #ede3d4;
+  color: var(--text);
+  border-color: rgba(132, 111, 81, 0.24);
+  border-radius: 0.75rem;
+}
+
+body.patmo-reading-theme pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+body.patmo-reading-theme .lesson-flow,
+body.patmo-reading-theme .takeaway-box {
+  background:
+    linear-gradient(135deg, rgba(182, 138, 90, 0.09), transparent 42%),
+    linear-gradient(180deg, rgba(15, 95, 115, 0.06), transparent 100%),
+    var(--surface-strong);
+  border-color: rgba(148, 102, 52, 0.22);
+}
+
+body.patmo-reading-theme .outline-link {
+  background: rgba(255, 255, 255, 0.42);
+}
+
+body.patmo-reading-theme .outline-link:hover,
+body.patmo-reading-theme .outline-link:focus {
+  color: var(--text);
+  background: rgba(15, 95, 115, 0.08);
+}
+
+body.patmo-reading-theme .social-link {
+  background: rgba(255, 255, 255, 0.42);
+}
+
 ::selection {
   color: #07050d;
   background: var(--cyan);
