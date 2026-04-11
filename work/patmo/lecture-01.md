@@ -117,48 +117,93 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
     </article>
   </div>
 
-  <div class="lesson-grid">
-    <div class="panel">
+  <div class="model-comparison">
+    <article class="entry-card">
+      <p class="card-label">Box Model</p>
+      <div class="model-illustration">
+        <pre><code>   atmosphere
+      |
+      v
+ +-----------+
+ | one box   |
+ | well      |
+ | mixed     |
+ +-----------+</code></pre>
+      </div>
       <p>
-        It can help to compare three common model structures:
+        A box model treats the whole system as one mixed compartment.
+        There is no vertical structure inside the box.
       </p>
-      <pre><code>Box model
-+-----------+
-| one mixed |
-| box       |
-+-----------+
+      <ul>
+        <li>space resolved: none</li>
+        <li>state variables: one value per species</li>
+        <li>best for: the simplest chemical thinking</li>
+      </ul>
+    </article>
 
-1D model
-+-----------+
-| layer 3   |
-+-----------+
-| layer 2   |
-+-----------+
-| layer 1   |
-+-----------+
-
-3D model
-        +---------+---------+
-       /         /         /|
-      +---------+---------+ |
-      |         |         | |
-      |         |         | +
-      |         |         |/
-      +---------+---------+</code></pre>
+    <article class="entry-card">
+      <p class="card-label">1D Model</p>
+      <div class="model-illustration">
+        <pre><code>      top
+       ^
+ +-----------+
+ | layer 4   |
+ +-----------+
+ | layer 3   |
+ +-----------+
+ | layer 2   |
+ +-----------+
+ | layer 1   |
+ +-----------+
+       ^
+    surface</code></pre>
+      </div>
       <p>
-        A box model has one mixed compartment. A 1D model resolves vertical layers.
-        A 3D model resolves a full volume in multiple horizontal and vertical directions.
+        A 1D model resolves the atmosphere vertically.
+        Each layer can have its own temperature, density, radiation field, and species abundances.
       </p>
-    </div>
+      <ul>
+        <li>space resolved: altitude only</li>
+        <li>state variables: one profile per species</li>
+        <li>best for: vertical structure, photochemistry, and diffusion</li>
+      </ul>
+    </article>
 
-    <div class="takeaway-box">
-      <p><strong>Why this is a good teaching model.</strong></p>
+    <article class="entry-card">
+      <p class="card-label">3D Model</p>
+      <div class="model-illustration">
+        <pre><code>          z
+          ^
+          |
+     +----+----+
+    /|   /|   /|
+   +----+----+ |
+   | +--|--+-| +
+   |/   |/   |/
+   +----+----+ --> x
+  /
+ v
+y</code></pre>
+      </div>
       <p>
-        A 1D photochemistry model is more informative than a single box model,
-        but still much easier to understand than a full 3D model.
-        That makes it a strong choice for learning how model inputs, chemistry, transport, and outputs connect.
+        A 3D model resolves the atmosphere as a full volume.
+        Conditions can vary in longitude, latitude, and height at the same time.
       </p>
-    </div>
+      <ul>
+        <li>space resolved: horizontal and vertical directions</li>
+        <li>state variables: one 3D field per species</li>
+        <li>best for: global transport and spatially complex systems</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="takeaway-box">
+    <p><strong>Why this is a good teaching model.</strong></p>
+    <p>
+      A 1D photochemistry model is more informative than a single box model,
+      but still much easier to understand than a full 3D model.
+      That makes it a strong choice for learning how model inputs, chemistry, transport, and outputs connect.
+    </p>
   </div>
 </section>
 
