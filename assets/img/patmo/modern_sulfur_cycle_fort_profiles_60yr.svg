@@ -1,0 +1,528 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1880" viewBox="0 0 1400 1880" role="img" aria-labelledby="title desc">
+<title id="title">Final sulfur-species number-density profiles from fort outputs after a 60-year PATMO run</title>
+<desc id="desc">Multi-panel plot showing altitude versus number density for sulfur-bearing species dumped by patmo_dumpDensityToFile in the modern sulfur cycle case, with clipped x-axis lower bounds for readability in panels with very large dynamic range.</desc>
+<rect width="100%" height="100%" fill="#fffaf2"/>
+<text x="700" y="34" text-anchor="middle" font-family="Baskerville, Palatino, serif" font-size="28" fill="#18242d">Final sulfur-species profiles from fort.* outputs</text>
+<text x="700" y="58" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#5d6c75">Modern sulfur cycle case, final time = 60 years; x-axis = number density (cm^-3), y-axis = altitude (km)</text>
+<rect x="70.0" y="72.0" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="276.5" y="94.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">COS</text>
+<line x1="122.0" y1="312.7" x2="465.0" y2="312.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="316.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="122.0" y1="281.4" x2="465.0" y2="281.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="285.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="122.0" y1="246.8" x2="465.0" y2="246.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="250.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="122.0" y1="212.1" x2="465.0" y2="212.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="216.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="122.0" y1="177.4" x2="465.0" y2="177.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="181.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="122.0" y1="142.7" x2="465.0" y2="142.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="146.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="122.0" y1="108.0" x2="465.0" y2="108.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="112.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="122.0" y1="108.0" x2="122.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="122.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">0</tspan></text>
+<line x1="215.5" y1="108.0" x2="215.5" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="215.5" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">3</tspan></text>
+<line x1="309.1" y1="108.0" x2="309.1" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="309.1" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">6</tspan></text>
+<line x1="402.6" y1="108.0" x2="402.6" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="402.6" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">9</tspan></text>
+<line x1="465.0" y1="108.0" x2="465.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="465.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">11</tspan></text>
+<polyline fill="none" stroke="#0f5f73" stroke-width="2.8" points="436.20,312.67 434.35,309.20 432.50,305.73 430.58,302.26 428.72,298.79 426.78,295.32 424.84,291.85 422.86,288.38 420.87,284.92 418.81,281.45 416.77,277.98 414.47,274.51 411.68,271.04 408.14,267.57 403.64,264.10 397.94,260.63 390.85,257.16 382.09,253.69 371.59,250.23 359.36,246.76 345.36,243.29 329.56,239.82 312.07,236.35 292.84,232.88 271.96,229.41 249.43,225.94 225.47,222.47 200.25,219.01 173.77,215.54 146.22,212.07 122.00,208.60 122.00,205.13 122.00,201.66 122.00,198.19 122.00,194.72 122.00,191.25 122.00,187.79 122.00,184.32 122.00,180.85 122.00,177.38 122.00,173.91 122.00,170.44 122.00,166.97 122.00,163.50 122.00,160.03 122.00,156.56 122.00,153.10 122.00,149.63 122.00,146.16 122.00,142.69 122.00,139.22 122.00,135.75 122.00,132.28 122.00,128.81 122.00,125.34 122.00,121.88 122.00,118.41 122.00,114.94 122.00,111.47 122.00,108.00"/>
+<text x="84.0" y="210.3" text-anchor="middle" transform="rotate(-90 84.0 210.3)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="293.5" y="342.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="511.0" y="72.0" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="717.5" y="94.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">S2</text>
+<line x1="563.0" y1="312.7" x2="906.0" y2="312.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="316.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="563.0" y1="281.4" x2="906.0" y2="281.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="285.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="563.0" y1="246.8" x2="906.0" y2="246.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="250.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="563.0" y1="212.1" x2="906.0" y2="212.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="216.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="563.0" y1="177.4" x2="906.0" y2="177.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="181.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="563.0" y1="142.7" x2="906.0" y2="142.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="146.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="563.0" y1="108.0" x2="906.0" y2="108.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="112.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="563.0" y1="108.0" x2="563.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="563.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-13</tspan></text>
+<line x1="661.0" y1="108.0" x2="661.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="661.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-11</tspan></text>
+<line x1="759.0" y1="108.0" x2="759.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="759.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-9</tspan></text>
+<line x1="857.0" y1="108.0" x2="857.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="857.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-7</tspan></text>
+<line x1="906.0" y1="108.0" x2="906.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="906.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-6</tspan></text>
+<polyline fill="none" stroke="#946634" stroke-width="2.8" points="886.77,312.67 883.87,309.20 880.95,305.73 877.92,302.26 874.98,298.79 871.91,295.32 868.83,291.85 865.68,288.38 862.51,284.92 859.22,281.45 855.90,277.98 852.05,274.51 847.26,271.04 841.13,267.57 833.51,264.10 824.20,260.63 813.11,257.16 800.02,253.69 785.02,250.23 768.27,246.76 749.72,243.29 729.24,239.82 706.98,236.35 682.83,232.88 656.63,229.41 628.25,225.94 597.88,222.47 565.34,219.01 563.00,215.54 563.00,212.07 563.00,208.60 563.00,205.13 563.00,201.66 563.00,198.19 563.00,194.72 563.00,191.25 563.00,187.79 563.00,184.32 563.00,180.85 563.00,177.38 563.00,173.91 563.00,170.44 563.00,166.97 563.00,163.50 563.00,160.03 563.00,156.56 563.00,153.10 563.00,149.63 563.00,146.16 563.00,142.69 563.00,139.22 563.00,135.75 563.00,132.28 563.00,128.81 563.00,125.34 563.00,121.88 563.00,118.41 563.00,114.94 563.00,111.47 563.00,108.00"/>
+<text x="525.0" y="210.3" text-anchor="middle" transform="rotate(-90 525.0 210.3)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="734.5" y="342.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="952.0" y="72.0" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="1158.5" y="94.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">HSO</text>
+<line x1="1004.0" y1="312.7" x2="1347.0" y2="312.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="316.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="1004.0" y1="281.4" x2="1347.0" y2="281.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="285.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="1004.0" y1="246.8" x2="1347.0" y2="246.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="250.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="1004.0" y1="212.1" x2="1347.0" y2="212.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="216.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="1004.0" y1="177.4" x2="1347.0" y2="177.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="181.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="1004.0" y1="142.7" x2="1347.0" y2="142.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="146.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="1004.0" y1="108.0" x2="1347.0" y2="108.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="112.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="1004.0" y1="108.0" x2="1004.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="1004.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">0</tspan></text>
+<line x1="1175.5" y1="108.0" x2="1175.5" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="1175.5" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">1</tspan></text>
+<line x1="1347.0" y1="108.0" x2="1347.0" y2="312.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="1347.0" y="328.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">2</tspan></text>
+<polyline fill="none" stroke="#8a0838" stroke-width="2.8" points="1297.98,312.67 1216.53,309.20 1147.36,305.73 1094.28,302.26 1049.61,298.79 1007.67,295.32 1004.00,291.85 1004.00,288.38 1004.00,284.92 1004.00,281.45 1004.00,277.98 1004.00,274.51 1004.00,271.04 1004.00,267.57 1004.00,264.10 1004.00,260.63 1004.00,257.16 1004.00,253.69 1004.00,250.23 1004.00,246.76 1004.00,243.29 1004.00,239.82 1004.00,236.35 1004.00,232.88 1004.00,229.41 1004.00,225.94 1004.00,222.47 1004.00,219.01 1004.00,215.54 1004.00,212.07 1004.00,208.60 1004.00,205.13 1004.00,201.66 1004.00,198.19 1004.00,194.72 1004.00,191.25 1004.00,187.79 1004.00,184.32 1004.00,180.85 1004.00,177.38 1004.00,173.91 1004.00,170.44 1004.00,166.97 1004.00,163.50 1004.00,160.03 1004.00,156.56 1004.00,153.10 1004.00,149.63 1004.00,146.16 1004.00,142.69 1004.00,139.22 1004.00,135.75 1004.00,132.28 1004.00,128.81 1004.00,125.34 1004.00,121.88 1004.00,118.41 1004.00,114.94 1004.00,111.47 1004.00,108.00"/>
+<text x="966.0" y="210.3" text-anchor="middle" transform="rotate(-90 966.0 210.3)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="1175.5" y="342.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="70.0" y="368.7" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="276.5" y="390.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">HSO2</text>
+<line x1="122.0" y1="609.3" x2="465.0" y2="609.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="613.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="122.0" y1="578.1" x2="465.0" y2="578.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="582.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="122.0" y1="543.4" x2="465.0" y2="543.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="547.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="122.0" y1="508.7" x2="465.0" y2="508.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="512.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="122.0" y1="474.0" x2="465.0" y2="474.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="478.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="122.0" y1="439.4" x2="465.0" y2="439.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="443.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="122.0" y1="404.7" x2="465.0" y2="404.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="408.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="122.0" y1="404.7" x2="122.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="122.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-15</tspan></text>
+<line x1="220.0" y1="404.7" x2="220.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="220.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-13</tspan></text>
+<line x1="318.0" y1="404.7" x2="318.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="318.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-11</tspan></text>
+<line x1="416.0" y1="404.7" x2="416.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="416.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-9</tspan></text>
+<line x1="465.0" y1="404.7" x2="465.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="465.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-8</tspan></text>
+<polyline fill="none" stroke="#2f6f3e" stroke-width="2.8" points="417.89,609.33 385.48,605.86 356.72,602.40 319.35,598.93 289.75,595.46 254.66,591.99 224.10,588.52 190.17,585.05 161.34,581.58 135.62,578.11 122.00,574.64 122.00,571.18 122.00,567.71 125.29,564.24 141.43,560.77 155.77,557.30 166.13,553.83 170.31,550.36 170.94,546.89 166.58,543.42 162.45,539.95 154.43,536.49 143.18,533.02 127.47,529.55 122.00,526.08 122.00,522.61 122.00,519.14 122.00,515.67 122.00,512.20 122.00,508.73 122.00,505.27 122.00,501.80 122.00,498.33 122.00,494.86 122.00,491.39 122.00,487.92 122.00,484.45 122.00,480.98 122.00,477.51 122.00,474.05 122.00,470.58 122.00,467.11 122.00,463.64 122.00,460.17 124.57,456.70 132.47,453.23 137.89,449.76 141.96,446.29 147.59,442.82 148.93,439.36 151.65,435.89 147.92,432.42 145.59,428.95 142.97,425.48 138.36,422.01 135.94,418.54 131.44,415.07 127.25,411.60 122.62,408.14 122.00,404.67"/>
+<text x="84.0" y="507.0" text-anchor="middle" transform="rotate(-90 84.0 507.0)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="293.5" y="639.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="511.0" y="368.7" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="717.5" y="390.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">HSO3</text>
+<line x1="563.0" y1="609.3" x2="906.0" y2="609.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="613.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="563.0" y1="578.1" x2="906.0" y2="578.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="582.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="563.0" y1="543.4" x2="906.0" y2="543.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="547.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="563.0" y1="508.7" x2="906.0" y2="508.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="512.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="563.0" y1="474.0" x2="906.0" y2="474.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="478.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="563.0" y1="439.4" x2="906.0" y2="439.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="443.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="563.0" y1="404.7" x2="906.0" y2="404.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="408.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="563.0" y1="404.7" x2="563.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="563.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-8</tspan></text>
+<line x1="661.0" y1="404.7" x2="661.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="661.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-6</tspan></text>
+<line x1="759.0" y1="404.7" x2="759.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="759.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-4</tspan></text>
+<line x1="857.0" y1="404.7" x2="857.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="857.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-2</tspan></text>
+<line x1="906.0" y1="404.7" x2="906.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="906.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-1</tspan></text>
+<polyline fill="none" stroke="#8c4f7d" stroke-width="2.8" points="878.03,609.33 854.76,605.86 833.63,602.40 818.61,598.93 804.05,595.46 790.51,591.99 776.51,588.52 764.03,585.05 752.32,581.58 741.41,578.11 727.26,574.64 718.28,571.18 727.59,567.71 743.10,564.24 756.81,560.77 766.67,557.30 772.90,553.83 775.51,550.36 774.45,546.89 770.18,543.42 761.45,539.95 749.53,536.49 735.81,533.02 718.88,529.55 699.57,526.08 678.07,522.61 654.57,519.14 631.44,515.67 611.92,512.20 600.82,508.73 598.66,505.27 600.20,501.80 603.35,498.33 605.87,494.86 608.50,491.39 611.44,487.92 613.02,484.45 615.67,480.98 617.86,477.51 620.66,474.05 622.68,470.58 624.52,467.11 625.51,463.64 627.05,460.17 627.25,456.70 625.89,453.23 625.85,449.76 625.17,446.29 623.96,442.82 623.24,439.36 621.95,435.89 622.83,432.42 621.47,428.95 621.03,425.48 620.80,422.01 620.20,418.54 618.95,415.07 617.81,411.60 615.39,408.14 579.57,404.67"/>
+<text x="525.0" y="507.0" text-anchor="middle" transform="rotate(-90 525.0 507.0)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="734.5" y="639.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="952.0" y="368.7" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="1158.5" y="390.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">CS2</text>
+<line x1="1004.0" y1="609.3" x2="1347.0" y2="609.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="613.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="1004.0" y1="578.1" x2="1347.0" y2="578.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="582.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="1004.0" y1="543.4" x2="1347.0" y2="543.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="547.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="1004.0" y1="508.7" x2="1347.0" y2="508.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="512.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="1004.0" y1="474.0" x2="1347.0" y2="474.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="478.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="1004.0" y1="439.4" x2="1347.0" y2="439.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="443.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="1004.0" y1="404.7" x2="1347.0" y2="404.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="408.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="1004.0" y1="404.7" x2="1004.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1004.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-11</tspan></text>
+<line x1="1102.0" y1="404.7" x2="1102.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1102.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-9</tspan></text>
+<line x1="1200.0" y1="404.7" x2="1200.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1200.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-7</tspan></text>
+<line x1="1298.0" y1="404.7" x2="1298.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1298.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-5</tspan></text>
+<line x1="1347.0" y1="404.7" x2="1347.0" y2="609.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1347.0" y="625.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-4</tspan></text>
+<polyline fill="none" stroke="#c18b00" stroke-width="2.8" points="1346.32,609.33 1004.00,605.86 1004.00,602.40 1004.00,598.93 1004.00,595.46 1004.00,591.99 1004.00,588.52 1004.00,585.05 1004.00,581.58 1004.00,578.11 1004.00,574.64 1004.00,571.18 1004.00,567.71 1004.00,564.24 1004.00,560.77 1004.00,557.30 1004.00,553.83 1004.00,550.36 1004.00,546.89 1004.00,543.42 1004.00,539.95 1004.00,536.49 1004.00,533.02 1004.00,529.55 1004.00,526.08 1004.00,522.61 1004.00,519.14 1004.00,515.67 1004.00,512.20 1004.00,508.73 1004.00,505.27 1004.00,501.80 1004.00,498.33 1004.00,494.86 1004.00,491.39 1004.00,487.92 1004.00,484.45 1004.00,480.98 1004.00,477.51 1004.00,474.05 1004.00,470.58 1004.00,467.11 1004.00,463.64 1004.00,460.17 1004.00,456.70 1004.00,453.23 1004.00,449.76 1004.00,446.29 1004.00,442.82 1004.00,439.36 1004.00,435.89 1004.00,432.42 1004.00,428.95 1004.00,425.48 1004.00,422.01 1004.00,418.54 1004.00,415.07 1004.00,411.60 1004.00,408.14 1004.00,404.67"/>
+<text x="966.0" y="507.0" text-anchor="middle" transform="rotate(-90 966.0 507.0)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="1175.5" y="639.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="70.0" y="665.3" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="276.5" y="687.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">SO3</text>
+<line x1="122.0" y1="906.0" x2="465.0" y2="906.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="910.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="122.0" y1="874.8" x2="465.0" y2="874.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="878.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="122.0" y1="840.1" x2="465.0" y2="840.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="844.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="122.0" y1="805.4" x2="465.0" y2="805.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="809.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="122.0" y1="770.7" x2="465.0" y2="770.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="774.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="122.0" y1="736.0" x2="465.0" y2="736.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="740.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="122.0" y1="701.3" x2="465.0" y2="701.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="705.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="122.0" y1="701.3" x2="122.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="122.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-3</tspan></text>
+<line x1="220.0" y1="701.3" x2="220.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="220.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-1</tspan></text>
+<line x1="318.0" y1="701.3" x2="318.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="318.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">1</tspan></text>
+<line x1="416.0" y1="701.3" x2="416.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="416.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">3</tspan></text>
+<line x1="465.0" y1="701.3" x2="465.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="465.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">4</tspan></text>
+<polyline fill="none" stroke="#4c6ea8" stroke-width="2.8" points="391.57,906.00 375.62,902.53 363.32,899.06 358.76,895.59 355.24,892.12 352.17,888.66 349.70,885.19 355.30,881.72 359.44,878.25 359.59,874.78 355.80,871.31 356.65,867.84 375.41,864.37 389.98,860.90 402.92,857.44 412.38,853.97 418.26,850.50 419.08,847.03 414.60,843.56 406.68,840.09 393.42,836.62 377.29,833.15 359.02,829.68 338.01,826.21 314.49,822.75 289.97,819.28 265.93,815.81 242.18,812.34 222.03,808.87 210.28,805.40 208.12,801.93 210.07,798.46 214.34,794.99 218.26,791.53 222.23,788.06 226.97,784.59 230.79,781.12 235.75,777.65 240.37,774.18 245.45,770.71 250.56,767.24 255.90,763.77 261.13,760.31 265.73,756.84 270.82,753.37 275.45,749.90 278.13,746.43 280.38,742.96 284.17,739.49 284.92,736.02 285.04,732.55 282.26,729.08 280.78,725.62 278.32,722.15 275.61,718.68 272.93,715.21 270.23,711.74 267.31,708.27 261.70,704.80 127.49,701.33"/>
+<text x="84.0" y="803.7" text-anchor="middle" transform="rotate(-90 84.0 803.7)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="293.5" y="936.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="511.0" y="665.3" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="717.5" y="687.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">CH4O3S</text>
+<line x1="563.0" y1="906.0" x2="906.0" y2="906.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="910.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="563.0" y1="874.8" x2="906.0" y2="874.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="878.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="563.0" y1="840.1" x2="906.0" y2="840.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="844.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="563.0" y1="805.4" x2="906.0" y2="805.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="809.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="563.0" y1="770.7" x2="906.0" y2="770.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="774.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="563.0" y1="736.0" x2="906.0" y2="736.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="740.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="563.0" y1="701.3" x2="906.0" y2="701.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="705.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="563.0" y1="701.3" x2="563.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="563.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">9</tspan></text>
+<line x1="648.8" y1="701.3" x2="648.8" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="648.8" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">10</tspan></text>
+<line x1="734.5" y1="701.3" x2="734.5" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="734.5" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">11</tspan></text>
+<line x1="820.2" y1="701.3" x2="820.2" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="820.2" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">12</tspan></text>
+<line x1="906.0" y1="701.3" x2="906.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="906.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">13</tspan></text>
+<polyline fill="none" stroke="#aa5a2f" stroke-width="2.8" points="889.82,906.00 884.80,902.53 879.75,899.06 874.54,895.59 869.48,892.12 864.23,888.66 858.96,885.19 853.60,881.72 848.24,878.25 842.75,874.78 837.56,871.31 832.23,867.84 826.79,864.37 821.28,860.90 815.71,857.44 810.18,853.97 804.70,850.50 799.11,847.03 793.62,843.56 788.21,840.09 782.78,836.62 777.32,833.15 772.12,829.68 766.85,826.21 761.62,822.75 756.39,819.28 751.20,815.81 746.04,812.34 740.91,808.87 735.75,805.40 730.76,801.93 725.80,798.46 720.85,794.99 715.88,791.53 710.93,788.06 706.22,784.59 701.36,781.12 696.85,777.65 692.06,774.18 687.40,770.71 682.77,767.24 678.20,763.77 673.68,760.31 669.23,756.84 664.81,753.37 660.34,749.90 655.70,746.43 650.99,742.96 646.37,739.49 641.43,736.02 636.46,732.55 630.87,729.08 625.36,725.62 619.68,722.15 614.07,718.68 608.35,715.21 602.87,711.74 597.26,708.27 591.64,704.80 585.47,701.33"/>
+<text x="525.0" y="803.7" text-anchor="middle" transform="rotate(-90 525.0 803.7)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="734.5" y="936.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="952.0" y="665.3" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="1158.5" y="687.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">SO4</text>
+<line x1="1004.0" y1="906.0" x2="1347.0" y2="906.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="910.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="1004.0" y1="874.8" x2="1347.0" y2="874.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="878.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="1004.0" y1="840.1" x2="1347.0" y2="840.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="844.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="1004.0" y1="805.4" x2="1347.0" y2="805.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="809.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="1004.0" y1="770.7" x2="1347.0" y2="770.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="774.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="1004.0" y1="736.0" x2="1347.0" y2="736.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="740.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="1004.0" y1="701.3" x2="1347.0" y2="701.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="705.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="1004.0" y1="701.3" x2="1004.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1004.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">0</tspan></text>
+<line x1="1072.6" y1="701.3" x2="1072.6" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1072.6" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">2</tspan></text>
+<line x1="1141.2" y1="701.3" x2="1141.2" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1141.2" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">4</tspan></text>
+<line x1="1209.8" y1="701.3" x2="1209.8" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1209.8" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">6</tspan></text>
+<line x1="1278.4" y1="701.3" x2="1278.4" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1278.4" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">8</tspan></text>
+<line x1="1347.0" y1="701.3" x2="1347.0" y2="906.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1347.0" y="922.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">10</tspan></text>
+<polyline fill="none" stroke="#5d6c75" stroke-width="2.8" points="1345.49,906.00 1343.49,902.53 1341.48,899.06 1339.40,895.59 1337.39,892.12 1335.31,888.66 1333.22,885.19 1331.11,881.72 1328.99,878.25 1326.85,874.78 1324.90,871.31 1323.08,867.84 1321.52,864.37 1320.23,860.90 1318.97,857.44 1317.61,853.97 1315.77,850.50 1313.29,847.03 1310.31,843.56 1306.79,840.09 1302.74,836.62 1298.38,833.15 1293.83,829.68 1289.25,826.21 1284.51,822.75 1279.69,819.28 1274.83,815.81 1269.80,812.34 1264.67,808.87 1259.29,805.40 1253.88,801.93 1248.35,798.46 1242.68,794.99 1236.89,791.53 1230.83,788.06 1224.79,784.59 1218.59,781.12 1212.27,777.65 1205.74,774.18 1199.17,770.71 1192.47,767.24 1185.67,763.77 1178.82,760.31 1171.90,756.84 1164.85,753.37 1157.85,749.90 1150.68,746.43 1143.32,742.96 1135.83,739.49 1127.86,736.02 1119.97,732.55 1111.78,729.08 1103.75,725.62 1095.31,722.15 1086.70,718.68 1078.16,715.21 1069.58,711.74 1060.82,708.27 1052.10,704.80 1042.82,701.33"/>
+<text x="966.0" y="803.7" text-anchor="middle" transform="rotate(-90 966.0 803.7)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="1175.5" y="936.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="70.0" y="962.0" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="276.5" y="984.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">S</text>
+<line x1="122.0" y1="1202.7" x2="465.0" y2="1202.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1206.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="122.0" y1="1171.4" x2="465.0" y2="1171.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1175.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="122.0" y1="1136.8" x2="465.0" y2="1136.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1140.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="122.0" y1="1102.1" x2="465.0" y2="1102.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1106.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="122.0" y1="1067.4" x2="465.0" y2="1067.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1071.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="122.0" y1="1032.7" x2="465.0" y2="1032.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1036.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="122.0" y1="998.0" x2="465.0" y2="998.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1002.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="122.0" y1="998.0" x2="122.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="122.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-9</tspan></text>
+<line x1="220.0" y1="998.0" x2="220.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="220.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-7</tspan></text>
+<line x1="318.0" y1="998.0" x2="318.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="318.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-5</tspan></text>
+<line x1="416.0" y1="998.0" x2="416.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="416.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-3</tspan></text>
+<line x1="465.0" y1="998.0" x2="465.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="465.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-2</tspan></text>
+<polyline fill="none" stroke="#0f5f73" stroke-width="2.8" points="122.00,1202.67 122.00,1199.20 122.00,1195.73 122.00,1192.26 122.00,1188.79 122.00,1185.32 122.00,1181.85 122.00,1178.38 162.37,1174.92 200.05,1171.45 231.68,1167.98 259.47,1164.51 282.90,1161.04 302.12,1157.57 317.25,1154.10 327.98,1150.63 334.77,1147.16 337.55,1143.69 336.49,1140.23 331.58,1136.76 322.64,1133.29 310.01,1129.82 294.17,1126.35 274.79,1122.88 252.31,1119.41 226.60,1115.94 198.34,1112.47 168.24,1109.01 138.43,1105.54 122.00,1102.07 122.00,1098.60 124.13,1095.13 134.09,1091.66 144.32,1088.19 154.30,1084.72 163.34,1081.25 171.79,1077.79 180.24,1074.32 188.71,1070.85 197.75,1067.38 206.15,1063.91 214.51,1060.44 222.41,1056.97 230.59,1053.50 237.74,1050.03 244.63,1046.56 253.00,1043.10 261.31,1039.63 268.01,1036.16 276.99,1032.69 285.50,1029.22 297.55,1025.75 308.82,1022.28 319.90,1018.81 331.61,1015.34 342.78,1011.88 354.94,1008.41 366.82,1004.94 380.07,1001.47 437.18,998.00"/>
+<text x="84.0" y="1100.3" text-anchor="middle" transform="rotate(-90 84.0 1100.3)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="293.5" y="1232.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="511.0" y="962.0" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="717.5" y="984.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">SO2</text>
+<line x1="563.0" y1="1202.7" x2="906.0" y2="1202.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1206.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="563.0" y1="1171.4" x2="906.0" y2="1171.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1175.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="563.0" y1="1136.8" x2="906.0" y2="1136.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1140.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="563.0" y1="1102.1" x2="906.0" y2="1102.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1106.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="563.0" y1="1067.4" x2="906.0" y2="1067.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1071.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="563.0" y1="1032.7" x2="906.0" y2="1032.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1036.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="563.0" y1="998.0" x2="906.0" y2="998.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1002.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="563.0" y1="998.0" x2="563.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="563.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">2</tspan></text>
+<line x1="648.8" y1="998.0" x2="648.8" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="648.8" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">4</tspan></text>
+<line x1="734.5" y1="998.0" x2="734.5" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="734.5" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">6</tspan></text>
+<line x1="820.2" y1="998.0" x2="820.2" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="820.2" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">8</tspan></text>
+<line x1="906.0" y1="998.0" x2="906.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="906.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">10</tspan></text>
+<polyline fill="none" stroke="#946634" stroke-width="2.8" points="883.35,1202.67 867.49,1199.20 852.62,1195.73 837.51,1192.26 822.52,1188.79 807.55,1185.32 793.16,1181.85 779.55,1178.38 766.89,1174.92 753.52,1171.45 738.24,1167.98 729.38,1164.51 737.35,1161.04 751.51,1157.57 763.63,1154.10 772.13,1150.63 776.59,1147.16 776.77,1143.69 773.22,1140.23 765.90,1136.76 756.22,1133.29 743.79,1129.82 727.92,1126.35 709.41,1122.88 688.64,1119.41 665.80,1115.94 642.11,1112.47 618.59,1109.01 598.02,1105.54 585.65,1102.07 581.32,1098.60 580.89,1095.13 581.47,1091.66 582.82,1088.19 584.37,1084.72 586.12,1081.25 588.36,1077.79 590.87,1074.32 593.55,1070.85 596.53,1067.38 599.86,1063.91 603.27,1060.44 606.58,1056.97 609.64,1053.50 612.51,1050.03 615.02,1046.56 617.05,1043.10 618.74,1039.63 620.16,1036.16 621.11,1032.69 621.73,1029.22 621.72,1025.75 621.50,1022.28 620.98,1018.81 620.29,1015.34 619.36,1011.88 618.29,1008.41 616.93,1004.94 615.24,1001.47 579.64,998.00"/>
+<text x="525.0" y="1100.3" text-anchor="middle" transform="rotate(-90 525.0 1100.3)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="734.5" y="1232.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="952.0" y="962.0" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="1158.5" y="984.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">CS</text>
+<line x1="1004.0" y1="1202.7" x2="1347.0" y2="1202.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1206.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="1004.0" y1="1171.4" x2="1347.0" y2="1171.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1175.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="1004.0" y1="1136.8" x2="1347.0" y2="1136.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1140.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="1004.0" y1="1102.1" x2="1347.0" y2="1102.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1106.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="1004.0" y1="1067.4" x2="1347.0" y2="1067.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1071.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="1004.0" y1="1032.7" x2="1347.0" y2="1032.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1036.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="1004.0" y1="998.0" x2="1347.0" y2="998.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1002.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="1004.0" y1="998.0" x2="1004.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="1004.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">0</tspan></text>
+<line x1="1118.3" y1="998.0" x2="1118.3" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="1118.3" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">1</tspan></text>
+<line x1="1232.7" y1="998.0" x2="1232.7" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="1232.7" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">2</tspan></text>
+<line x1="1347.0" y1="998.0" x2="1347.0" y2="1202.7" stroke="#efe6dc" stroke-width="1"/>
+<text x="1347.0" y="1218.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">3</tspan></text>
+<polyline fill="none" stroke="#8a0838" stroke-width="2.8" points="1298.35,1202.67 1004.00,1199.20 1004.00,1195.73 1004.00,1192.26 1004.00,1188.79 1004.00,1185.32 1004.00,1181.85 1004.00,1178.38 1004.00,1174.92 1004.00,1171.45 1004.00,1167.98 1004.00,1164.51 1004.00,1161.04 1004.00,1157.57 1004.00,1154.10 1004.00,1150.63 1004.00,1147.16 1004.00,1143.69 1004.00,1140.23 1004.00,1136.76 1004.00,1133.29 1004.00,1129.82 1004.00,1126.35 1004.00,1122.88 1004.00,1119.41 1004.00,1115.94 1004.00,1112.47 1004.00,1109.01 1004.00,1105.54 1004.00,1102.07 1004.00,1098.60 1004.00,1095.13 1004.00,1091.66 1004.00,1088.19 1004.00,1084.72 1004.00,1081.25 1004.00,1077.79 1004.00,1074.32 1004.00,1070.85 1004.00,1067.38 1004.00,1063.91 1004.00,1060.44 1004.00,1056.97 1004.00,1053.50 1004.00,1050.03 1004.00,1046.56 1004.00,1043.10 1004.00,1039.63 1004.00,1036.16 1004.00,1032.69 1004.00,1029.22 1004.00,1025.75 1004.00,1022.28 1004.00,1018.81 1004.00,1015.34 1004.00,1011.88 1004.00,1008.41 1004.00,1004.94 1004.00,1001.47 1004.00,998.00"/>
+<text x="966.0" y="1100.3" text-anchor="middle" transform="rotate(-90 966.0 1100.3)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="1175.5" y="1232.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="70.0" y="1258.7" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="276.5" y="1280.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">SCSOH</text>
+<line x1="122.0" y1="1499.3" x2="465.0" y2="1499.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1503.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="122.0" y1="1468.1" x2="465.0" y2="1468.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1472.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="122.0" y1="1433.4" x2="465.0" y2="1433.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1437.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="122.0" y1="1398.7" x2="465.0" y2="1398.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1402.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="122.0" y1="1364.0" x2="465.0" y2="1364.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1368.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="122.0" y1="1329.4" x2="465.0" y2="1329.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1333.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="122.0" y1="1294.7" x2="465.0" y2="1294.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1298.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="122.0" y1="1294.7" x2="122.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="122.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-21</tspan></text>
+<line x1="220.0" y1="1294.7" x2="220.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="220.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-19</tspan></text>
+<line x1="318.0" y1="1294.7" x2="318.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="318.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-17</tspan></text>
+<line x1="416.0" y1="1294.7" x2="416.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="416.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-15</tspan></text>
+<line x1="465.0" y1="1294.7" x2="465.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="465.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-14</tspan></text>
+<polyline fill="none" stroke="#2f6f3e" stroke-width="2.8" points="452.82,1499.33 122.00,1495.86 122.00,1492.40 122.00,1488.93 122.00,1485.46 122.00,1481.99 122.00,1478.52 122.00,1475.05 122.00,1471.58 122.00,1468.11 122.00,1464.64 122.00,1461.18 122.00,1457.71 122.00,1454.24 122.00,1450.77 122.00,1447.30 122.00,1443.83 122.00,1440.36 122.00,1436.89 122.00,1433.42 122.00,1429.95 122.00,1426.49 122.00,1423.02 122.00,1419.55 122.00,1416.08 122.00,1412.61 122.00,1409.14 122.00,1405.67 122.00,1402.20 122.00,1398.73 122.00,1395.27 122.00,1391.80 122.00,1388.33 122.00,1384.86 122.00,1381.39 122.00,1377.92 122.00,1374.45 122.00,1370.98 122.00,1367.51 122.00,1364.05 122.00,1360.58 122.00,1357.11 122.00,1353.64 122.00,1350.17 122.00,1346.70 122.00,1343.23 122.00,1339.76 122.00,1336.29 122.00,1332.82 122.00,1329.36 122.00,1325.89 122.00,1322.42 122.00,1318.95 122.00,1315.48 122.00,1312.01 122.00,1308.54 122.00,1305.07 122.00,1301.60 122.00,1298.14 122.00,1294.67"/>
+<text x="84.0" y="1397.0" text-anchor="middle" transform="rotate(-90 84.0 1397.0)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="293.5" y="1529.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="511.0" y="1258.7" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="717.5" y="1280.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">H2SO4</text>
+<line x1="563.0" y1="1499.3" x2="906.0" y2="1499.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1503.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="563.0" y1="1468.1" x2="906.0" y2="1468.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1472.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="563.0" y1="1433.4" x2="906.0" y2="1433.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1437.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="563.0" y1="1398.7" x2="906.0" y2="1398.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1402.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="563.0" y1="1364.0" x2="906.0" y2="1364.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1368.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="563.0" y1="1329.4" x2="906.0" y2="1329.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1333.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="563.0" y1="1294.7" x2="906.0" y2="1294.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1298.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="563.0" y1="1294.7" x2="563.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="563.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">0</tspan></text>
+<line x1="631.6" y1="1294.7" x2="631.6" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="631.6" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">2</tspan></text>
+<line x1="700.2" y1="1294.7" x2="700.2" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="700.2" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">4</tspan></text>
+<line x1="768.8" y1="1294.7" x2="768.8" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="768.8" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">6</tspan></text>
+<line x1="837.4" y1="1294.7" x2="837.4" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="837.4" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">8</tspan></text>
+<line x1="906.0" y1="1294.7" x2="906.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="906.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">10</tspan></text>
+<polyline fill="none" stroke="#8c4f7d" stroke-width="2.8" points="891.14,1499.33 881.56,1495.86 870.73,1492.40 860.21,1488.93 850.12,1485.46 840.55,1481.99 831.57,1478.52 823.28,1475.05 815.58,1471.58 807.59,1468.11 798.13,1464.64 787.04,1461.18 642.99,1457.71 648.81,1454.24 653.89,1450.77 658.60,1447.30 663.04,1443.83 667.99,1440.36 672.68,1436.89 677.79,1433.42 686.46,1429.95 696.94,1426.49 709.53,1423.02 720.01,1419.55 729.44,1416.08 737.82,1412.61 738.70,1409.14 737.40,1405.67 735.58,1402.20 733.61,1398.73 731.66,1395.27 729.71,1391.80 727.76,1388.33 725.79,1384.86 723.82,1381.39 721.93,1377.92 719.98,1374.45 718.15,1370.98 716.19,1367.51 714.26,1364.05 712.30,1360.58 710.31,1357.11 708.28,1353.64 706.21,1350.17 704.07,1346.70 701.80,1343.23 699.36,1339.76 696.76,1336.29 694.06,1332.82 691.07,1329.36 687.89,1325.89 684.27,1322.42 680.44,1318.95 676.22,1315.48 671.58,1312.01 666.28,1308.54 660.12,1305.07 652.17,1301.60 639.96,1298.14 563.00,1294.67"/>
+<text x="525.0" y="1397.0" text-anchor="middle" transform="rotate(-90 525.0 1397.0)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="734.5" y="1529.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="952.0" y="1258.7" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="1158.5" y="1280.7" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">H2S</text>
+<line x1="1004.0" y1="1499.3" x2="1347.0" y2="1499.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1503.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="1004.0" y1="1468.1" x2="1347.0" y2="1468.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1472.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="1004.0" y1="1433.4" x2="1347.0" y2="1433.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1437.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="1004.0" y1="1398.7" x2="1347.0" y2="1398.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1402.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="1004.0" y1="1364.0" x2="1347.0" y2="1364.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1368.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="1004.0" y1="1329.4" x2="1347.0" y2="1329.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1333.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="1004.0" y1="1294.7" x2="1347.0" y2="1294.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1298.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="1004.0" y1="1294.7" x2="1004.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1004.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">0</tspan></text>
+<line x1="1080.2" y1="1294.7" x2="1080.2" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1080.2" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">2</tspan></text>
+<line x1="1156.4" y1="1294.7" x2="1156.4" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1156.4" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">4</tspan></text>
+<line x1="1232.7" y1="1294.7" x2="1232.7" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1232.7" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">6</tspan></text>
+<line x1="1308.9" y1="1294.7" x2="1308.9" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1308.9" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">8</tspan></text>
+<line x1="1347.0" y1="1294.7" x2="1347.0" y2="1499.3" stroke="#efe6dc" stroke-width="1"/>
+<text x="1347.0" y="1515.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">9</tspan></text>
+<polyline fill="none" stroke="#c18b00" stroke-width="2.8" points="1335.63,1499.33 1321.25,1495.86 1308.47,1492.40 1296.23,1488.93 1284.35,1485.46 1272.69,1481.99 1261.47,1478.52 1250.82,1475.05 1240.66,1471.58 1229.32,1468.11 1213.86,1464.64 1191.75,1461.18 1162.97,1457.71 1129.23,1454.24 1092.14,1450.77 1051.46,1447.30 1006.87,1443.83 1004.00,1440.36 1004.00,1436.89 1004.00,1433.42 1004.00,1429.95 1004.00,1426.49 1004.00,1423.02 1004.00,1419.55 1004.00,1416.08 1004.00,1412.61 1004.00,1409.14 1004.00,1405.67 1004.00,1402.20 1004.00,1398.73 1004.00,1395.27 1004.00,1391.80 1004.00,1388.33 1004.00,1384.86 1004.00,1381.39 1004.00,1377.92 1004.00,1374.45 1004.00,1370.98 1004.00,1367.51 1004.00,1364.05 1004.00,1360.58 1004.00,1357.11 1004.00,1353.64 1004.00,1350.17 1004.00,1346.70 1004.00,1343.23 1004.00,1339.76 1004.00,1336.29 1004.00,1332.82 1004.00,1329.36 1004.00,1325.89 1004.00,1322.42 1004.00,1318.95 1004.00,1315.48 1004.00,1312.01 1004.00,1308.54 1004.00,1305.07 1004.00,1301.60 1004.00,1298.14 1004.00,1294.67"/>
+<text x="966.0" y="1397.0" text-anchor="middle" transform="rotate(-90 966.0 1397.0)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="1175.5" y="1529.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="70.0" y="1555.3" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="276.5" y="1577.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">SH</text>
+<line x1="122.0" y1="1796.0" x2="465.0" y2="1796.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1800.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="122.0" y1="1764.8" x2="465.0" y2="1764.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1768.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="122.0" y1="1730.1" x2="465.0" y2="1730.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1734.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="122.0" y1="1695.4" x2="465.0" y2="1695.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1699.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="122.0" y1="1660.7" x2="465.0" y2="1660.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1664.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="122.0" y1="1626.0" x2="465.0" y2="1626.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1630.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="122.0" y1="1591.3" x2="465.0" y2="1591.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="114.0" y="1595.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="122.0" y1="1591.3" x2="122.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="122.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">0</tspan></text>
+<line x1="293.5" y1="1591.3" x2="293.5" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="293.5" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">1</tspan></text>
+<line x1="465.0" y1="1591.3" x2="465.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="465.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">2</tspan></text>
+<polyline fill="none" stroke="#4c6ea8" stroke-width="2.8" points="318.35,1796.00 229.38,1792.53 154.77,1789.06 122.00,1785.59 122.00,1782.12 122.00,1778.66 122.00,1775.19 122.00,1771.72 122.00,1768.25 122.00,1764.78 122.00,1761.31 122.00,1757.84 122.00,1754.37 122.00,1750.90 122.00,1747.44 122.00,1743.97 122.00,1740.50 122.00,1737.03 122.00,1733.56 122.00,1730.09 122.00,1726.62 122.00,1723.15 122.00,1719.68 122.00,1716.21 122.00,1712.75 122.00,1709.28 122.00,1705.81 122.00,1702.34 122.00,1698.87 122.00,1695.40 122.00,1691.93 122.00,1688.46 122.00,1684.99 122.00,1681.53 122.00,1678.06 122.00,1674.59 122.00,1671.12 122.00,1667.65 122.00,1664.18 122.00,1660.71 122.00,1657.24 122.00,1653.77 122.00,1650.31 122.00,1646.84 122.00,1643.37 122.00,1639.90 122.00,1636.43 122.00,1632.96 122.00,1629.49 122.00,1626.02 122.00,1622.55 122.00,1619.08 122.00,1615.62 122.00,1612.15 122.00,1608.68 122.00,1605.21 122.00,1601.74 122.00,1598.27 122.00,1594.80 122.00,1591.33"/>
+<text x="84.0" y="1693.7" text-anchor="middle" transform="rotate(-90 84.0 1693.7)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="293.5" y="1826.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="511.0" y="1555.3" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="717.5" y="1577.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">SO</text>
+<line x1="563.0" y1="1796.0" x2="906.0" y2="1796.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1800.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="563.0" y1="1764.8" x2="906.0" y2="1764.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1768.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="563.0" y1="1730.1" x2="906.0" y2="1730.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1734.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="563.0" y1="1695.4" x2="906.0" y2="1695.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1699.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="563.0" y1="1660.7" x2="906.0" y2="1660.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1664.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="563.0" y1="1626.0" x2="906.0" y2="1626.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1630.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="563.0" y1="1591.3" x2="906.0" y2="1591.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="555.0" y="1595.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="563.0" y1="1591.3" x2="563.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="563.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-3</tspan></text>
+<line x1="661.0" y1="1591.3" x2="661.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="661.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">-1</tspan></text>
+<line x1="759.0" y1="1591.3" x2="759.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="759.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">1</tspan></text>
+<line x1="857.0" y1="1591.3" x2="857.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="857.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">3</tspan></text>
+<line x1="906.0" y1="1591.3" x2="906.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="906.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">4</tspan></text>
+<polyline fill="none" stroke="#aa5a2f" stroke-width="2.8" points="686.69,1796.00 642.80,1792.53 625.72,1789.06 615.77,1785.59 607.63,1782.12 601.48,1778.66 597.97,1775.19 599.05,1771.72 609.55,1768.25 632.27,1764.78 660.52,1761.31 687.10,1757.84 710.96,1754.37 731.70,1750.90 749.88,1747.44 764.92,1743.97 778.46,1740.50 789.60,1737.03 797.67,1733.56 801.66,1730.09 801.28,1726.62 797.25,1723.15 789.03,1719.68 777.14,1716.21 762.19,1712.75 744.19,1709.28 724.80,1705.81 704.96,1702.34 687.95,1698.87 679.82,1695.40 679.22,1691.93 682.82,1688.46 687.30,1684.99 692.32,1681.53 697.31,1678.06 701.98,1674.59 706.24,1671.12 710.73,1667.65 715.34,1664.18 720.83,1660.71 725.81,1657.24 730.85,1653.77 735.63,1650.31 740.79,1646.84 744.98,1643.37 748.85,1639.90 753.89,1636.43 758.71,1632.96 762.23,1629.49 767.29,1626.02 771.94,1622.55 779.01,1619.08 785.22,1615.62 791.16,1612.15 797.69,1608.68 803.45,1605.21 809.99,1601.74 815.84,1598.27 822.23,1594.80 865.20,1591.33"/>
+<text x="525.0" y="1693.7" text-anchor="middle" transform="rotate(-90 525.0 1693.7)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="734.5" y="1826.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<rect x="952.0" y="1555.3" width="413.0" height="268.7" rx="10" fill="#fffaf2" stroke="#d0c2ae" stroke-width="1.3"/>
+<text x="1158.5" y="1577.3" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18242d">CH3SCH3</text>
+<line x1="1004.0" y1="1796.0" x2="1347.0" y2="1796.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1800.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">1</text>
+<line x1="1004.0" y1="1764.8" x2="1347.0" y2="1764.8" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1768.8" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10</text>
+<line x1="1004.0" y1="1730.1" x2="1347.0" y2="1730.1" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1734.1" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">20</text>
+<line x1="1004.0" y1="1695.4" x2="1347.0" y2="1695.4" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1699.4" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">30</text>
+<line x1="1004.0" y1="1660.7" x2="1347.0" y2="1660.7" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1664.7" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">40</text>
+<line x1="1004.0" y1="1626.0" x2="1347.0" y2="1626.0" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1630.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">50</text>
+<line x1="1004.0" y1="1591.3" x2="1347.0" y2="1591.3" stroke="#e3d8cb" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="996.0" y="1595.3" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">60</text>
+<line x1="1004.0" y1="1591.3" x2="1004.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1004.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">0</tspan></text>
+<line x1="1072.6" y1="1591.3" x2="1072.6" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1072.6" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">2</tspan></text>
+<line x1="1141.2" y1="1591.3" x2="1141.2" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1141.2" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">4</tspan></text>
+<line x1="1209.8" y1="1591.3" x2="1209.8" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1209.8" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">6</tspan></text>
+<line x1="1278.4" y1="1591.3" x2="1278.4" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1278.4" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">8</tspan></text>
+<line x1="1347.0" y1="1591.3" x2="1347.0" y2="1796.0" stroke="#efe6dc" stroke-width="1"/>
+<text x="1347.0" y="1812.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#6f7d84">10<tspan dy="-4" font-size="8">10</tspan></text>
+<polyline fill="none" stroke="#5d6c75" stroke-width="2.8" points="1314.17,1796.00 1293.99,1792.53 1276.05,1789.06 1258.23,1785.59 1240.46,1782.12 1222.50,1778.66 1204.69,1775.19 1187.16,1771.72 1169.74,1768.25 1149.48,1764.78 1121.72,1761.31 1084.14,1757.84 1037.57,1754.37 1004.00,1750.90 1004.00,1747.44 1004.00,1743.97 1004.00,1740.50 1004.00,1737.03 1004.00,1733.56 1004.00,1730.09 1004.00,1726.62 1004.00,1723.15 1004.00,1719.68 1004.00,1716.21 1004.00,1712.75 1004.00,1709.28 1004.00,1705.81 1004.00,1702.34 1004.00,1698.87 1004.00,1695.40 1004.00,1691.93 1004.00,1688.46 1004.00,1684.99 1004.00,1681.53 1004.00,1678.06 1004.00,1674.59 1004.00,1671.12 1004.00,1667.65 1004.00,1664.18 1004.00,1660.71 1004.00,1657.24 1004.00,1653.77 1004.00,1650.31 1004.00,1646.84 1004.00,1643.37 1004.00,1639.90 1004.00,1636.43 1004.00,1632.96 1004.00,1629.49 1004.00,1626.02 1004.00,1622.55 1004.00,1619.08 1004.00,1615.62 1004.00,1612.15 1004.00,1608.68 1004.00,1605.21 1004.00,1601.74 1004.00,1598.27 1004.00,1594.80 1004.00,1591.33"/>
+<text x="966.0" y="1693.7" text-anchor="middle" transform="rotate(-90 966.0 1693.7)" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Altitude (km)</text>
+<text x="1175.5" y="1826.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#31424c">Number density (cm^-3)</text>
+<text x="700" y="1868" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5d6c75">Note: x-axis lower bounds are clipped in very wide-range panels for readability. fort.41 and fort.50 are identical SO3 dumps; fort.43 and fort.46 are identical SO4 dumps.</text>
+</svg>
