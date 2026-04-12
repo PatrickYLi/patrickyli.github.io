@@ -182,6 +182,10 @@
     letter-spacing: 0.02em;
   }
 
+  .patmo-course .lecture-figure.wide-figure img {
+    width: min(100%, 1080px);
+  }
+
   .patmo-course .model-note-stack {
     display: grid;
     grid-template-columns: 1fr;
@@ -241,6 +245,39 @@
     color: #51616a;
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+  .patmo-course .patmo-data-table,
+  .patmo-course .compact-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 0;
+    background: rgba(255, 250, 242, 0.78);
+    overflow: hidden;
+    border-radius: 0.85rem;
+  }
+
+  .patmo-course .patmo-data-table th,
+  .patmo-course .patmo-data-table td,
+  .patmo-course .compact-data-table th,
+  .patmo-course .compact-data-table td {
+    padding: 0.78rem 0.8rem;
+    border: 1px solid rgba(132, 111, 81, 0.18);
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .patmo-course .patmo-data-table th,
+  .patmo-course .compact-data-table th {
+    background: rgba(15, 95, 115, 0.08);
+    color: #18242d;
+    font-family: "Helvetica Neue", "Avenir Next", "Segoe UI", sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+  }
+
+  .patmo-course .compact-data-table {
+    font-size: 0.95rem;
   }
 
   .pixel-button {
