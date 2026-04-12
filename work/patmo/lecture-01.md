@@ -54,7 +54,6 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
     <li><a class="outline-link" href="#case-study">Why this course uses the modern sulfur cycle</a></li>
     <li><a class="outline-link" href="#research-workflow">PATMO in research work</a></li>
     <li><a class="outline-link" href="#course-expectations">What this course will teach you</a></li>
-    <li><a class="outline-link" href="#after-class-task">After-class task</a></li>
     <li><a class="outline-link" href="#check-yourself">Check yourself</a></li>
   </ol>
 </section>
@@ -390,31 +389,6 @@ y</code></pre>
       <p>
         If these points are already clear to you, then you are ready for Lecture 2.
       </p>
-    </div>
-  </div>
-</section>
-
-<section id="after-class-task" class="section-block">
-  <div class="section-heading">
-    <h2>After-Class Task</h2>
-  </div>
-
-  <div class="lesson-grid">
-    <div class="panel">
-      <p>Write a short answer, in no more than 200 words, to the following two questions:</p>
-      <ol>
-        <li>What is <code>PATMO</code> in your own understanding?</li>
-        <li>What role does the <code>modern sulfur cycle</code> play in this course?</li>
-      </ol>
-    </div>
-
-    <div class="panel">
-      <p class="section-label">Requirements</p>
-      <ul>
-        <li>use your own words</li>
-        <li>do not simply copy section headings</li>
-        <li>your answer does not need to be perfect, but it should show understanding</li>
-      </ul>
     </div>
   </div>
 </section>
