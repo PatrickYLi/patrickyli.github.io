@@ -6,7 +6,6 @@ permalink: /work/patmo/lecture-01/
 body_class: patmo-reading-theme
 head-extra:
   - patmo-reading-theme.html
-  - patmo-mathjax.html
 description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and the role of the modern sulfur cycle.
 ---
 
@@ -95,14 +94,34 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
         <div class="equation-step">
           <p class="equation-label">Continuous Vertical Form</p>
           <div class="equation">
-\[
-\frac{\partial n_i(z,t)}{\partial t}
-=
-P_i(z,t) - L_i(z,t) - \frac{\partial \Phi_i(z,t)}{\partial z}
-\]
+            <math display="block">
+              <mfrac>
+                <mrow>
+                  <mo>&#x2202;</mo>
+                  <msub><mi>n</mi><mi>i</mi></msub>
+                  <mo>(</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo>)</mo>
+                </mrow>
+                <mrow><mo>&#x2202;</mo><mi>t</mi></mrow>
+              </mfrac>
+              <mo>=</mo>
+              <msub><mi>P</mi><mi>i</mi></msub>
+              <mo>(</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo>)</mo>
+              <mo>&#x2212;</mo>
+              <msub><mi>L</mi><mi>i</mi></msub>
+              <mo>(</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo>)</mo>
+              <mo>&#x2212;</mo>
+              <mfrac>
+                <mrow>
+                  <mo>&#x2202;</mo>
+                  <msub><mi>&#x03A6;</mi><mi>i</mi></msub>
+                  <mo>(</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo>)</mo>
+                </mrow>
+                <mrow><mo>&#x2202;</mo><mi>z</mi></mrow>
+              </mfrac>
+            </math>
           </div>
           <p class="equation-note">
-            In a 1D atmospheric column, the abundance of species \(i\) changes because of local production,
+            In a 1D atmospheric column, the abundance of species <em>i</em> changes because of local production,
             local loss, and the vertical divergence of flux.
           </p>
         </div>
@@ -110,15 +129,40 @@ P_i(z,t) - L_i(z,t) - \frac{\partial \Phi_i(z,t)}{\partial z}
         <div class="equation-step">
           <p class="equation-label">Layer-by-Layer Discretization</p>
           <div class="equation">
-\[
-\frac{d n_{i,k}}{dt}
-=
-P_{i,k} - L_{i,k}
-- \frac{\Phi_{i,k+1/2} - \Phi_{i,k-1/2}}{\Delta z_k}
-\]
+            <math display="block">
+              <mfrac>
+                <mrow>
+                  <mi>d</mi>
+                  <msub>
+                    <mi>n</mi>
+                    <mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow>
+                  </msub>
+                </mrow>
+                <mrow><mi>d</mi><mi>t</mi></mrow>
+              </mfrac>
+              <mo>=</mo>
+              <msub><mi>P</mi><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></msub>
+              <mo>&#x2212;</mo>
+              <msub><mi>L</mi><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></msub>
+              <mo>&#x2212;</mo>
+              <mfrac>
+                <mrow>
+                  <msub>
+                    <mi>&#x03A6;</mi>
+                    <mrow><mi>i</mi><mo>,</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>/</mo><mn>2</mn></mrow>
+                  </msub>
+                  <mo>&#x2212;</mo>
+                  <msub>
+                    <mi>&#x03A6;</mi>
+                    <mrow><mi>i</mi><mo>,</mo><mi>k</mi><mo>&#x2212;</mo><mn>1</mn><mo>/</mo><mn>2</mn></mrow>
+                  </msub>
+                </mrow>
+                <mrow><mo>&#x0394;</mo><msub><mi>z</mi><mi>k</mi></msub></mrow>
+              </mfrac>
+            </math>
           </div>
           <p class="equation-note">
-            Here, \(k = 1, 2, \dots, N\) labels the vertical layers.
+            Here, <em>k</em> = 1, 2, ..., <em>N</em> labels the vertical layers.
             This is the key idea behind a 1D model:
             the atmosphere is represented as a stack of coupled layers,
             and each layer exchanges material with the layers above and below.
@@ -158,51 +202,83 @@ P_{i,k} - L_{i,k}
         <div class="equation-step">
           <p class="equation-label">1. Opacity</p>
           <div class="equation">
-\[
-\tau_\lambda(z)
-=
-\int_z^\infty \sum_i n_i(z')\,\sigma_{i,\lambda}(z')\,dz'
-\]
+            <math display="block">
+              <msub><mi>&#x03C4;</mi><mi>&#x03BB;</mi></msub>
+              <mo>(</mo><mi>z</mi><mo>)</mo>
+              <mo>=</mo>
+              <msubsup><mo>&#x222B;</mo><mi>z</mi><mi>&#x221E;</mi></msubsup>
+              <munder><mo>&#x2211;</mo><mi>i</mi></munder>
+              <msub><mi>n</mi><mi>i</mi></msub>
+              <mo>(</mo><mrow><mi>z</mi><mo>&#x2032;</mo></mrow><mo>)</mo>
+              <msub><mi>&#x03C3;</mi><mrow><mi>i</mi><mo>,</mo><mi>&#x03BB;</mi></mrow></msub>
+              <mo>(</mo><mrow><mi>z</mi><mo>&#x2032;</mo></mrow><mo>)</mo>
+              <mi>d</mi><mrow><mi>z</mi><mo>&#x2032;</mo></mrow>
+            </math>
           </div>
           <p class="equation-note">
-            This is the wavelength-dependent optical depth above altitude \(z\).
-            It measures how much absorbing material lies overhead and how strongly that material interacts with radiation at wavelength \(\lambda\).
+            This is the wavelength-dependent optical depth above altitude <em>z</em>.
+            It measures how much absorbing material lies overhead and how strongly that material interacts with radiation at wavelength <em>&#x03BB;</em>.
           </p>
         </div>
 
         <div class="equation-step">
           <p class="equation-label">2. Solar Flux in Each Layer</p>
           <div class="equation">
-\[
-I_\lambda(z)
-=
-I_\lambda(\infty)\,
-\exp\!\left(-\frac{\tau_\lambda(z)}{\cos\theta}\right)
-\]
+            <math display="block">
+              <msub><mi>I</mi><mi>&#x03BB;</mi></msub>
+              <mo>(</mo><mi>z</mi><mo>)</mo>
+              <mo>=</mo>
+              <msub><mi>I</mi><mi>&#x03BB;</mi></msub>
+              <mo>(</mo><mi>&#x221E;</mi><mo>)</mo>
+              <msup>
+                <mi>e</mi>
+                <mrow>
+                  <mo>&#x2212;</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub><mi>&#x03C4;</mi><mi>&#x03BB;</mi></msub>
+                      <mo>(</mo><mi>z</mi><mo>)</mo>
+                    </mrow>
+                    <mrow><mi>cos</mi><mi>&#x03B8;</mi></mrow>
+                  </mfrac>
+                </mrow>
+              </msup>
+            </math>
           </div>
           <p class="equation-note">
             Once the optical depth is known, the incoming solar radiation is attenuated as it travels downward.
             Larger optical depth means less radiation survives to a given layer.
-            The angle \(\theta\) is the solar zenith angle.
+            The angle <em>&#x03B8;</em> is the solar zenith angle.
           </p>
         </div>
 
         <div class="equation-step">
           <p class="equation-label">3. Photochemical Rate Constant</p>
           <div class="equation">
-\[
-J_i(z)
-=
-\int_{\lambda_1}^{\lambda_2}
-\phi_i(\lambda)\,\sigma_i(\lambda)\,I_\lambda(z)\,d\lambda
-\]
+            <math display="block">
+              <msub><mi>J</mi><mi>i</mi></msub>
+              <mo>(</mo><mi>z</mi><mo>)</mo>
+              <mo>=</mo>
+              <msubsup>
+                <mo>&#x222B;</mo>
+                <mrow><mi>&#x03BB;</mi><mn>1</mn></mrow>
+                <mrow><mi>&#x03BB;</mi><mn>2</mn></mrow>
+              </msubsup>
+              <msub><mi>&#x03C6;</mi><mi>i</mi></msub>
+              <mo>(</mo><mi>&#x03BB;</mi><mo>)</mo>
+              <msub><mi>&#x03C3;</mi><mi>i</mi></msub>
+              <mo>(</mo><mi>&#x03BB;</mi><mo>)</mo>
+              <msub><mi>I</mi><mi>&#x03BB;</mi></msub>
+              <mo>(</mo><mi>z</mi><mo>)</mo>
+              <mi>d</mi><mi>&#x03BB;</mi>
+            </math>
           </div>
           <p class="equation-note">
-            This gives the photolysis rate of species \(i\) at altitude \(z\).
+            This gives the photolysis rate of species <em>i</em> at altitude <em>z</em>.
             It combines three ingredients:
-            how efficiently absorbed photons trigger reaction (\( \phi_i \), the quantum yield),
-            how strongly the species absorbs light (\( \sigma_i \), the cross section),
-            and how much radiation is actually available locally (\( I_\lambda \)).
+            how efficiently absorbed photons trigger reaction (<em>&#x03C6;</em><sub>i</sub>, the quantum yield),
+            how strongly the species absorbs light (<em>&#x03C3;</em><sub>i</sub>, the cross section),
+            and how much radiation is actually available locally (<em>I</em><sub>&#x03BB;</sub>).
           </p>
         </div>
       </div>
