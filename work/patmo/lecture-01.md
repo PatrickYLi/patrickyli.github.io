@@ -921,6 +921,34 @@ call patmo_dumpAllMixingRatioToFile("allNDs.dat")</code></pre>
 call patmo_dumpOpacity("opacity.dat")
 call patmo_dumpAllRates("rates.dat")
 call patmo_dumpAllMixingRatioToFile("allNDs.dat")</code></pre>
+    <p>
+      In addition to those named diagnostic files, this case also writes species-specific density profiles through
+      <code>patmo_dumpDensityToFile</code>. After your 60-year rerun, these outputs appear as <code>build/fort.*</code> files.
+    </p>
+    <pre><code>call patmo_dumpDensityToFile(35,t,patmo_idx_COS)
+call patmo_dumpDensityToFile(36,t,patmo_idx_S2)
+call patmo_dumpDensityToFile(37,t,patmo_idx_HSO)
+call patmo_dumpDensityToFile(38,t,patmo_idx_HSO2)
+call patmo_dumpDensityToFile(39,t,patmo_idx_HSO3)
+call patmo_dumpDensityToFile(40,t,patmo_idx_CS2)
+call patmo_dumpDensityToFile(41,t,patmo_idx_SO3)
+call patmo_dumpDensityToFile(42,t,patmo_idx_CH4O3S)
+call patmo_dumpDensityToFile(43,t,patmo_idx_SO4)
+call patmo_dumpDensityToFile(44,t,patmo_idx_S)
+call patmo_dumpDensityToFile(45,t,patmo_idx_SO2)
+call patmo_dumpDensityToFile(46,t,patmo_idx_SO4)
+call patmo_dumpDensityToFile(47,t,patmo_idx_CS)
+call patmo_dumpDensityToFile(48,t,patmo_idx_SCSOH)
+call patmo_dumpDensityToFile(49,t,patmo_idx_H2SO4)
+call patmo_dumpDensityToFile(50,t,patmo_idx_SO3)
+call patmo_dumpDensityToFile(51,t,patmo_idx_H2S)
+call patmo_dumpDensityToFile(52,t,patmo_idx_SH)
+call patmo_dumpDensityToFile(53,t,patmo_idx_SO)
+call patmo_dumpDensityToFile(55,t,patmo_idx_CH3SCH3)</code></pre>
+    <figure class="lecture-figure wide-figure">
+      <img src="{{ '/assets/img/patmo/modern_sulfur_cycle_fort_profiles_60yr.svg' | relative_url }}" alt="Multi-panel plot of sulfur-species number-density profiles from fort outputs after a 60-year PATMO run, with altitude in kilometers on the vertical axis and number density on the horizontal axis.">
+      <figcaption>Figure. Final sulfur-species number-density profiles from the <code>fort.*</code> outputs after a 60-year run. Duplicate <code>SO3</code> and <code>SO4</code> dumps are plotted once.</figcaption>
+    </figure>
   </div>
 
   <div class="lesson-grid">
@@ -956,6 +984,15 @@ call patmo_dumpAllMixingRatioToFile("allNDs.dat")</code></pre>
         This file is where chemistry becomes interpretable.
         If you want to know which sulfur pathway is important, this is the file you need.
         It helps you move from “the profile changed” to “this particular reaction pathway is responsible.”
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label"><code>fort.*</code> density dumps</p>
+      <p>
+        These are species-specific profile outputs written directly from <code>test.f90</code>.
+        They are especially useful when you want a quick look at the final vertical distribution of selected sulfur intermediates and products
+        without first parsing the larger combined output files.
       </p>
     </article>
   </div>
