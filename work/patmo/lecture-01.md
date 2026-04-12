@@ -90,12 +90,27 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
         Instead of representing the entire atmosphere in longitude, latitude, and height,
         it treats the atmosphere as a single vertical column divided into layers.
       </p>
+      <div class="equation-step">
+        <p class="equation-label">Layer-by-Layer Representation</p>
+        <div class="equation">
+          n<sub>i</sub>(z, t) &rarr; { n<sub>i,1</sub>(t), n<sub>i,2</sub>(t), ..., n<sub>i,N</sub>(t) }
+        </div>
+        <p class="equation-note">
+          Here, <em>i</em> is a chemical species and <em>k = 1, 2, ..., N</em> labels the vertical layers.
+          Instead of storing one single abundance for the whole atmosphere,
+          <code>PATMO</code> stores one value for each species in each layer.
+        </p>
+      </div>
       <ul>
         <li>temperature can vary by layer</li>
         <li>density can vary by layer</li>
         <li>species abundances can vary by layer</li>
         <li>radiation conditions can vary by layer</li>
       </ul>
+      <p>
+        This is why the output of a 1D model is often a profile rather than a single number.
+        The model is solving the atmosphere one layer at a time, while still allowing neighboring layers to interact through transport.
+      </p>
     </article>
 
     <article class="entry-card">
@@ -108,6 +123,51 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
       <p>
         So radiation is not just a background setting in <code>PATMO</code>;
         it is one of the active drivers of chemical evolution.
+      </p>
+      <div class="equation-flow">
+        <div class="equation-step">
+          <p class="equation-label">1. Opacity</p>
+          <div class="equation">
+            &tau;<sub>k,&lambda;</sub> &asymp; &Sigma;<sub>m=k</sub><sup>N</sup> &Sigma;<sub>i</sub>
+            n<sub>i,m</sub> &middot; &sigma;<sub>i,&lambda;</sub> &middot; &Delta;z<sub>m</sub>
+          </div>
+          <p class="equation-note">
+            This is the wavelength-dependent opacity above layer <em>k</em>.
+            It tells you how much material lies above that layer and how strongly that material absorbs radiation at wavelength <em>&lambda;</em>.
+          </p>
+        </div>
+
+        <div class="equation-step">
+          <p class="equation-label">2. Solar Flux in Each Layer</p>
+          <div class="equation">
+            I<sub>&lambda;</sub>(z<sub>k</sub>) = I<sub>&lambda;</sub>(&infin;) &middot;
+            e<sup>-&tau;<sub>k,&lambda;</sub> / cos &theta;</sup>
+          </div>
+          <p class="equation-note">
+            Once the opacity is known, the incoming solar flux is attenuated as it travels downward.
+            Larger opacity means less radiation reaches the layer.
+            The factor <em>&theta;</em> is the solar zenith angle.
+          </p>
+        </div>
+
+        <div class="equation-step">
+          <p class="equation-label">3. Photochemical Rate Constant</p>
+          <div class="equation">
+            J<sub>i,k</sub> = &int;<sub>&lambda;1</sub><sup>&lambda;2</sup>
+            &phi;<sub>i</sub>(&lambda;) &middot; &sigma;<sub>i</sub>(&lambda;) &middot; I<sub>&lambda;</sub>(z<sub>k</sub>) d&lambda;
+          </div>
+          <p class="equation-note">
+            This gives the photolysis rate of species <em>i</em> in layer <em>k</em>.
+            It combines three ingredients: how efficiently photons cause reaction
+            (<em>quantum yield</em>), how strongly the species absorbs radiation
+            (<em>cross section</em>), and how much radiation is actually available in that layer.
+          </p>
+        </div>
+      </div>
+      <p>
+        In short, the logic is:
+        opacity controls how much solar radiation survives to a given layer,
+        and that surviving radiation sets the local photochemical rate constants.
       </p>
     </article>
 
