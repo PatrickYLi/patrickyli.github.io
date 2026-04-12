@@ -1026,6 +1026,7 @@ call patmo_dumpDensityToFile(52,t,patmo_idx_CH3SCH3)</code></pre>
       <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>reaction_network.xlsx</code></button>
     </div>
     <div class="quiz-feedback"></div>
+    <div class="quiz-explanation" hidden><strong>Correct.</strong> <span class="feedback-detail"><code>profile.xlsx</code> is the file that stores the altitude-dependent initial profiles, so it is the right place to inspect number density as a function of height.</span></div>
   </div>
 
   <div class="quiz-block" data-answer="c">
@@ -1037,6 +1038,7 @@ call patmo_dumpDensityToFile(52,t,patmo_idx_CH3SCH3)</code></pre>
       <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. Because sulfur is introduced mainly through emissions and then evolves through chemistry and transport</button>
     </div>
     <div class="quiz-feedback"></div>
+    <div class="quiz-explanation" hidden><strong>Correct.</strong> <span class="feedback-detail">In this case, sulfur is not mainly prescribed as a large initial inventory in <code>profile.xlsx</code>. It enters the column through boundary-condition emissions and then changes through chemistry, transport, and removal processes.</span></div>
   </div>
 
   <div class="quiz-block" data-answer="a">
@@ -1048,6 +1050,7 @@ call patmo_dumpDensityToFile(52,t,patmo_idx_CH3SCH3)</code></pre>
       <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>gravity_species</code></button>
     </div>
     <div class="quiz-feedback"></div>
+    <div class="quiz-explanation" hidden><strong>Correct.</strong> <span class="feedback-detail"><code>emission_species</code> defines the surface source strengths that inject gases into the model column. The other two settings describe removal processes rather than sources.</span></div>
   </div>
 
   <div class="quiz-block" data-answer="b">
@@ -1059,6 +1062,7 @@ call patmo_dumpDensityToFile(52,t,patmo_idx_CH3SCH3)</code></pre>
       <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. What is the precise three-dimensional cloud field over the whole planet?</button>
     </div>
     <div class="quiz-feedback"></div>
+    <div class="quiz-explanation" hidden><strong>Correct.</strong> <span class="feedback-detail"><code>PATMO</code> is a one-dimensional atmospheric photochemistry model, so it is well suited to questions about layer-by-layer chemical structure and sensitivity to inputs such as emissions, radiation, and deposition.</span></div>
   </div>
 
   <div class="quiz-block" data-answer="c">
@@ -1070,6 +1074,7 @@ call patmo_dumpDensityToFile(52,t,patmo_idx_CH3SCH3)</code></pre>
       <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. Replace a full three-dimensional global weather or climate model</button>
     </div>
     <div class="quiz-feedback"></div>
+    <div class="quiz-explanation" hidden><strong>Correct.</strong> <span class="feedback-detail"><code>PATMO</code> is designed for one-dimensional chemistry problems, not for full three-dimensional weather or climate prediction. That limitation is part of what makes its results more controlled and interpretable for this kind of case study.</span></div>
   </div>
 
   <div class="hero-actions">
@@ -1084,12 +1089,13 @@ call patmo_dumpDensityToFile(52,t,patmo_idx_CH3SCH3)</code></pre>
     const choice = button.dataset.choice;
     const feedback = block.querySelector('.quiz-feedback');
     const options = block.querySelectorAll('.quiz-option');
+    const explanation = block.querySelector('.quiz-explanation');
 
     options.forEach((option) => option.classList.remove('correct-choice'));
 
     if (choice === answer) {
       button.classList.add('correct-choice');
-      feedback.textContent = 'Correct. You can move on.';
+      feedback.innerHTML = explanation ? explanation.innerHTML : 'Correct. You can move on.';
       feedback.className = 'quiz-feedback correct';
     } else {
       feedback.textContent = 'Not quite. Try again.';
