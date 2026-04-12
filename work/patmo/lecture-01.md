@@ -6,6 +6,7 @@ permalink: /work/patmo/lecture-01/
 body_class: patmo-reading-theme
 head-extra:
   - patmo-reading-theme.html
+  - patmo-mathjax.html
 description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and the role of the modern sulfur cycle.
 ---
 
@@ -90,16 +91,39 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
         Instead of representing the entire atmosphere in longitude, latitude, and height,
         it treats the atmosphere as a single vertical column divided into layers.
       </p>
-      <div class="equation-step">
-        <p class="equation-label">Layer-by-Layer Representation</p>
-        <div class="equation">
-          n<sub>i</sub>(z, t) &rarr; { n<sub>i,1</sub>(t), n<sub>i,2</sub>(t), ..., n<sub>i,N</sub>(t) }
+      <div class="equation-flow">
+        <div class="equation-step">
+          <p class="equation-label">Continuous Vertical Form</p>
+          <div class="equation">
+\[
+\frac{\partial n_i(z,t)}{\partial t}
+=
+P_i(z,t) - L_i(z,t) - \frac{\partial \Phi_i(z,t)}{\partial z}
+\]
+          </div>
+          <p class="equation-note">
+            In a 1D atmospheric column, the abundance of species \(i\) changes because of local production,
+            local loss, and the vertical divergence of flux.
+          </p>
         </div>
-        <p class="equation-note">
-          Here, <em>i</em> is a chemical species and <em>k = 1, 2, ..., N</em> labels the vertical layers.
-          Instead of storing one single abundance for the whole atmosphere,
-          <code>PATMO</code> stores one value for each species in each layer.
-        </p>
+
+        <div class="equation-step">
+          <p class="equation-label">Layer-by-Layer Discretization</p>
+          <div class="equation">
+\[
+\frac{d n_{i,k}}{dt}
+=
+P_{i,k} - L_{i,k}
+- \frac{\Phi_{i,k+1/2} - \Phi_{i,k-1/2}}{\Delta z_k}
+\]
+          </div>
+          <p class="equation-note">
+            Here, \(k = 1, 2, \dots, N\) labels the vertical layers.
+            This is the key idea behind a 1D model:
+            the atmosphere is represented as a stack of coupled layers,
+            and each layer exchanges material with the layers above and below.
+          </p>
+        </div>
       </div>
       <ul>
         <li>temperature can vary by layer</li>
@@ -110,6 +134,12 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
       <p>
         This is why the output of a 1D model is often a profile rather than a single number.
         The model is solving the atmosphere one layer at a time, while still allowing neighboring layers to interact through transport.
+      </p>
+      <p class="source-note">
+        <strong>Textbook note.</strong>
+        The use of altitude as a vertical coordinate and the species continuity equation as the basis for layer-by-layer atmospheric modeling
+        are discussed in Jacobson, <em>Fundamentals of Atmospheric Modeling, Second Edition</em>,
+        Section 5.2 “Altitude coordinate” (p. 143) and Section 7.3 “The species continuity equation” (p. 211).
       </p>
     </article>
 
@@ -128,39 +158,51 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
         <div class="equation-step">
           <p class="equation-label">1. Opacity</p>
           <div class="equation">
-            &tau;<sub>k,&lambda;</sub> &asymp; &Sigma;<sub>m=k</sub><sup>N</sup> &Sigma;<sub>i</sub>
-            n<sub>i,m</sub> &middot; &sigma;<sub>i,&lambda;</sub> &middot; &Delta;z<sub>m</sub>
+\[
+\tau_\lambda(z)
+=
+\int_z^\infty \sum_i n_i(z')\,\sigma_{i,\lambda}(z')\,dz'
+\]
           </div>
           <p class="equation-note">
-            This is the wavelength-dependent opacity above layer <em>k</em>.
-            It tells you how much material lies above that layer and how strongly that material absorbs radiation at wavelength <em>&lambda;</em>.
+            This is the wavelength-dependent optical depth above altitude \(z\).
+            It measures how much absorbing material lies overhead and how strongly that material interacts with radiation at wavelength \(\lambda\).
           </p>
         </div>
 
         <div class="equation-step">
           <p class="equation-label">2. Solar Flux in Each Layer</p>
           <div class="equation">
-            I<sub>&lambda;</sub>(z<sub>k</sub>) = I<sub>&lambda;</sub>(&infin;) &middot;
-            e<sup>-&tau;<sub>k,&lambda;</sub> / cos &theta;</sup>
+\[
+I_\lambda(z)
+=
+I_\lambda(\infty)\,
+\exp\!\left(-\frac{\tau_\lambda(z)}{\cos\theta}\right)
+\]
           </div>
           <p class="equation-note">
-            Once the opacity is known, the incoming solar flux is attenuated as it travels downward.
-            Larger opacity means less radiation reaches the layer.
-            The factor <em>&theta;</em> is the solar zenith angle.
+            Once the optical depth is known, the incoming solar radiation is attenuated as it travels downward.
+            Larger optical depth means less radiation survives to a given layer.
+            The angle \(\theta\) is the solar zenith angle.
           </p>
         </div>
 
         <div class="equation-step">
           <p class="equation-label">3. Photochemical Rate Constant</p>
           <div class="equation">
-            J<sub>i,k</sub> = &int;<sub>&lambda;1</sub><sup>&lambda;2</sup>
-            &phi;<sub>i</sub>(&lambda;) &middot; &sigma;<sub>i</sub>(&lambda;) &middot; I<sub>&lambda;</sub>(z<sub>k</sub>) d&lambda;
+\[
+J_i(z)
+=
+\int_{\lambda_1}^{\lambda_2}
+\phi_i(\lambda)\,\sigma_i(\lambda)\,I_\lambda(z)\,d\lambda
+\]
           </div>
           <p class="equation-note">
-            This gives the photolysis rate of species <em>i</em> in layer <em>k</em>.
-            It combines three ingredients: how efficiently photons cause reaction
-            (<em>quantum yield</em>), how strongly the species absorbs radiation
-            (<em>cross section</em>), and how much radiation is actually available in that layer.
+            This gives the photolysis rate of species \(i\) at altitude \(z\).
+            It combines three ingredients:
+            how efficiently absorbed photons trigger reaction (\( \phi_i \), the quantum yield),
+            how strongly the species absorbs light (\( \sigma_i \), the cross section),
+            and how much radiation is actually available locally (\( I_\lambda \)).
           </p>
         </div>
       </div>
@@ -168,6 +210,14 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
         In short, the logic is:
         opacity controls how much solar radiation survives to a given layer,
         and that surviving radiation sets the local photochemical rate constants.
+      </p>
+      <p class="source-note">
+        <strong>Textbook note.</strong>
+        The links among optical depth, solar zenith angle, radiative transfer, and photolysis coefficients are discussed in Jacobson,
+        <em>Fundamentals of Atmospheric Modeling, Second Edition</em>,
+        Section 9.6 “Optical depth” (p. 313), Section 9.7 “Solar zenith angle” (p. 316),
+        Section 9.8 “The radiative transfer equation” (p. 317),
+        and Section 9.8.4 “Heating rates and photolysis coefficients” (p. 332).
       </p>
     </article>
 
