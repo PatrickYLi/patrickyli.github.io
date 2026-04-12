@@ -52,8 +52,8 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
   <ol>
     <li><a class="outline-link" href="#patmo-as-a-model">PATMO as a model</a></li>
     <li><a class="outline-link" href="#simplified-sulfur-cycle">A simplified modern sulfur cycle</a></li>
-    <li><a class="outline-link" href="#working-with-patmo">The case directory you will read</a></li>
-    <li><a class="outline-link" href="#case-study">How the modern sulfur cycle enters PATMO</a></li>
+    <li><a class="outline-link" href="#working-with-patmo">Modern sulfur cycle input files and initial conditions</a></li>
+    <li><a class="outline-link" href="#case-study">How PATMO uses these files in code</a></li>
     <li><a class="outline-link" href="#research-workflow">What PATMO produces after a run</a></li>
     <li><a class="outline-link" href="#check-yourself">Check yourself</a></li>
   </ol>
@@ -454,120 +454,372 @@ y</code></pre>
 
 <section id="working-with-patmo" class="section-block">
   <div class="section-heading">
-    <h2>The Case Directory You Will Read</h2>
+    <h2>Modern Sulfur Cycle Input Files and Initial Conditions</h2>
   </div>
 
   <div class="panel">
     <p>
-      If you want to learn <code>PATMO</code> as a working research model, the best place to start is not the entire source tree.
-      The best place to start is one complete case directory.
-      In this course, that directory is <code>tests/modern_sulfur_cycle/</code>.
+      If you want to understand how the <code>modern sulfur cycle</code> is represented in <code>PATMO</code>,
+      the most useful place to start is the case directory <code>tests/modern_sulfur_cycle/</code>.
+      This folder contains the input package for the case: editable spreadsheet inputs,
+      runtime text files, the Fortran driver, and helper files for source and sink processes.
     </p>
     <pre><code>tests/modern_sulfur_cycle/
-├── options.opt
-├── reaction_network.ntw
-├── profile.dat
-├── solar_flux.txt
+├── settings.xlsx          -> options.opt
+├── profile.xlsx           -> profile.dat
+├── solar_flux.xlsx        -> solar_flux.txt
+├── reaction_network.xlsx  -> reaction_network.ntw
 ├── test.f90
 ├── copylist.pcp
-├── Rainout-*.txt / deposition files
-└── other case-specific helper inputs</code></pre>
+└── helper deposition / rainout files</code></pre>
+    <p>
+      In this case, the spreadsheet files are convenient for human inspection and editing.
+      The runtime files such as <code>options.opt</code>, <code>profile.dat</code>,
+      <code>solar_flux.txt</code>, and <code>reaction_network.ntw</code> are the files used by the model during execution.
+    </p>
   </div>
 
-  <div class="lesson-grid">
-    <article class="entry-card">
-      <p class="card-label">Why Start Here</p>
-      <p>
-        This folder already contains the scientific problem, the numerical setup, and the driver program.
-        That makes it the most useful entry point for a student who wants to understand how <code>PATMO</code> is actually used.
-      </p>
-    </article>
+  <div class="panel">
+    <h3>1. Main input-file types</h3>
+    <table class="patmo-data-table">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Kind of input</th>
+          <th>What it contains</th>
+          <th>Why it matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>settings.xlsx</code><br><code>options.opt</code></td>
+          <td>Case settings</td>
+          <td>Grid size, wavelength range, switches, emissions, dry deposition, fixed species</td>
+          <td>Controls how the case is configured before the model runs</td>
+        </tr>
+        <tr>
+          <td><code>profile.xlsx</code><br><code>profile.dat</code></td>
+          <td>Initial vertical column</td>
+          <td>Altitude, <code>Kzz</code>, temperature, and species number densities in each layer</td>
+          <td>Defines the initial state of the 1D atmosphere</td>
+        </tr>
+        <tr>
+          <td><code>solar_flux.xlsx</code><br><code>solar_flux.txt</code></td>
+          <td>Radiation input</td>
+          <td>Top-of-atmosphere spectral solar flux</td>
+          <td>Drives opacity, local solar flux, and photolysis rates</td>
+        </tr>
+        <tr>
+          <td><code>reaction_network.xlsx</code><br><code>reaction_network.ntw</code></td>
+          <td>Chemical mechanism</td>
+          <td>Reactants, products, and rate information for the sulfur chemistry</td>
+          <td>Defines which reactions <code>PATMO</code> is allowed to solve</td>
+        </tr>
+        <tr>
+          <td><code>test.f90</code></td>
+          <td>Driver code</td>
+          <td>The case-specific Fortran program that initializes the model and writes outputs</td>
+          <td>Shows how this case is actually executed in code</td>
+        </tr>
+        <tr>
+          <td><code>copylist.pcp</code> and helper <code>.txt</code> files</td>
+          <td>Case support files</td>
+          <td>Files copied into the build directory, including deposition and rainout inputs</td>
+          <td>Provide auxiliary data needed by this specific sulfur-cycle case</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <article class="entry-card">
-      <p class="card-label">What This Means in Practice</p>
-      <p>
-        In Lecture 1, the goal is not to read every solver routine.
-        The goal is to recognize how one atmospheric chemistry problem is assembled into files that <code>PATMO</code> can run.
-      </p>
-    </article>
+  <div class="panel">
+    <h3>2. Initial conditions in <code>profile.xlsx</code></h3>
+    <p>
+      <code>profile.xlsx</code> is the clearest place to see what the atmospheric column looks like at the beginning of the simulation.
+      The first columns define the vertical structure, and the remaining columns store number densities for individual species.
+    </p>
+    <table class="compact-data-table">
+      <thead>
+        <tr>
+          <th>Column group</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>index</code></td>
+          <td>Layer number in the 1D column</td>
+        </tr>
+        <tr>
+          <td><code>alt</code></td>
+          <td>Altitude in km</td>
+        </tr>
+        <tr>
+          <td><code>dummy</code></td>
+          <td>An auxiliary profile column carried with the prepared input file; not the main teaching focus in Lecture 1</td>
+        </tr>
+        <tr>
+          <td><code>Kzz</code></td>
+          <td>Eddy diffusion coefficient used for vertical mixing</td>
+        </tr>
+        <tr>
+          <td><code>Tgas</code></td>
+          <td>Gas temperature in each layer</td>
+        </tr>
+        <tr>
+          <td>Species columns</td>
+          <td>Initial number densities in <code>cm^-3</code> for each species</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <article class="entry-card">
-      <p class="card-label">A Small but Important File</p>
-      <p>
-        <code>copylist.pcp</code> lists the files that must be copied into the build directory for this case.
-        This tells you something important about <code>PATMO</code>:
-        a model run is built from a case folder, not from one giant monolithic input file.
-      </p>
-      <pre><code>test.f90
-profile.dat
-solar_flux.txt
-...</code></pre>
-      <p>
-        In Lecture 1, it is enough to understand that a case is assembled from several input files.
-        You do not need to study every helper file yet.
-      </p>
-    </article>
+    <figure class="lecture-figure wide-figure">
+      <img src="{{ '/assets/img/patmo/modern_sulfur_cycle_initial_profiles.svg' | relative_url }}" alt="Two-panel plot of initial number-density profiles from profile.xlsx, with altitude in kilometers on the vertical axis and number density on the horizontal axis, showing only the non-zero species.">
+      <figcaption>Figure. Initial number-density profiles from <code>profile.xlsx</code>. Only non-zero species are plotted.</figcaption>
+    </figure>
+
+    <div class="lesson-grid">
+      <article class="entry-card">
+        <p class="card-label">What the Plot Shows</p>
+        <p>
+          The non-zero initial profiles are mainly background gases and oxidants:
+          <code>N2</code>, <code>O2</code>, <code>CO2</code>, <code>H2O</code>, <code>O3</code>,
+          <code>O</code>, <code>OH</code>, <code>HO2</code>, <code>CO</code>, and total number density <code>M</code>.
+        </p>
+        <p>
+          This is a good reminder that a <code>PATMO</code> case is not just chemistry.
+          It also needs a physically defined background atmosphere in which that chemistry can evolve.
+        </p>
+      </article>
+
+      <article class="entry-card">
+        <p class="card-label">What Starts at Zero</p>
+        <p>
+          In this case, the sulfur-bearing species in the initial profile are set to zero:
+          <code>COS</code>, <code>CS2</code>, <code>CS</code>, <code>H2S</code>, <code>SH</code>, <code>S</code>,
+          <code>SO</code>, <code>SO2</code>, <code>SO3</code>, <code>HSO</code>, <code>HSO2</code>, <code>HSO3</code>,
+          <code>H2SO4</code>, <code>DMS</code>, <code>SO4</code>, <code>CS2E</code>, and <code>CH4O3S</code>.
+        </p>
+        <p>
+          That means the sulfur cycle is not initialized by a pre-existing sulfur column.
+          Instead, sulfur is introduced mainly through the source terms defined in the case settings and then evolves through chemistry and transport.
+        </p>
+      </article>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>3. What <code>settings.xlsx</code> controls</h3>
+    <p>
+      <code>settings.xlsx</code> is the human-readable summary of the case configuration.
+      In this workflow, it is converted into <code>options.opt</code>, which is the runtime settings file read by <code>PATMO</code>.
+    </p>
+    <table class="patmo-data-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Value in this case</th>
+          <th>What it means</th>
+          <th>Why it matters here</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>cellsNumber</code></td>
+          <td>60</td>
+          <td>Number of vertical layers</td>
+          <td>Sets the vertical resolution of the 1D column</td>
+        </tr>
+        <tr>
+          <td><code>cellThickness</code></td>
+          <td>1000 m</td>
+          <td>Thickness of each model layer</td>
+          <td>With 60 layers, this gives a 60 km atmospheric column</td>
+        </tr>
+        <tr>
+          <td><code>photoBinsNumber</code></td>
+          <td>4400</td>
+          <td>Number of wavelength bins used for photochemistry</td>
+          <td>Controls the spectral resolution of the radiation calculation</td>
+        </tr>
+        <tr>
+          <td><code>wavelengMin</code></td>
+          <td>120 nm</td>
+          <td>Short-wavelength limit of the radiation grid</td>
+          <td>Defines the lower bound of the photochemical spectrum</td>
+        </tr>
+        <tr>
+          <td><code>wavelengMax</code></td>
+          <td>400 nm</td>
+          <td>Long-wavelength limit of the radiation grid</td>
+          <td>Defines the upper bound of the photochemical spectrum</td>
+        </tr>
+        <tr>
+          <td><code>zenith_angle</code></td>
+          <td>60 degree</td>
+          <td>Solar zenith angle</td>
+          <td>Enters the attenuation formula for local solar flux</td>
+        </tr>
+        <tr>
+          <td><code>TOA_para</code></td>
+          <td>0.5</td>
+          <td>Scaling factor applied at the top-of-atmosphere flux boundary</td>
+          <td>In this case, the incoming solar flux is reduced by half at the top boundary</td>
+        </tr>
+        <tr>
+          <td><code>usePhotochemistry</code></td>
+          <td><code>T</code></td>
+          <td>Turns photochemistry on</td>
+          <td>Necessary because radiation-driven chemistry is central to this case</td>
+        </tr>
+        <tr>
+          <td><code>useHescape</code></td>
+          <td><code>F</code></td>
+          <td>Turns hydrogen escape off</td>
+          <td>This process is not part of the teaching focus of the modern sulfur cycle case</td>
+        </tr>
+        <tr>
+          <td><code>useWaterRemoval</code></td>
+          <td><code>F</code></td>
+          <td>Turns water removal off</td>
+          <td>Keeps the case focused on the sulfur-cycle processes being introduced here</td>
+        </tr>
+        <tr>
+          <td><code>useAerosolformation</code></td>
+          <td><code>T</code></td>
+          <td>Allows aerosol formation processes to operate</td>
+          <td>Needed because sulfuric-acid production is linked to sulfate aerosol formation</td>
+        </tr>
+        <tr>
+          <td><code>gravity_species</code></td>
+          <td><code>SO4:gd(j)</code></td>
+          <td>Assigns gravitational settling behavior to <code>SO4</code></td>
+          <td>Represents the fact that sulfur aerosol is removed physically as well as chemically</td>
+        </tr>
+        <tr>
+          <td><code>constant_species</code></td>
+          <td>12 species</td>
+          <td>Species held fixed instead of being fully integrated as prognostic variables</td>
+          <td>Simplifies the case while preserving an oxidizing background atmosphere</td>
+        </tr>
+        <tr>
+          <td><code>drydep_species</code></td>
+          <td>5 sulfur species</td>
+          <td>Dry-deposition velocities at the lower boundary</td>
+          <td>Represents surface removal of sulfur gases</td>
+        </tr>
+        <tr>
+          <td><code>emission_species</code></td>
+          <td>5 sulfur species</td>
+          <td>Surface emission source strengths</td>
+          <td>These emissions are the main way sulfur enters the column in this case</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="lesson-grid">
+      <article class="entry-card">
+        <p class="card-label"><code>emission_species</code></p>
+        <table class="compact-data-table">
+          <thead>
+            <tr>
+              <th>Species</th>
+              <th>Emission rate</th>
+              <th>Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>COS</code></td><td><code>8.1001d2</code></td><td><code>molecule cm^-3 s^-1</code></td></tr>
+            <tr><td><code>CS2</code></td><td><code>5.9886d2</code></td><td><code>molecule cm^-3 s^-1</code></td></tr>
+            <tr><td><code>H2S</code></td><td><code>84.7910d2</code></td><td><code>molecule cm^-3 s^-1</code></td></tr>
+            <tr><td><code>SO2</code></td><td><code>615.84d2</code></td><td><code>molecule cm^-3 s^-1</code></td></tr>
+            <tr><td><code>CH3SCH3</code> (<code>DMS</code>)</td><td><code>39.50274d3</code></td><td><code>molecule cm^-3 s^-1</code></td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="entry-card">
+        <p class="card-label"><code>drydep_species</code></p>
+        <table class="compact-data-table">
+          <thead>
+            <tr>
+              <th>Species</th>
+              <th>Deposition velocity</th>
+              <th>Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>COS</code></td><td><code>9.5d-3</code></td><td><code>cm s^-1</code></td></tr>
+            <tr><td><code>CS2</code></td><td><code>4.48d-2</code></td><td><code>cm s^-1</code></td></tr>
+            <tr><td><code>SO2</code></td><td><code>1</code></td><td><code>cm s^-1</code></td></tr>
+            <tr><td><code>H2S</code></td><td><code>1.7d-1</code></td><td><code>cm s^-1</code></td></tr>
+            <tr><td><code>CH3SCH3</code> (<code>DMS</code>)</td><td><code>1.48d-1</code></td><td><code>cm s^-1</code></td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="entry-card">
+        <p class="card-label"><code>constant_species</code></p>
+        <p>
+          The species held fixed in this case are:
+          <code>HO2</code>, <code>N</code>, <code>CO2</code>, <code>H2O</code>, <code>CO</code>,
+          <code>O2</code>, <code>N2</code>, <code>OH</code>, <code>O</code>, <code>H2</code>, <code>H</code>, and <code>O3</code>.
+        </p>
+        <p>
+          This keeps a prescribed oxidizing background while the sulfur species respond to emissions,
+          photochemistry, transport, and deposition.
+        </p>
+      </article>
+    </div>
   </div>
 </section>
 
 <section id="case-study" class="section-block">
   <div class="section-heading">
-    <h2>How the Modern Sulfur Cycle Enters PATMO</h2>
+    <h2>How PATMO Uses These Files in Code</h2>
   </div>
 
   <div class="panel">
     <p>
-      The <code>modern sulfur cycle</code> is useful in this course because it is not just a chemistry diagram.
-      In <code>PATMO</code>, it becomes a set of concrete files that control reactions, profiles, radiation, deposition, emissions, and outputs.
+      The spreadsheet files are not the final objects read by the runtime model.
+      In this workflow, <code>compile_modern_sulfur_cycle.sh</code> converts the editable spreadsheets
+      into the text files that <code>PATMO</code> actually uses when the case is built and executed.
     </p>
-    <p>
-      The practical question for a student is therefore not only “what is sulfur chemistry?”
-      It is also “where is that chemistry stored in the code and input files?”
-    </p>
+    <pre><code>settings.xlsx          -> options.opt
+profile.xlsx           -> profile.dat
+solar_flux.xlsx        -> solar_flux.txt
+reaction_network.xlsx  -> reaction_network.ntw</code></pre>
   </div>
 
   <div class="model-note-stack">
     <article class="entry-card">
-      <p class="card-label">1. <code>options.opt</code>: Global Settings for This Case</p>
+      <p class="card-label">1. <code>options.opt</code> as the switchboard</p>
       <pre><code>cellsNumber = 60
 zenith_angle = 60
 usePhotochemistry = T
 emission_species = COS:..., CS2:..., H2S:..., SO2:..., CH3SCH3:...
 drydep_species = COS:..., CS2:..., SO2:..., H2S:..., CH3SCH3:...</code></pre>
       <p>
-        This file turns the scientific idea into numerical settings.
-        It defines the vertical grid, the radiation geometry, whether photochemistry is active,
-        and which sulfur species are emitted or dry-deposited.
+        Once <code>settings.xlsx</code> has been converted, <code>options.opt</code> becomes the central runtime settings file.
+        It tells <code>PATMO</code> how many layers to use, what solar geometry to apply,
+        whether photochemistry is active, and which sulfur gases are emitted or removed at the lower boundary.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">2. <code>reaction_network.ntw</code>: The Sulfur Chemistry Itself</p>
+      <p class="card-label">2. <code>reaction_network.ntw</code> as the chemistry file</p>
       <pre><code>13,H2S,OH,,H2O,SH,,...
 26,SO2,O,M,SO3,M,,...
 33,SO2,OH,M,HSO3,M,,...
 34,SO3,H2O,,H2SO4,,,...
 37,SO2,,,SO4,,,0</code></pre>
       <p>
-        This file is where the sulfur cycle becomes an explicit chemical mechanism.
-        Here you can see species such as <code>H2S</code>, <code>SO2</code>, <code>SO3</code>, <code>H2SO4</code>, and <code>SO4</code>
-        connected by reaction lines that the model can evaluate.
+        This file is where the sulfur cycle becomes an explicit mechanism that the solver can evaluate.
+        It is the bridge between the conceptual sulfur-cycle diagram and the actual reaction network used in the model.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">3. <code>profile.dat</code> and <code>solar_flux.txt</code>: The Column and the Radiation Field</p>
-      <pre><code>index alt ... Kzz Tgas ... COS CS2 H2S SO2 SO3 H2SO4 SO4 ...
-1     1   ... 1.0E5 282  ... 0   0   0   0   0   0     0</code></pre>
-      <p>
-        <code>profile.dat</code> gives the vertical atmospheric structure layer by layer.
-        It contains altitude, mixing strength <code>Kzz</code>, temperature, and species abundances.
-        <code>solar_flux.txt</code> provides the incoming radiation spectrum that drives photochemistry.
-      </p>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">4. <code>test.f90</code>: The Driver of the Whole Experiment</p>
+      <p class="card-label">3. <code>test.f90</code> as the case driver</p>
       <pre><code>call patmo_init()
 call patmo_loadInitialProfile("profile.dat",unitH="km",unitX="1/cm3")
 call patmo_setFluxBB()
@@ -577,8 +829,10 @@ call patmo_dumpAllRates("rates.dat")
 call patmo_dumpAllMixingRatioToFile("allNDs.dat")</code></pre>
       <p>
         This is the Fortran driver program for the case.
-        It initializes the model, loads the atmospheric profile, sets the radiation field, and writes the main outputs.
-        If you want to see where a <code>PATMO</code> run actually starts and ends, this is the file to open.
+        It shows, in code, how the runtime inputs are loaded:
+        first the model is initialized, then the atmospheric profile is read, then the radiation field is set,
+        and finally the diagnostic outputs are written.
+        If you want to see where this <code>PATMO</code> run actually starts and ends, this is the file to open.
       </p>
     </article>
   </div>
@@ -586,8 +840,9 @@ call patmo_dumpAllMixingRatioToFile("allNDs.dat")</code></pre>
   <div class="takeaway-box">
     <p><strong>Practical takeaway.</strong></p>
     <p>
-      In this course, the <code>modern sulfur cycle</code> is not just a topic.
-      It is a concrete <code>PATMO</code> case that you can read file by file.
+      The modern sulfur cycle becomes runnable in <code>PATMO</code> only when these files work together:
+      the spreadsheet inputs define the case, the converted text files are read at runtime,
+      and <code>test.f90</code> provides the code path that actually launches the experiment.
     </p>
   </div>
 </section>
@@ -668,33 +923,33 @@ call patmo_dumpAllMixingRatioToFile("allNDs.dat")</code></pre>
 
   <div class="quiz-block" data-answer="b">
     <h3>1</h3>
-    <p>Which file in <code>tests/modern_sulfur_cycle/</code> contains the sulfur reaction list used by the model?</p>
+    <p>Which spreadsheet is the best place to inspect the altitude-dependent initial number densities of species in this case?</p>
     <div class="quiz-options">
-      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>solar_flux.txt</code></button>
-      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>reaction_network.ntw</code></button>
-      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>allNDs.dat</code></button>
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>settings.xlsx</code></button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>profile.xlsx</code></button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>reaction_network.xlsx</code></button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
 
-  <div class="quiz-block" data-answer="a">
+  <div class="quiz-block" data-answer="c">
     <h3>2</h3>
-    <p>Which file acts as the driver of the case by calling <code>patmo_init</code>, loading the profile, and writing the output files?</p>
+    <p>In this lecture, why are many sulfur species zero in <code>profile.xlsx</code> at the start of the run?</p>
     <div class="quiz-options">
-      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>test.f90</code></button>
-      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>profile.dat</code></button>
-      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>copylist.pcp</code></button>
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. Because sulfur chemistry is turned off in this case</button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. Because <code>PATMO</code> cannot read sulfur species from a profile file</button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. Because sulfur is introduced mainly through emissions and then evolves through chemistry and transport</button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
 
   <div class="quiz-block" data-answer="a">
     <h3>3</h3>
-    <p>If you want to see the final vertical profiles of sulfur species after a run, which file should you open first?</p>
+    <p>Which parameter in <code>settings.xlsx</code> contains the surface source strengths that inject sulfur gases into the atmospheric column?</p>
     <div class="quiz-options">
-      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>allNDs.dat</code></button>
-      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>opacity.dat</code></button>
-      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>copylist.pcp</code></button>
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>emission_species</code></button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>drydep_species</code></button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>gravity_species</code></button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
