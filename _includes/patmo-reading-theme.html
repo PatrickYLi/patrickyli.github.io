@@ -1,4 +1,8 @@
 <style>
+  body.patmo-hub-page .page-meta {
+    display: none !important;
+  }
+
   body {
     background: #f6f1e7 !important;
     color: #21303a !important;
@@ -330,6 +334,164 @@
   .patmo-course .boundary-summary-table tbody td:first-child {
     background: rgba(138, 8, 56, 0.08) !important;
     font-weight: 700;
+  }
+
+  .patmo-course .architecture-map {
+    margin: 1.4rem 0 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 250, 242, 0.72);
+    border: 1px solid rgba(132, 111, 81, 0.18);
+    border-radius: 1rem;
+  }
+
+  .patmo-course .architecture-stage {
+    padding: 1rem 1rem 1.1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(132, 111, 81, 0.16);
+  }
+
+  .patmo-course .architecture-stage h3 {
+    margin: 0 0 0.9rem;
+    text-align: center;
+  }
+
+  .patmo-course .stage-inputs {
+    background: #f6eee1;
+  }
+
+  .patmo-course .stage-python {
+    background: #e9f3f0;
+  }
+
+  .patmo-course .stage-build {
+    background: #f4efe6;
+  }
+
+  .patmo-course .stage-runtime {
+    background: #e9eef6;
+  }
+
+  .patmo-course .stage-outputs {
+    background: #eef5eb;
+  }
+
+  .patmo-course .architecture-stage-grid {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .patmo-course .architecture-stage-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .patmo-course .architecture-stage-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .patmo-course .architecture-stage-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .patmo-course .architecture-node {
+    min-width: 0;
+    padding: 0.85rem 0.9rem;
+    background: rgba(255, 250, 242, 0.96);
+    border: 1px solid rgba(132, 111, 81, 0.18);
+    border-radius: 0.9rem;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset;
+  }
+
+  .patmo-course .architecture-node h4 {
+    margin: 0 0 0.45rem;
+    font-size: 0.98rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .patmo-course .architecture-node p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .patmo-course .architecture-node p + p {
+    margin-top: 0.28rem;
+  }
+
+  .patmo-course .architecture-node code {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .patmo-course .architecture-arrow {
+    margin: 0.55rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #6c7b84;
+  }
+
+  .patmo-course .architecture-runtime-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    align-items: stretch;
+    margin-bottom: 0.9rem;
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .patmo-course .architecture-arrow-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c7b84;
+    font-size: 1.6rem;
+    line-height: 1;
+    transform: rotate(90deg);
+    min-height: 1rem;
+  }
+
+  .patmo-course .architecture-note {
+    margin: 0.95rem 0 0;
+    padding: 0.72rem 0.9rem;
+    background: rgba(255, 250, 242, 0.72);
+    border: 1px solid rgba(132, 111, 81, 0.16);
+    border-radius: 0.8rem;
+    color: #5d6c75;
+  }
+
+  .patmo-course .architecture-caption {
+    margin: 0.85rem 0 0;
+    text-align: center;
+    color: #0f5f73;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", "Avenir Next", "Segoe UI", sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 1100px) {
+    .patmo-course .architecture-stage-grid-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .patmo-course .architecture-stage-grid-2,
+    .patmo-course .architecture-stage-grid-3,
+    .patmo-course .architecture-stage-grid-4,
+    .patmo-course .architecture-runtime-flow {
+      grid-template-columns: 1fr;
+    }
+
+    .patmo-course .architecture-arrow-inline {
+      min-height: 1.2rem;
+    }
   }
 
   .pixel-button {
