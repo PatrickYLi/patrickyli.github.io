@@ -51,6 +51,7 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
 
   <ol>
     <li><a class="outline-link" href="#patmo-as-a-model">PATMO as a model</a></li>
+    <li><a class="outline-link" href="#simplified-sulfur-cycle">A simplified modern sulfur cycle</a></li>
     <li><a class="outline-link" href="#working-with-patmo">The case directory you will read</a></li>
     <li><a class="outline-link" href="#case-study">How the modern sulfur cycle enters PATMO</a></li>
     <li><a class="outline-link" href="#research-workflow">What PATMO produces after a run</a></li>
@@ -392,6 +393,61 @@ y</code></pre>
       A 1D photochemistry model is more informative than a single box model,
       but still much easier to understand than a full 3D model.
       That makes it a strong choice for learning how model inputs, chemistry, transport, and outputs connect.
+    </p>
+  </div>
+</section>
+
+<section id="simplified-sulfur-cycle" class="section-block">
+  <div class="section-heading">
+    <h2>A Simplified Modern Sulfur Cycle</h2>
+  </div>
+
+  <div class="panel">
+    <p>
+      Before reading the <code>PATMO</code> case directory, it helps to have one simple picture in mind:
+      which sulfur species are released near the surface, which ones can reach the stratosphere,
+      and how they are converted into sulfate aerosol.
+    </p>
+    <figure class="lecture-figure">
+      <img src="{{ '/assets/img/patmo/sulfur_cycle.png' | relative_url }}" alt="Simplified atmospheric modern sulfur cycle showing surface emissions of COS, SO2, CS2, H2S, and DMS, oxidation pathways, transport to the stratosphere, conversion to H2SO4 and stratospheric sulfur aerosol, and return to the surface by deposition.">
+      <figcaption>Figure. A simplified atmospheric modern sulfur cycle schematic.</figcaption>
+    </figure>
+  </div>
+
+  <div class="model-note-stack">
+    <article class="entry-card">
+      <p class="card-label">How to Read This Figure</p>
+      <p>
+        In this simplified picture, sulfur enters the atmosphere through near-surface release of
+        <code>COS</code>, <code>SO2</code>, <code>CS2</code>, <code>H2S</code>, and <code>DMS</code>.
+        Among these species, <code>CS2</code>, <code>H2S</code>, and <code>DMS</code> are oxidized in the lower atmosphere
+        and feed the production of <code>COS</code> and <code>SO2</code>.
+      </p>
+      <p>
+        <code>SO2</code> is usually oxidized efficiently near the surface and in the troposphere,
+        so it does not easily survive long enough to reach the stratosphere.
+        In practice, direct injection by strong events such as volcanic eruptions is one important way for <code>SO2</code> to appear there.
+      </p>
+      <p>
+        <code>COS</code> is relatively stable compared with the other reduced sulfur gases.
+        That makes it an effective carrier of sulfur into the stratosphere, where it is oxidized through a sequence of reactions that eventually produces <code>SO2</code>.
+      </p>
+      <p>
+        Once <code>SO2</code> is present in the stratosphere, further oxidation produces <code>H2SO4</code>.
+        That sulfuric acid then contributes to the formation of <code>stratospheric sulfur aerosol (SSA)</code>.
+      </p>
+      <p>
+        Finally, <code>SSA</code> does not remain suspended forever.
+        It is removed through physical processes such as sedimentation and deposition, which return sulfur to lower levels and eventually back toward the surface.
+      </p>
+    </article>
+  </div>
+
+  <div class="takeaway-box">
+    <p><strong>Why this figure matters for PATMO.</strong></p>
+    <p>
+      The rest of Lecture 1 shows how this simplified sulfur-cycle picture is turned into a runnable
+      <code>PATMO</code> case through input files, a driver program, and diagnostic outputs.
     </p>
   </div>
 </section>
