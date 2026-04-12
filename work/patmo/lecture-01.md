@@ -947,7 +947,7 @@ call patmo_dumpDensityToFile(53,t,patmo_idx_SO)
 call patmo_dumpDensityToFile(55,t,patmo_idx_CH3SCH3)</code></pre>
     <figure class="lecture-figure wide-figure">
       <img src="{{ '/assets/img/patmo/modern_sulfur_cycle_fort_profiles_60yr.svg' | relative_url }}" alt="Multi-panel plot of sulfur-species number-density profiles from fort outputs after a 60-year PATMO run, with altitude in kilometers on the vertical axis and number density on the horizontal axis.">
-      <figcaption>Figure. Final sulfur-species number-density profiles from the <code>fort.*</code> outputs after a 60-year run. Duplicate <code>SO3</code> and <code>SO4</code> dumps are plotted once.</figcaption>
+      <figcaption>Figure. Final sulfur-species number-density profiles from the <code>fort.*</code> outputs after a 60-year run. In panels with extremely large dynamic range, the left end of the x-axis is clipped for readability. Duplicate <code>SO3</code> and <code>SO4</code> dumps are plotted once.</figcaption>
     </figure>
   </div>
 
