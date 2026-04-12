@@ -771,6 +771,67 @@ y</code></pre>
       </article>
     </div>
   </div>
+
+  <div class="panel">
+    <h3>4. Boundary-condition summary for the modern sulfur cycle case</h3>
+    <p>
+      As a final summary, the table below collects the main lower-boundary sulfur inputs and removal terms in converted teaching units.
+      The emission and dry-deposition entries are consistent with the case settings, while the Henry's-constant column is included as supporting boundary-condition context for sulfur uptake and removal.
+    </p>
+    <table class="patmo-data-table boundary-summary-table">
+      <thead>
+        <tr>
+          <th>Species</th>
+          <th>Emission<br>(Tg year<sup>-1</sup>)</th>
+          <th>Dry deposition<br>(cm s<sup>-1</sup>)</th>
+          <th>Henry's constant<br>(mol L<sup>-1</sup> atm<sup>-1</sup>)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>COS</code></td>
+          <td>1.3</td>
+          <td>9.5 &times; 10<sup>-3</sup></td>
+          <td>0.02</td>
+        </tr>
+        <tr>
+          <td><code>CS2</code></td>
+          <td>1.2</td>
+          <td>4.48 &times; 10<sup>-2</sup></td>
+          <td>0.05</td>
+        </tr>
+        <tr>
+          <td><code>SO2</code></td>
+          <td>105.4</td>
+          <td>1</td>
+          <td>4000</td>
+        </tr>
+        <tr>
+          <td><code>H2S</code></td>
+          <td>7.72</td>
+          <td>1.7 &times; 10<sup>-1</sup></td>
+          <td>0.1</td>
+        </tr>
+        <tr>
+          <td><code>DMS</code></td>
+          <td>65.57</td>
+          <td>1.48 &times; 10<sup>-1</sup></td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><code>SSA</code></td>
+          <td>--</td>
+          <td>--</td>
+          <td>5 &times; 10<sup>4</sup></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Read this table as a compact reminder of how sulfur enters and leaves the model column:
+      gaseous sulfur species are supplied at the lower boundary by emissions, some are removed there by dry deposition,
+      and highly soluble sulfur species are also connected to aqueous uptake through large Henry's constants.
+    </p>
+  </div>
 </section>
 
 <section id="case-study" class="section-block">
