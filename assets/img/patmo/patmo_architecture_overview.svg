@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="1780" viewBox="0 0 1260 1780" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="1735" viewBox="0 0 1260 1735" role="img" aria-labelledby="title desc">
 <title id="title">PATMO architecture overview</title>
 <desc id="desc">Static workflow diagram of PATMO showing inputs, Python preprocessing and code generation, build products, Fortran runtime, and outputs.</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7b8b93"/></marker></defs>
-<rect x="0" y="0" width="1260" height="1780" rx="0" fill="#fffaf2" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1260" height="1735" rx="0" fill="#fffaf2" stroke="none" stroke-width="0"/>
 <text x="630.0" y="42" text-anchor="middle" font-family="Baskerville, Palatino, serif" font-size="32" font-weight="700" fill="#18242d">PATMO Architecture Overview</text>
 <text x="630.0" y="72" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#5d6c75">
 <tspan x="630.0" dy="0">From case inputs to generated Fortran code, runtime integration, and scientific outputs</tspan>
@@ -45,22 +45,27 @@
 <rect x="835" y="438" width="310" height="100" rx="16" fill="#fffaf2" stroke="#cdbda7" stroke-width="1.4"/>
 <text x="990.0" y="472" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#31424c">
 <tspan x="990.0" dy="0">patmo_network</tspan>
-<tspan x="990.0" dy="20">build species, reactions, reverse reactions, ODEs</tspan>
+<tspan x="990.0" dy="20">build species and reactions</tspan>
+<tspan x="990.0" dy="20">reverse reactions</tspan>
+<tspan x="990.0" dy="20">write ODE code</tspan>
 </text>
 <rect x="115" y="575" width="310" height="100" rx="16" fill="#fffaf2" stroke="#cdbda7" stroke-width="1.4"/>
 <text x="270.0" y="609" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#31424c">
 <tspan x="270.0" dy="0">patmo_photochemistry</tspan>
-<tspan x="270.0" dy="20">interpolate cross sections and build photo data</tspan>
+<tspan x="270.0" dy="20">interpolate cross sections</tspan>
+<tspan x="270.0" dy="20">build photo data</tspan>
 </text>
 <rect x="475" y="575" width="310" height="100" rx="16" fill="#fffaf2" stroke="#cdbda7" stroke-width="1.4"/>
 <text x="630.0" y="609" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#31424c">
 <tspan x="630.0" dy="0">Template replacement</tspan>
-<tspan x="630.0" dy="20">fill src_f90 templates with case-specific code</tspan>
+<tspan x="630.0" dy="20">fill src_f90 templates</tspan>
+<tspan x="630.0" dy="20">with case-specific code</tspan>
 </text>
 <rect x="835" y="575" width="310" height="100" rx="16" fill="#fffaf2" stroke="#cdbda7" stroke-width="1.4"/>
 <text x="990.0" y="609" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#31424c">
 <tspan x="990.0" dy="0">Generated code writer</tspan>
-<tspan x="990.0" dy="20">rates, jacobian, sparsity, commons, main</tspan>
+<tspan x="990.0" dy="20">rates, Jacobian, sparsity</tspan>
+<tspan x="990.0" dy="20">commons and main modules</tspan>
 </text>
 <line x1="270" y1="538" x2="270" y2="575" stroke="#7b8b93" stroke-width="2.4" marker-end="url(#arrow)"/>
 <line x1="630" y1="538" x2="630" y2="575" stroke="#7b8b93" stroke-width="2.4" marker-end="url(#arrow)"/>
@@ -102,12 +107,14 @@
 <rect x="505" y="1150" width="250" height="82" rx="16" fill="#fffaf2" stroke="#cdbda7" stroke-width="1.4"/>
 <text x="630" y="1184" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#31424c">
 <tspan x="630" dy="0">patmo_init</tspan>
-<tspan x="630" dy="20">load profiles, photo data, arrays</tspan>
+<tspan x="630" dy="20">load profiles</tspan>
+<tspan x="630" dy="20">photo data and arrays</tspan>
 </text>
 <rect x="840" y="1150" width="250" height="82" rx="16" fill="#fffaf2" stroke="#cdbda7" stroke-width="1.4"/>
 <text x="965" y="1184" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#31424c">
 <tspan x="965" dy="0">patmo_run</tspan>
-<tspan x="965" dy="20">advance one time step with DLSODES</tspan>
+<tspan x="965" dy="20">advance one time step</tspan>
+<tspan x="965" dy="20">solve with DLSODES</tspan>
 </text>
 <line x1="420" y1="1191" x2="505" y2="1191" stroke="#7b8b93" stroke-width="2.4" marker-end="url(#arrow)"/>
 <line x1="755" y1="1191" x2="840" y2="1191" stroke="#7b8b93" stroke-width="2.4" marker-end="url(#arrow)"/>
@@ -161,8 +168,4 @@
 <line x1="630.0" y1="725" x2="630.0" y2="770" stroke="#7b8b93" stroke-width="2.4" marker-end="url(#arrow)"/>
 <line x1="630.0" y1="1030" x2="630.0" y2="1075" stroke="#7b8b93" stroke-width="2.4" marker-end="url(#arrow)"/>
 <line x1="630.0" y1="1495" x2="630.0" y2="1540" stroke="#7b8b93" stroke-width="2.4" marker-end="url(#arrow)"/>
-<text x="118" y="1718" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#7a6d5b">
-<tspan x="118" dy="0">Simplified from the local architecture analysis in</tspan>
-<tspan x="118" dy="20">reports/PATMO_architecture.md</tspan>
-</text>
 </svg>
