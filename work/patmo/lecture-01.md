@@ -37,8 +37,9 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
     <p>After reading this page, you should be able to:</p>
     <ul>
       <li>identify what kind of model <code>PATMO</code> is</li>
-      <li>explain what <code>PATMO</code> can help you do and what it is not built for</li>
-      <li>understand why the <code>modern sulfur cycle</code> is the main case of this course</li>
+      <li>recognize the key files in <code>tests/modern_sulfur_cycle/</code> and what each one does</li>
+      <li>understand how the <code>modern sulfur cycle</code> becomes a runnable <code>PATMO</code> case</li>
+      <li>know which output files to inspect after a run</li>
     </ul>
   </div>
 </section>
@@ -50,10 +51,9 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
 
   <ol>
     <li><a class="outline-link" href="#patmo-as-a-model">PATMO as a model</a></li>
-    <li><a class="outline-link" href="#working-with-patmo">Working with PATMO</a></li>
-    <li><a class="outline-link" href="#case-study">Why this course uses the modern sulfur cycle</a></li>
-    <li><a class="outline-link" href="#research-workflow">PATMO in research work</a></li>
-    <li><a class="outline-link" href="#course-expectations">What this course will teach you</a></li>
+    <li><a class="outline-link" href="#working-with-patmo">The case directory you will read</a></li>
+    <li><a class="outline-link" href="#case-study">How the modern sulfur cycle enters PATMO</a></li>
+    <li><a class="outline-link" href="#research-workflow">What PATMO produces after a run</a></li>
     <li><a class="outline-link" href="#check-yourself">Check yourself</a></li>
   </ol>
 </section>
@@ -398,184 +398,203 @@ y</code></pre>
 
 <section id="working-with-patmo" class="section-block">
   <div class="section-heading">
-    <h2>Working with PATMO</h2>
-  </div>
-
-  <div class="lesson-grid">
-    <article class="entry-card">
-      <p class="card-label">What You Can Study</p>
-      <p>
-        If you provide a reaction network, an atmospheric profile, and relevant parameters,
-        <code>PATMO</code> can compute how species evolve across altitude.
-      </p>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">What You Can Compare</p>
-      <p>You can change case-specific settings and compare how the results respond.</p>
-      <ul>
-        <li>emission parameters</li>
-        <li>deposition parameters</li>
-        <li>radiation-related settings</li>
-        <li>other case-specific inputs</li>
-      </ul>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">Sensitivity Experiments</p>
-      <p>
-        One of the most useful habits in this course is changing one factor while keeping the rest as fixed as possible,
-        then examining how the result changes.
-      </p>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">What It Is Not Built For</p>
-      <p>
-        <code>PATMO</code> is not designed to answer full 3D weather or global transport questions,
-        and it does not replace observations or scientific judgment.
-      </p>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">Why Inputs Matter</p>
-      <p>
-        Model output only becomes useful when the chosen inputs, parameters, and boundary conditions are meaningful.
-        A model cannot rescue a poor setup by itself.
-      </p>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">Why This Matters</p>
-      <p>
-        The value of <code>PATMO</code> is not only that it produces numbers.
-        Its value is that it lets you run controlled, comparable, and interpretable computational experiments.
-      </p>
-    </article>
-  </div>
-
-  <pre class="lesson-flow"><code>ask a question
--> organize model inputs
--> run the model
--> inspect outputs
--> compare experiments
--> interpret the results</code></pre>
-</section>
-
-<section id="case-study" class="section-block">
-  <div class="section-heading">
-    <h2>Why This Course Uses the Modern Sulfur Cycle</h2>
-  </div>
-
-  <div class="lesson-grid">
-    <div class="panel">
-      <p>
-        This course uses the <code>modern sulfur cycle</code> as its main case study,
-        but that does not mean the course is trying to teach the full theory of sulfur chemistry.
-      </p>
-      <p>
-        Instead, this case is used because it is scientifically meaningful and also practical for learning how to work with <code>PATMO</code>.
-      </p>
-    </div>
-
-    <article class="entry-card">
-      <p class="card-label">Why This Case Works Well</p>
-      <ul>
-        <li>it contains a real reaction network</li>
-        <li>it uses vertical profile inputs</li>
-        <li>it includes radiation-related inputs</li>
-        <li>it contains source and sink settings</li>
-        <li>it produces outputs that can be compared and interpreted</li>
-      </ul>
-    </article>
+    <h2>The Case Directory You Will Read</h2>
   </div>
 
   <div class="panel">
     <p>
-      It is also useful because the same case can be revisited throughout the course.
-      You do not need to keep adapting to a different scientific context in every lecture.
-      Instead, you can move step by step from recognizing the case, to reading its files, to running it, and finally to modifying it.
+      If you want to learn <code>PATMO</code> as a working research model, the best place to start is not the entire source tree.
+      The best place to start is one complete case directory.
+      In this course, that directory is <code>tests/modern_sulfur_cycle/</code>.
+    </p>
+    <pre><code>tests/modern_sulfur_cycle/
+├── options.opt
+├── reaction_network.ntw
+├── profile.dat
+├── solar_flux.txt
+├── test.f90
+├── copylist.pcp
+├── Rainout-*.txt / deposition files
+└── other case-specific helper inputs</code></pre>
+  </div>
+
+  <div class="lesson-grid">
+    <article class="entry-card">
+      <p class="card-label">Why Start Here</p>
+      <p>
+        This folder already contains the scientific problem, the numerical setup, and the driver program.
+        That makes it the most useful entry point for a student who wants to understand how <code>PATMO</code> is actually used.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">What This Means in Practice</p>
+      <p>
+        In Lecture 1, the goal is not to read every solver routine.
+        The goal is to recognize how one atmospheric chemistry problem is assembled into files that <code>PATMO</code> can run.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">A Small but Important File</p>
+      <p>
+        <code>copylist.pcp</code> lists the files that must be copied into the build directory for this case.
+        This tells you something important about <code>PATMO</code>:
+        a model run is built from a case folder, not from one giant monolithic input file.
+      </p>
+      <pre><code>test.f90
+profile.dat
+solar_flux.txt
+...</code></pre>
+      <p>
+        In Lecture 1, it is enough to understand that a case is assembled from several input files.
+        You do not need to study every helper file yet.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="case-study" class="section-block">
+  <div class="section-heading">
+    <h2>How the Modern Sulfur Cycle Enters PATMO</h2>
+  </div>
+
+  <div class="panel">
+    <p>
+      The <code>modern sulfur cycle</code> is useful in this course because it is not just a chemistry diagram.
+      In <code>PATMO</code>, it becomes a set of concrete files that control reactions, profiles, radiation, deposition, emissions, and outputs.
     </p>
     <p>
-      The <code>modern sulfur cycle</code> is therefore not the whole content of the course.
-      It is the main training case through which you learn how to work with <code>PATMO</code>.
+      The practical question for a student is therefore not only “what is sulfur chemistry?”
+      It is also “where is that chemistry stored in the code and input files?”
+    </p>
+  </div>
+
+  <div class="model-note-stack">
+    <article class="entry-card">
+      <p class="card-label">1. <code>options.opt</code>: Global Settings for This Case</p>
+      <pre><code>cellsNumber = 60
+zenith_angle = 60
+usePhotochemistry = T
+emission_species = COS:..., CS2:..., H2S:..., SO2:..., CH3SCH3:...
+drydep_species = COS:..., CS2:..., SO2:..., H2S:..., CH3SCH3:...</code></pre>
+      <p>
+        This file turns the scientific idea into numerical settings.
+        It defines the vertical grid, the radiation geometry, whether photochemistry is active,
+        and which sulfur species are emitted or dry-deposited.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">2. <code>reaction_network.ntw</code>: The Sulfur Chemistry Itself</p>
+      <pre><code>13,H2S,OH,,H2O,SH,,...
+26,SO2,O,M,SO3,M,,...
+33,SO2,OH,M,HSO3,M,,...
+34,SO3,H2O,,H2SO4,,,...
+37,SO2,,,SO4,,,0</code></pre>
+      <p>
+        This file is where the sulfur cycle becomes an explicit chemical mechanism.
+        Here you can see species such as <code>H2S</code>, <code>SO2</code>, <code>SO3</code>, <code>H2SO4</code>, and <code>SO4</code>
+        connected by reaction lines that the model can evaluate.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">3. <code>profile.dat</code> and <code>solar_flux.txt</code>: The Column and the Radiation Field</p>
+      <pre><code>index alt ... Kzz Tgas ... COS CS2 H2S SO2 SO3 H2SO4 SO4 ...
+1     1   ... 1.0E5 282  ... 0   0   0   0   0   0     0</code></pre>
+      <p>
+        <code>profile.dat</code> gives the vertical atmospheric structure layer by layer.
+        It contains altitude, mixing strength <code>Kzz</code>, temperature, and species abundances.
+        <code>solar_flux.txt</code> provides the incoming radiation spectrum that drives photochemistry.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">4. <code>test.f90</code>: The Driver of the Whole Experiment</p>
+      <pre><code>call patmo_init()
+call patmo_loadInitialProfile("profile.dat",unitH="km",unitX="1/cm3")
+call patmo_setFluxBB()
+call patmo_dumpJValue("jvalue.dat")
+call patmo_dumpOpacity("opacity.dat")
+call patmo_dumpAllRates("rates.dat")
+call patmo_dumpAllMixingRatioToFile("allNDs.dat")</code></pre>
+      <p>
+        This is the Fortran driver program for the case.
+        It initializes the model, loads the atmospheric profile, sets the radiation field, and writes the main outputs.
+        If you want to see where a <code>PATMO</code> run actually starts and ends, this is the file to open.
+      </p>
+    </article>
+  </div>
+
+  <div class="takeaway-box">
+    <p><strong>Practical takeaway.</strong></p>
+    <p>
+      In this course, the <code>modern sulfur cycle</code> is not just a topic.
+      It is a concrete <code>PATMO</code> case that you can read file by file.
     </p>
   </div>
 </section>
 
 <section id="research-workflow" class="section-block">
   <div class="section-heading">
-    <h2>PATMO in Research Work</h2>
+    <h2>What PATMO Produces After a Run</h2>
   </div>
 
-  <div class="lesson-grid">
-    <div class="panel">
-      <p>
-        A common misunderstanding is to think that “running the model” is the whole research activity.
-        It is not.
-      </p>
-      <p>
-        <code>PATMO</code> is not the beginning and it is not the end.
-        It is the middle step that connects a scientific question to interpretable results.
-      </p>
-    </div>
-
-    <div class="panel">
-      <p>
-        This way of thinking matters because model output is not the end of the task.
-        Output is the start of analysis.
-      </p>
-    </div>
-  </div>
-
-  <pre class="lesson-flow"><code>scientific question
--> choose relevant species and processes
--> prepare model inputs
--> run PATMO
--> obtain outputs
--> compare experiments
--> interpret the results</code></pre>
-</section>
-
-<section id="course-expectations" class="section-block">
-  <div class="section-heading">
-    <h2>What This Course Will Teach You</h2>
+  <div class="panel">
+    <p>
+      At the end of <code>tests/modern_sulfur_cycle/test.f90</code>, the case writes four output files that you will repeatedly use in later lectures:
+    </p>
+    <pre><code>call patmo_dumpJValue("jvalue.dat")
+call patmo_dumpOpacity("opacity.dat")
+call patmo_dumpAllRates("rates.dat")
+call patmo_dumpAllMixingRatioToFile("allNDs.dat")</code></pre>
   </div>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label">By the End of the Course</p>
-      <ul>
-        <li>explain what <code>PATMO</code> is for</li>
-        <li>recognize the structure of a <code>PATMO</code> case directory</li>
-        <li>understand the role of the major input files</li>
-        <li>run a prepared case</li>
-        <li>find the main output files</li>
-        <li>make a simple change to a case</li>
-        <li>compare a baseline experiment and a control experiment</li>
-      </ul>
+      <p class="card-label"><code>allNDs.dat</code></p>
+      <p>
+        This is the first file to inspect if you want to know what the atmosphere looks like after the run.
+        It contains the vertical abundances or mixing ratios of the modeled species.
+        For the modern sulfur cycle case, this is where you begin if you want to see the final profiles of species such as
+        <code>H2S</code>, <code>SO2</code>, <code>H2SO4</code>, or <code>SO4</code>.
+      </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">What Is Not the Focus Here</p>
-      <ul>
-        <li>a full atmospheric chemistry course</li>
-        <li>a full sulfur-cycle theory course</li>
-        <li>mathematical derivations of numerical solvers</li>
-        <li>3D global model systems</li>
-        <li>advanced source-code development</li>
-      </ul>
+      <p class="card-label"><code>jvalue.dat</code></p>
       <p>
-        You may also hear brief mention of modules that are still under development,
-        such as volcano-related functionality, but those will not be major topics in this course.
+        This file contains photolysis rates.
+        It tells you how quickly radiation-driven reactions proceed in each layer.
       </p>
     </article>
 
-    <div class="takeaway-box">
+    <article class="entry-card">
+      <p class="card-label"><code>opacity.dat</code></p>
       <p>
-        If these points are already clear to you, then you are ready for Lecture 2.
+        This file helps you understand why the photolysis rates look the way they do.
+        It records how radiation is attenuated through the atmospheric column.
       </p>
-    </div>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label"><code>rates.dat</code></p>
+      <p>
+        This file is where chemistry becomes interpretable.
+        If you want to know which sulfur pathway is important, this is the file you need.
+        It helps you move from “the profile changed” to “this particular reaction pathway is responsible.”
+      </p>
+    </article>
+  </div>
+
+  <div class="takeaway-box">
+    <p><strong>A useful reading order.</strong></p>
+    <p>
+      First inspect <code>allNDs.dat</code> to see the resulting sulfur profiles.
+      Then look at <code>jvalue.dat</code> and <code>opacity.dat</code> to understand the radiative environment.
+      Finally, open <code>rates.dat</code> to identify which reactions are controlling the result.
+    </p>
   </div>
 </section>
 
@@ -593,33 +612,33 @@ y</code></pre>
 
   <div class="quiz-block" data-answer="b">
     <h3>1</h3>
-    <p>What kind of model is <code>PATMO</code> in this course?</p>
+    <p>Which file in <code>tests/modern_sulfur_cycle/</code> contains the sulfur reaction list used by the model?</p>
     <div class="quiz-options">
-      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. A full 3D global weather prediction model</button>
-      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. A one-dimensional atmospheric photochemistry model</button>
-      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. A database of sulfur chemistry observations</button>
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>solar_flux.txt</code></button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>reaction_network.ntw</code></button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>allNDs.dat</code></button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
 
-  <div class="quiz-block" data-answer="c">
+  <div class="quiz-block" data-answer="a">
     <h3>2</h3>
-    <p>What is one of the main reasons to use <code>PATMO</code>?</p>
+    <p>Which file acts as the driver of the case by calling <code>patmo_init</code>, loading the profile, and writing the output files?</p>
     <div class="quiz-options">
-      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. It automatically tells you which scientific interpretation is correct</button>
-      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. It replaces real atmospheric observations</button>
-      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. It lets you run controlled and comparable computational experiments</button>
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>test.f90</code></button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>profile.dat</code></button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>copylist.pcp</code></button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
 
   <div class="quiz-block" data-answer="a">
     <h3>3</h3>
-    <p>Why does this course use the <code>modern sulfur cycle</code>?</p>
+    <p>If you want to see the final vertical profiles of sulfur species after a run, which file should you open first?</p>
     <div class="quiz-options">
-      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. It is the main training case through which you learn how to work with <code>PATMO</code></button>
-      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. It is the only atmospheric chemistry topic that <code>PATMO</code> can simulate</button>
-      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. It replaces the need to understand model inputs and outputs</button>
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>allNDs.dat</code></button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>opacity.dat</code></button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>copylist.pcp</code></button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
