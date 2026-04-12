@@ -69,6 +69,10 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
       At the most basic level, <code>PATMO</code> is a numerical model for atmospheric chemistry and related physical processes.
       It is a structured way to describe a scientific setup and compute how that setup evolves under clearly stated assumptions.
     </p>
+    <figure class="lecture-figure">
+      <img src="{{ '/assets/img/patmo/PATMO_1D.png' | relative_url }}" alt="PATMO architecture for the modern sulfur cycle case shown as a one-dimensional atmospheric column with solar flux, chemistry, transport, source, and sink processes.">
+      <figcaption>Figure. Architecture of <code>PATMO</code> in the <code>modern sulfur cycle</code> case.</figcaption>
+    </figure>
     <p>
       In this course, the word <em>model</em> does not mean “automatic truth.”
       It means a simplified and computable representation of reality that helps you run repeatable and comparable experiments.
@@ -79,7 +83,7 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
     </p>
   </div>
 
-  <div class="lesson-grid">
+  <div class="model-note-stack">
     <article class="entry-card">
       <p class="card-label">One-Dimensional</p>
       <p>
