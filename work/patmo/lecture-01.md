@@ -29,7 +29,7 @@ description: Lecture 1 of the PATMO course, introducing PATMO, its scope, and th
     </p>
   </div>
   <p>
-    If you finish this page and can clearly answer the three questions in the check section at the end,
+    If you finish this page and can clearly answer the questions in the check section at the end,
     then you have understood the main point of Lecture 1.
   </p>
 
@@ -1012,7 +1012,7 @@ call patmo_dumpDensityToFile(52,t,patmo_idx_CH3SCH3)</code></pre>
 
   <div class="panel">
     <p>
-      Before you move on to Lecture 2, answer these three questions.
+      Before you move on to Lecture 2, answer the questions below.
       If you can answer them correctly, then the main idea of Lecture 1 is already in place.
     </p>
   </div>
@@ -1046,6 +1046,28 @@ call patmo_dumpDensityToFile(52,t,patmo_idx_CH3SCH3)</code></pre>
       <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. <code>emission_species</code></button>
       <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. <code>drydep_species</code></button>
       <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. <code>gravity_species</code></button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz-block" data-answer="b">
+    <h3>4</h3>
+    <p>Which of the following is a question that <code>PATMO</code> is well suited to explore?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. What will the exact global weather pattern be tomorrow?</button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. How do sulfur species change with altitude when emissions or radiation settings are modified?</button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. What is the precise three-dimensional cloud field over the whole planet?</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz-block" data-answer="c">
+    <h3>5</h3>
+    <p>Which of the following is <em>not</em> something <code>PATMO</code> is meant to do?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" data-choice="a" onclick="checkPatmoQuiz(this)">A. Compute layer-by-layer chemistry in a one-dimensional atmospheric column</button>
+      <button class="quiz-option" data-choice="b" onclick="checkPatmoQuiz(this)">B. Run controlled sensitivity experiments for a case such as the modern sulfur cycle</button>
+      <button class="quiz-option" data-choice="c" onclick="checkPatmoQuiz(this)">C. Replace a full three-dimensional global weather or climate model</button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
