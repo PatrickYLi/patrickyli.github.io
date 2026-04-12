@@ -613,7 +613,7 @@ y</code></pre>
       <code>settings.xlsx</code> is the human-readable summary of the case configuration.
       In this workflow, it is converted into <code>options.opt</code>, which is the runtime settings file read by <code>PATMO</code>.
     </p>
-    <table class="patmo-data-table">
+    <table class="patmo-data-table settings-detail-table">
       <thead>
         <tr>
           <th>Parameter</th>
