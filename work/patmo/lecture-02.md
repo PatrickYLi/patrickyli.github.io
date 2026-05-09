@@ -42,6 +42,10 @@ description: Lecture 2 of the PATMO student course, introducing the Chapman cycl
     </p>
   </div>
 
+  <figure class="panel">
+    <img src="{{ '/assets/img/patmo/chapman-cycle-schematic.png' | relative_url }}" alt="Schematic diagram of the Chapman cycle showing oxygen photolysis, ozone formation, ozone photolysis, and ozone loss.">
+  </figure>
+
   <div class="takeaway-box">
     <p class="section-label">Four Equations</p>
     <pre class="lesson-flow"><code>R1: O2 + hv -> O + O
@@ -248,58 +252,6 @@ R4: O + O3 -> O2 + O2</code></pre>
   </div>
 </section>
 
-<section id="reference-data" class="section-block">
-  <div class="section-heading">
-    <h2>Reference Data To Check</h2>
-  </div>
-
-  <div class="panel">
-    <p>
-      The table below is only a reference target. Students still need to use JPL and NIST themselves
-      to confirm the entries and complete the source information.
-    </p>
-  </div>
-
-  <div class="panel">
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Reaction</th>
-          <th>Reference data</th>
-          <th>Student task</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>R1</td>
-          <td><code>O<sub>2</sub> + hv -> O + O</code></td>
-          <td>No fixed thermal <code>k</code>; use <code>J1</code> from photolysis inputs.</td>
-          <td>Find JPL photolysis data for <code>O<sub>2</sub></code>.</td>
-        </tr>
-        <tr>
-          <td>R2</td>
-          <td><code>O + O<sub>2</sub> + M -> O<sub>3</sub> + M</code></td>
-          <td>Common low-pressure form: <code>k2 = 6.0e-34 (T/300)^-2.4</code>.</td>
-          <td>Check units, third-body assumptions, and temperature range.</td>
-        </tr>
-        <tr>
-          <td>R3</td>
-          <td><code>O<sub>3</sub> + hv -> O<sub>2</sub> + O</code></td>
-          <td>No fixed thermal <code>k</code>; use <code>J3</code> from photolysis inputs.</td>
-          <td>Find JPL photolysis data and note product channels.</td>
-        </tr>
-        <tr>
-          <td>R4</td>
-          <td><code>O + O<sub>3</sub> -> O<sub>2</sub> + O<sub>2</sub></code></td>
-          <td><code>k4 = 8.0e-12 exp(-2060/T)</code>, units <code>cm3 molecule-1 s-1</code>.</td>
-          <td>Use this as the worked example, then compare with NIST records.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
 <section id="after-class-task" class="section-block">
   <div class="section-heading">
     <h2>After-Class Task</h2>
@@ -307,70 +259,30 @@ R4: O + O3 -> O2 + O2</code></pre>
 
   <div class="panel">
     <p>
-      We demonstrated the database workflow with only one reaction:
+      In class, we demonstrated the database workflow with one non-photochemical reaction:
       <code>O + O<sub>3</sub> -> O<sub>2</sub> + O<sub>2</sub></code>.
-      Now complete the remaining entries yourself.
+      Your task is to complete the remaining non-photochemical Chapman reaction and then build the PATMO input reaction network.
     </p>
     <ol>
-      <li>Use JPL to find the photolysis information for <code>O<sub>2</sub></code>.</li>
-      <li>Use JPL and NIST to check <code>O + O<sub>2</sub> + M -> O<sub>3</sub> + M</code>.</li>
-      <li>Use JPL to find the photolysis information for <code>O<sub>3</sub></code>.</li>
-      <li>Make a final Chapman table with reaction, rate term, units, source, and notes.</li>
+      <li>Use JPL and NIST to find the <code>k</code> value for <code>O + O<sub>2</sub> + M -> O<sub>3</sub> + M</code>.</li>
+      <li>Record the rate expression, units, temperature range, pressure or third-body notes, and database source.</li>
+      <li>Prepare the complete Chapman reaction network in the PATMO input file format used in class.</li>
+      <li>Include all four Chapman reactions in the network, but only the two non-photochemical reactions need thermal <code>k</code> values.</li>
+      <li>Add short source notes so another student can trace where each non-photochemical <code>k</code> value came from.</li>
     </ol>
   </div>
-</section>
 
-<section id="quick-check-quiz" class="section-block">
-  <div class="section-heading">
-    <h2>Quick Check</h2>
-  </div>
-
-  <div class="quiz-block" data-answer="b">
-    <h3>Question 1</h3>
-    <p>Which equation forms ozone in the Chapman cycle?</p>
-    <div class="quiz-options">
-      <button class="quiz-option" data-choice="a" onclick="checkPatmoLecture2Quiz(this)">A. <code>O<sub>3</sub> + hv -> O<sub>2</sub> + O</code></button>
-      <button class="quiz-option" data-choice="b" onclick="checkPatmoLecture2Quiz(this)">B. <code>O + O<sub>2</sub> + M -> O<sub>3</sub> + M</code></button>
-      <button class="quiz-option" data-choice="c" onclick="checkPatmoLecture2Quiz(this)">C. <code>O + O<sub>3</sub> -> O<sub>2</sub> + O<sub>2</sub></code></button>
-    </div>
-    <div class="quiz-feedback"></div>
-  </div>
-
-  <div class="quiz-block" data-answer="a">
-    <h3>Question 2</h3>
-    <p>What type of parameter is used for photolysis reactions?</p>
-    <div class="quiz-options">
-      <button class="quiz-option" data-choice="a" onclick="checkPatmoLecture2Quiz(this)">A. <code>J</code>, with units of <code>s-1</code></button>
-      <button class="quiz-option" data-choice="b" onclick="checkPatmoLecture2Quiz(this)">B. <code>k</code>, always with units of <code>cm6 molecule-2 s-1</code></button>
-      <button class="quiz-option" data-choice="c" onclick="checkPatmoLecture2Quiz(this)">C. No rate parameter is needed</button>
-    </div>
-    <div class="quiz-feedback"></div>
+  <div class="takeaway-box">
+    <p class="section-label">Final Output</p>
+    <p>
+      Submit the PATMO reaction network input file, not only a summary table.
+      The file should be ready for the next class discussion.
+    </p>
   </div>
 
   <div class="hero-actions">
     <a class="pixel-button ghost" href="{{ '/work/patmo/' | relative_url }}">Back to course hub</a>
   </div>
 </section>
-
-<script>
-  function checkPatmoLecture2Quiz(button) {
-    const block = button.closest('.quiz-block');
-    const answer = block.dataset.answer;
-    const choice = button.dataset.choice;
-    const feedback = block.querySelector('.quiz-feedback');
-    const options = block.querySelectorAll('.quiz-option');
-
-    options.forEach((option) => option.classList.remove('correct-choice'));
-
-    if (choice === answer) {
-      button.classList.add('correct-choice');
-      feedback.textContent = 'Correct.';
-      feedback.className = 'quiz-feedback correct';
-    } else {
-      feedback.textContent = 'Not quite. Try again.';
-      feedback.className = 'quiz-feedback incorrect';
-    }
-  }
-</script>
 
 </div>
