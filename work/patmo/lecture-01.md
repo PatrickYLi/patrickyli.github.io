@@ -529,8 +529,8 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
 
     <article class="entry-card flow-step">
       <p class="card-label">Lecture 2</p>
-      <h3>Building a Reaction Network</h3>
-      <p>Use the Chapman cycle to learn how reactions, rate laws, and kinetic databases fit together.</p>
+      <h3>Chapman Cycle and Rate Constants</h3>
+      <p>Use the Chapman cycle to learn the four core equations and where their rate data come from.</p>
     </article>
 
     <div class="flow-arrow" aria-hidden="true">↓</div>
