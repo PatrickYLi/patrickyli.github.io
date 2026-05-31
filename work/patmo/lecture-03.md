@@ -202,78 +202,6 @@ R3: O3 + hv -> O2 + O</code></pre>
   </div>
 </section>
 
-<section id="setting-xlsx" class="section-block">
-  <div class="section-heading">
-    <h2>Photochemical Settings In tests/setting.xlsx</h2>
-  </div>
-
-  <div class="panel">
-    <p>
-      In the PATMO test case, look at <code>tests/setting.xlsx</code> before running a photochemical calculation.
-      The exact sheet or row names may differ between versions, but the photochemistry-related settings should answer these questions.
-    </p>
-  </div>
-
-  <div class="panel">
-    <table>
-      <thead>
-        <tr>
-          <th>Setting group</th>
-          <th>What students should check</th>
-          <th>Why it matters for <code>O3 + hv -> O2 + O</code></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Photochemistry switch</td>
-          <td>Whether photochemical reactions are enabled for the run.</td>
-          <td>If this is off, the model will not calculate <code>J[O3]</code>.</td>
-        </tr>
-        <tr>
-          <td>Radiation source</td>
-          <td>The solar or stellar spectrum used as input radiation.</td>
-          <td>Different spectra change the amount of light available for ozone photolysis.</td>
-        </tr>
-        <tr>
-          <td>Solar zenith angle</td>
-          <td>The zenith angle <code>&theta;</code>, or equivalently <code>cos(&theta;)</code>.</td>
-          <td>This controls the slant path used in <code>&tau;<sub>slant</sub> = &tau; / cos(&theta;)</code>.</td>
-        </tr>
-        <tr>
-          <td>Optical depth</td>
-          <td>How the model calculates or reads <code>&tau;<sub>&lambda;</sub>(z)</code>.</td>
-          <td>The optical depth controls how much solar irradiance reaches each atmospheric layer.</td>
-        </tr>
-        <tr>
-          <td>Wavelength grid</td>
-          <td>The wavelength range and resolution used by the calculation.</td>
-          <td>The cross-section file must cover the wavelength region used by the model.</td>
-        </tr>
-        <tr>
-          <td>Cross-section file</td>
-          <td>The path or filename for the <code>O3</code> absorption cross-section data.</td>
-          <td>This is the database file students will find from MPI-Mainz or another source.</td>
-        </tr>
-        <tr>
-          <td>Quantum yield file</td>
-          <td>The product-channel yield used for ozone photolysis.</td>
-          <td>Absorption alone is not enough; the model also needs the product probability.</td>
-        </tr>
-        <tr>
-          <td>Atmospheric profile</td>
-          <td>Altitude, temperature, and density information used by the run.</td>
-          <td>Temperature can affect cross sections and quantum yields, and altitude affects radiation.</td>
-        </tr>
-        <tr>
-          <td>Output control</td>
-          <td>Whether photolysis rates or radiation diagnostics are written to output files.</td>
-          <td>Students need this output to check whether <code>J(O3)</code> was actually calculated.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
 <section id="mpi-mainz" class="section-block">
   <div class="section-heading">
     <h2>Finding Cross Sections In MPI-Mainz</h2>
@@ -335,7 +263,7 @@ R3: O3 + hv -> O2 + O</code></pre>
     <pre class="lesson-flow"><code>choose photolysis reaction
 find O3 cross-section data
 find or confirm quantum yield data
-check tests/setting.xlsx photochemistry settings
+	check radiation, optical depth, zenith angle, and wavelength settings
 point PATMO to the correct input files
 run and inspect J(O3) output</code></pre>
   </div>
@@ -363,8 +291,7 @@ run and inspect J(O3) output</code></pre>
     <ol>
       <li>Find one suitable <code>O3</code> absorption cross-section data set in MPI-Mainz.</li>
       <li>Record the author, year, temperature, wavelength range, units, and filename.</li>
-      <li>Identify the photochemistry-related settings in <code>tests/setting.xlsx</code>.</li>
-      <li>Explain which setting controls the cross-section file, solar irradiance, optical depth, zenith angle, and wavelength grid.</li>
+      <li>Explain why the cross-section file, solar irradiance, optical depth, zenith angle, and wavelength range must be consistent.</li>
       <li>Write what must be added or checked in the PATMO input reaction network for this photolysis reaction.</li>
     </ol>
   </div>
