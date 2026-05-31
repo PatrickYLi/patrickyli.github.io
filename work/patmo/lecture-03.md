@@ -21,15 +21,21 @@ description: Lecture 3 of the PATMO student course, introducing photochemical ca
   <p class="section-label">Student Handout</p>
   <p>
     Lecture 2 used the Chapman cycle to introduce a reaction network.
-    Lecture 3 focuses on one photochemical reaction from that cycle:
+    The same cycle contains two photochemical reactions:
   </p>
 
-  <pre class="lesson-flow"><code>O3 + hv -> O2 + O</code></pre>
+  <figure class="panel">
+    <img src="{{ '/assets/img/patmo/chapman-cycle-schematic.png' | relative_url }}" alt="Schematic diagram of the Chapman cycle showing oxygen photolysis, ozone formation, ozone photolysis, and ozone loss.">
+  </figure>
+
+  <pre class="lesson-flow"><code>R1: O2 + hv -> O + O
+R3: O3 + hv -> O2 + O</code></pre>
 
   <p>
-    This reaction is useful because it shows why photochemistry is different from ordinary thermal kinetics.
-    Instead of finding one thermal rate constant <code>k(T)</code>, we need to understand how a photolysis rate
-    <code>J</code> is calculated from light intensity, absorption cross section, and quantum yield.
+    In this lecture, we will use <code>O3 + hv -> O2 + O</code> as the worked example.
+    This reaction shows why photochemistry is different from ordinary thermal kinetics:
+    instead of finding one thermal rate constant <code>k(T)</code>, we need to understand how a photolysis rate
+    <code>J</code> is calculated from radiation, absorption cross section, and quantum yield.
   </p>
 
   <div class="hero-actions">
@@ -40,12 +46,21 @@ description: Lecture 3 of the PATMO student course, introducing photochemical ca
 
 <section id="example-reaction" class="section-block">
   <div class="section-heading">
-    <h2>The Example Reaction</h2>
+    <h2>The Chapman Photochemical Reactions</h2>
   </div>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label">Reaction</p>
+      <p class="card-label">R1: Oxygen Photolysis</p>
+      <pre><code>O2 + hv -> O + O</code></pre>
+      <p>
+        Molecular oxygen absorbs short-wavelength ultraviolet radiation and breaks into two oxygen atoms.
+        This reaction supplies the atomic oxygen needed to start ozone formation.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">R3: Ozone Photolysis</p>
       <pre><code>O3 + hv -> O2 + O</code></pre>
       <p>
         Ozone absorbs a photon and dissociates into molecular oxygen and atomic oxygen.
@@ -53,13 +68,23 @@ description: Lecture 3 of the PATMO student course, introducing photochemical ca
         should be treated separately.
       </p>
     </article>
+  </div>
+
+  <div class="lesson-grid">
+    <article class="entry-card">
+      <p class="card-label">Worked Example In This Lecture</p>
+      <p>
+        We focus on <code>O3 + hv -> O2 + O</code> because ozone has widely used UV/VIS absorption data,
+        and it gives a clean example for learning how to search cross-section databases.
+      </p>
+    </article>
 
     <article class="entry-card">
       <p class="card-label">Why This Is Not A Normal k</p>
       <p>
-        The reaction speed depends on the radiation field.
-        The same ozone molecule can photolyze quickly or slowly depending on wavelength, altitude,
-        solar zenith angle, shielding, and the chosen cross-section data.
+        Photolysis depends on the radiation field.
+        The same molecule can photolyze quickly or slowly depending on wavelength, altitude,
+        solar zenith angle, shielding, cross section, and quantum yield.
       </p>
     </article>
   </div>
@@ -82,45 +107,76 @@ description: Lecture 3 of the PATMO student course, introducing photochemical ca
     <p>
       A simplified photolysis calculation can be written like this:
     </p>
-    <pre class="lesson-flow"><code>J(z) = sum over wavelength [
-  actinic_flux(lambda, z)
-  * cross_section(lambda, T)
-  * quantum_yield(lambda, T)
-  * wavelength_step
-]</code></pre>
+    <div class="takeaway-box">
+      <p class="section-label">Continuous Form</p>
+      <p style="font-size: 1.35rem; line-height: 1.8; text-align: center; overflow-x: auto;">
+        <strong>
+          <em>J</em><sub>i</sub>(z) =
+          &int; <em>F</em>(&lambda;, z)
+          &sigma;<sub>i</sub>(&lambda;, T)
+          &Phi;<sub>i</sub>(&lambda;, T)
+          d&lambda;
+        </strong>
+      </p>
+    </div>
+    <p>
+      In a numerical model, the integral is evaluated on a wavelength grid:
+    </p>
+    <div class="takeaway-box">
+      <p class="section-label">Discrete Model Form</p>
+      <p style="font-size: 1.25rem; line-height: 1.8; text-align: center; overflow-x: auto;">
+        <strong>
+          <em>J</em><sub>i</sub>(z) &approx;
+          &sum;<sub>&lambda;</sub>
+          <em>F</em>(&lambda;, z)
+          &sigma;<sub>i</sub>(&lambda;, T)
+          &Phi;<sub>i</sub>(&lambda;, T)
+          &Delta;&lambda;
+        </strong>
+      </p>
+    </div>
   </div>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label">Actinic Flux</p>
+      <p class="card-label"><em>J</em><sub>i</sub>(z)</p>
       <p>
-        The amount of radiation available to drive photolysis at each wavelength and altitude.
+        The photolysis rate of reaction <code>i</code> at altitude <code>z</code>.
+        Its unit is <code>s-1</code>. For ozone photolysis, this is the <code>J(O3)</code> value used in the reaction network.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label"><em>F</em>(&lambda;, z)</p>
+      <p>
+        The actinic flux: the amount of radiation available to drive photolysis at wavelength <code>&lambda;</code> and altitude <code>z</code>.
         It changes with solar spectrum, altitude, absorption by other species, and scattering.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">Cross Section</p>
+      <p class="card-label">&sigma;<sub>i</sub>(&lambda;, T)</p>
       <p>
-        A measure of how strongly a molecule absorbs light at a given wavelength.
-        For gas-phase atmospheric chemistry, it is commonly reported in
-        <code>cm2 molecule-1</code>.
+        The absorption cross section for species <code>i</code>.
+        It tells us how strongly the molecule absorbs light at each wavelength and temperature.
+        It is commonly reported in <code>cm2 molecule-1</code>.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">Quantum Yield</p>
+      <p class="card-label">&Phi;<sub>i</sub>(&lambda;, T)</p>
       <p>
-        The probability that photon absorption actually produces the photochemical product channel of interest.
-        It is dimensionless and may depend on wavelength and temperature.
+        The quantum yield for the product channel.
+        It is the probability that photon absorption actually produces the photochemical products we wrote in the reaction.
+        It is dimensionless.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">J Value</p>
+      <p class="card-label">&lambda; and &Delta;&lambda;</p>
       <p>
-        The final photolysis rate has units of <code>s-1</code>.
-        In the reaction network, the rate term is <code>J[O3]</code>.
+        <code>&lambda;</code> is wavelength, usually given in <code>nm</code>.
+        <code>&Delta;&lambda;</code> is the wavelength interval used by the model when it sums across the wavelength grid.
       </p>
     </article>
   </div>
