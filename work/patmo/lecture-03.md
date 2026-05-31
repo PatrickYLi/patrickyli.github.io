@@ -143,60 +143,60 @@ R3: O3 + hv -> O2 + O</code></pre>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label"><em>J</em><sub>i,z</sub></p>
+      <p class="card-label">J_i,z</p>
       <p>
-        The photolysis rate of reaction <code>i</code> at altitude <code>z</code>.
+        <code>J_i,z</code> is the photolysis rate of reaction <code>i</code> at altitude <code>z</code>.
         Its unit is <code>s-1</code>. For ozone photolysis, this is the <code>J(O3)</code> value used in the reaction network.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">&phi;<sub>&lambda;</sub>(&lambda;)</p>
+      <p class="card-label">phi_lambda(lambda)</p>
       <p>
-        The quantum yield for the selected product channel.
+        <code>phi_lambda(lambda)</code> is the quantum yield for the selected product channel.
         It is the probability that photon absorption produces the products written in the photochemical reaction.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">&sigma;<sub>&lambda;</sub>(&lambda;)</p>
+      <p class="card-label">sigma_lambda(lambda)</p>
       <p>
-        The absorption cross section at wavelength <code>&lambda;</code>.
+        <code>sigma_lambda(lambda)</code> is the absorption cross section at wavelength <code>lambda</code>.
         It tells us how strongly the molecule absorbs light.
         It is commonly reported in <code>cm2 molecule-1</code>.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label"><em>I</em><sub>&lambda;</sub>(z)</p>
+      <p class="card-label">I_lambda(z)</p>
       <p>
-        The solar irradiance at wavelength <code>&lambda;</code> and altitude <code>z</code>.
-        It is reduced from the top-of-atmosphere irradiance <code>I<sub>&lambda;,0</sub></code> by atmospheric optical depth.
+        <code>I_lambda(z)</code> is the solar irradiance at wavelength <code>lambda</code> and altitude <code>z</code>.
+        It is reduced from the top-of-atmosphere irradiance <code>I_lambda,0</code> by atmospheric optical depth.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">&lambda;<sub>1</sub>, &lambda;<sub>2</sub>, and d&lambda;</p>
+      <p class="card-label">lambda_1, lambda_2, and d_lambda</p>
       <p>
-        <code>&lambda;<sub>1</sub></code> and <code>&lambda;<sub>2</sub></code> define the wavelength range of the photolysis calculation.
-        The term <code>d&lambda;</code> means the integral is summed over wavelength.
+        <code>lambda_1</code> and <code>lambda_2</code> define the wavelength range of the photolysis calculation.
+        The term <code>d_lambda</code> means the integral is evaluated over wavelength.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">&tau;<sub>&lambda;</sub>(z)</p>
+      <p class="card-label">tau_lambda(z)</p>
       <p>
-        The vertical optical depth above altitude <code>z</code>.
+        <code>tau_lambda(z)</code> is the vertical optical depth above altitude <code>z</code>.
         Larger optical depth means stronger attenuation before radiation reaches the layer.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">&theta; and cos(&theta;)</p>
+      <p class="card-label">theta and cos(theta)</p>
       <p>
-        <code>&theta;</code> is the solar zenith angle measured from the local vertical.
-        The factor <code>cos(&theta;)</code> converts vertical optical depth into an approximate slant-path optical depth:
-        <code>&tau;<sub>slant</sub> = &tau; / cos(&theta;)</code>.
+        <code>theta</code> is the solar zenith angle measured from the local vertical.
+        The factor <code>cos(theta)</code> converts vertical optical depth into an approximate slant-path optical depth:
+        <code>tau_slant = tau / cos(theta)</code>.
       </p>
     </article>
   </div>
