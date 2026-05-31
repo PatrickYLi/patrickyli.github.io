@@ -282,6 +282,7 @@ R4: O + O3 -> O2 + O2</code></pre>
 
   <div class="hero-actions">
     <a class="pixel-button ghost" href="{{ '/work/patmo/' | relative_url }}">Back to course hub</a>
+    <a class="pixel-button" href="{{ '/work/patmo/lecture-03/' | relative_url }}">Continue to Lecture 3</a>
   </div>
 </section>
 

@@ -537,8 +537,8 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
 
     <article class="entry-card flow-step">
       <p class="card-label">Lecture 3</p>
-      <h3>The Input File System of <code>PATMO</code></h3>
-      <p>Learn how the main input files are organized and what each one does.</p>
+      <h3>Photochemical Calculations</h3>
+      <p>Use ozone photolysis to learn how cross sections, quantum yields, and radiation settings define a photochemical rate.</p>
     </article>
 
     <div class="flow-arrow" aria-hidden="true">↓</div>
