@@ -105,41 +105,44 @@ R3: O3 + hv -> O2 + O</code></pre>
 
   <div class="panel">
     <p>
-      A simplified photolysis calculation can be written like this:
+      For this lecture, use one photolysis-rate equation:
     </p>
     <div class="takeaway-box">
-      <p class="section-label">Continuous Form</p>
+      <p class="section-label">Photolysis Rate</p>
       <p style="font-size: 1.35rem; line-height: 1.8; text-align: center; overflow-x: auto;">
         <strong>
-          <em>J</em><sub>i</sub>(z) =
-          &int; <em>F</em>(&lambda;, z)
-          &sigma;<sub>i</sub>(&lambda;, T)
-          &Phi;<sub>i</sub>(&lambda;, T)
+          <em>J</em><sub>i,z</sub> =
+          &int;<sub>&lambda;1</sub><sup>&lambda;2</sup>
+          &phi;<sub>&lambda;</sub>(&lambda;)
+          &sigma;<sub>&lambda;</sub>(&lambda;)
+          <em>I</em><sub>&lambda;</sub>(z)
           d&lambda;
         </strong>
       </p>
     </div>
     <p>
-      In a numerical model, the integral is evaluated on a wavelength grid:
+      Here <code>I</code> is the solar irradiance reaching altitude <code>z</code>.
+      In a simple attenuation form, it can be connected to optical depth and solar zenith angle:
     </p>
     <div class="takeaway-box">
-      <p class="section-label">Discrete Model Form</p>
+      <p class="section-label">Irradiance With Optical Depth</p>
       <p style="font-size: 1.25rem; line-height: 1.8; text-align: center; overflow-x: auto;">
         <strong>
-          <em>J</em><sub>i</sub>(z) &approx;
-          &sum;<sub>&lambda;</sub>
-          <em>F</em>(&lambda;, z)
-          &sigma;<sub>i</sub>(&lambda;, T)
-          &Phi;<sub>i</sub>(&lambda;, T)
-          &Delta;&lambda;
+          <em>I</em><sub>&lambda;</sub>(z) =
+          <em>I</em><sub>&lambda;,0</sub>
+          exp[-&tau;<sub>&lambda;</sub>(z) / cos(&theta;)]
         </strong>
       </p>
     </div>
   </div>
 
+  <figure class="panel">
+    <img src="{{ '/assets/img/patmo/zenith-angle-schematic.png' | relative_url }}" alt="Schematic diagram showing solar zenith angle measured from the local vertical and the longer atmospheric path at larger zenith angle.">
+  </figure>
+
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label"><em>J</em><sub>i</sub>(z)</p>
+      <p class="card-label"><em>J</em><sub>i,z</sub></p>
       <p>
         The photolysis rate of reaction <code>i</code> at altitude <code>z</code>.
         Its unit is <code>s-1</code>. For ozone photolysis, this is the <code>J(O3)</code> value used in the reaction network.
@@ -147,36 +150,52 @@ R3: O3 + hv -> O2 + O</code></pre>
     </article>
 
     <article class="entry-card">
-      <p class="card-label"><em>F</em>(&lambda;, z)</p>
+      <p class="card-label">&phi;<sub>&lambda;</sub>(&lambda;)</p>
       <p>
-        The actinic flux: the amount of radiation available to drive photolysis at wavelength <code>&lambda;</code> and altitude <code>z</code>.
-        It changes with solar spectrum, altitude, absorption by other species, and scattering.
+        The quantum yield for the selected product channel.
+        It is the probability that photon absorption produces the products written in the photochemical reaction.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">&sigma;<sub>i</sub>(&lambda;, T)</p>
+      <p class="card-label">&sigma;<sub>&lambda;</sub>(&lambda;)</p>
       <p>
-        The absorption cross section for species <code>i</code>.
-        It tells us how strongly the molecule absorbs light at each wavelength and temperature.
+        The absorption cross section at wavelength <code>&lambda;</code>.
+        It tells us how strongly the molecule absorbs light.
         It is commonly reported in <code>cm2 molecule-1</code>.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">&Phi;<sub>i</sub>(&lambda;, T)</p>
+      <p class="card-label"><em>I</em><sub>&lambda;</sub>(z)</p>
       <p>
-        The quantum yield for the product channel.
-        It is the probability that photon absorption actually produces the photochemical products we wrote in the reaction.
-        It is dimensionless.
+        The solar irradiance at wavelength <code>&lambda;</code> and altitude <code>z</code>.
+        It is reduced from the top-of-atmosphere irradiance <code>I<sub>&lambda;,0</sub></code> by atmospheric optical depth.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">&lambda; and &Delta;&lambda;</p>
+      <p class="card-label">&lambda;<sub>1</sub>, &lambda;<sub>2</sub>, and d&lambda;</p>
       <p>
-        <code>&lambda;</code> is wavelength, usually given in <code>nm</code>.
-        <code>&Delta;&lambda;</code> is the wavelength interval used by the model when it sums across the wavelength grid.
+        <code>&lambda;<sub>1</sub></code> and <code>&lambda;<sub>2</sub></code> define the wavelength range of the photolysis calculation.
+        The term <code>d&lambda;</code> means the integral is summed over wavelength.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">&tau;<sub>&lambda;</sub>(z)</p>
+      <p>
+        The vertical optical depth above altitude <code>z</code>.
+        Larger optical depth means stronger attenuation before radiation reaches the layer.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">&theta; and cos(&theta;)</p>
+      <p>
+        <code>&theta;</code> is the solar zenith angle measured from the local vertical.
+        The factor <code>cos(&theta;)</code> converts vertical optical depth into an approximate slant-path optical depth:
+        <code>&tau;<sub>slant</sub> = &tau; / cos(&theta;)</code>.
       </p>
     </article>
   </div>
@@ -213,6 +232,16 @@ R3: O3 + hv -> O2 + O</code></pre>
           <td>Radiation source</td>
           <td>The solar or stellar spectrum used as input radiation.</td>
           <td>Different spectra change the amount of light available for ozone photolysis.</td>
+        </tr>
+        <tr>
+          <td>Solar zenith angle</td>
+          <td>The zenith angle <code>&theta;</code>, or equivalently <code>cos(&theta;)</code>.</td>
+          <td>This controls the slant path used in <code>&tau;<sub>slant</sub> = &tau; / cos(&theta;)</code>.</td>
+        </tr>
+        <tr>
+          <td>Optical depth</td>
+          <td>How the model calculates or reads <code>&tau;<sub>&lambda;</sub>(z)</code>.</td>
+          <td>The optical depth controls how much solar irradiance reaches each atmospheric layer.</td>
         </tr>
         <tr>
           <td>Wavelength grid</td>
@@ -334,7 +363,7 @@ run and inspect J(O3) output</code></pre>
       <li>Find one suitable <code>O3</code> absorption cross-section data set in MPI-Mainz.</li>
       <li>Record the author, year, temperature, wavelength range, units, and filename.</li>
       <li>Identify the photochemistry-related settings in <code>tests/setting.xlsx</code>.</li>
-      <li>Explain which setting controls the cross-section file and which setting controls the radiation or wavelength grid.</li>
+      <li>Explain which setting controls the cross-section file, solar irradiance, optical depth, zenith angle, and wavelength grid.</li>
       <li>Write what must be added or checked in the PATMO input reaction network for this photolysis reaction.</li>
     </ol>
   </div>
