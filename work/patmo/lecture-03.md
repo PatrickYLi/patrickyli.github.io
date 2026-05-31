@@ -6,6 +6,7 @@ permalink: /work/patmo/lecture-03/
 body_class: patmo-reading-theme
 head-extra:
   - patmo-reading-theme.html
+  - mathjax.html
 description: Lecture 3 of the PATMO student course, introducing photochemical calculations through Chapman-cycle ozone photolysis and the MPI-Mainz UV/VIS spectral atlas.
 ---
 
@@ -109,15 +110,15 @@ R3: O3 + hv -> O2 + O</code></pre>
     </p>
     <div class="takeaway-box">
       <p class="section-label">Photolysis Rate</p>
-      <p style="font-size: 1.35rem; line-height: 1.8; text-align: center; overflow-x: auto;">
-        <strong>
-          <em>J</em><sub>i,z</sub> =
-          &int;<sub>&lambda;1</sub><sup>&lambda;2</sup>
-          &phi;<sub>&lambda;</sub>(&lambda;)
-          &sigma;<sub>&lambda;</sub>(&lambda;)
-          <em>I</em><sub>&lambda;</sub>(z)
-          d&lambda;
-        </strong>
+      <p style="font-size: 1.45rem; line-height: 1.8; text-align: center; overflow-x: auto;">
+        \[
+        J_{i,z} =
+        \int_{\lambda_1}^{\lambda_2}
+        \phi_{\lambda}(\lambda)
+        \sigma_{\lambda}(\lambda)
+        I_{\lambda}(z)
+        \, d\lambda
+        \]
       </p>
     </div>
     <p>
@@ -126,12 +127,12 @@ R3: O3 + hv -> O2 + O</code></pre>
     </p>
     <div class="takeaway-box">
       <p class="section-label">Irradiance With Optical Depth</p>
-      <p style="font-size: 1.25rem; line-height: 1.8; text-align: center; overflow-x: auto;">
-        <strong>
-          <em>I</em><sub>&lambda;</sub>(z) =
-          <em>I</em><sub>&lambda;,0</sub>
-          exp[-&tau;<sub>&lambda;</sub>(z) / cos(&theta;)]
-        </strong>
+      <p style="font-size: 1.35rem; line-height: 1.8; text-align: center; overflow-x: auto;">
+        \[
+        I_{\lambda}(z) =
+        I_{\lambda,0}
+        \exp\left[-\frac{\tau_{\lambda}(z)}{\cos\theta}\right]
+        \]
       </p>
     </div>
   </div>
