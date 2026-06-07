@@ -185,6 +185,11 @@ R4: O + O3 -> O2 + O2</code></pre>
         In Guion et al. (2023), the emission variable is biogenic isoprene, written as <code>C5H8</code>, not <code>O3</code>.
         Students should copy the emitted species name before copying any number.
       </p>
+      <p>
+        There is no direct stoichiometric conversion such as <code>1 C5H8 -> x O3</code>.
+        <code>C5H8</code> is an ozone precursor: it can affect <code>O3</code> only through a larger <code>VOC-NOx</code> photochemical mechanism.
+        In a Chapman-only network, <code>C5H8</code> cannot be converted into <code>O3</code> because the required precursor chemistry is not included.
+      </p>
     </article>
 
     <article class="entry-card">
@@ -268,6 +273,7 @@ R4: O + O3 -> O2 + O2</code></pre>
       Use the paper example to teach the search workflow: identify emitted species, source type, units, region, period,
       convert the reported flux to molecules cm<sup>-2</sup> s<sup>-1</sup>, and then convert it to molecules cm<sup>-3</sup> s<sup>-1</sup>
       using the thickness of the model layer receiving the emission.
+      Do not reinterpret the resulting <code>C5H8</code> source term as an <code>O3</code> source term unless a separate ozone-production yield is explicitly defined for a larger chemical mechanism.
     </p>
   </div>
 </section>
