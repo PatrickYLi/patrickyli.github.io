@@ -190,7 +190,7 @@ R4: O + O3 -> O2 + O2</code></pre>
     <article class="entry-card">
       <p class="card-label">Step 3: Copy Units And Source Type</p>
       <p>
-        Emission data may be reported as a flux, for example mass per area per time.
+        Guion et al. show daily mean <code>C5H8</code> emissions in units of g m<sup>-2</sup> h<sup>-1</sup>.
         Record whether the source is biogenic, anthropogenic, biomass burning, oceanic, volcanic, or another category.
       </p>
     </article>
@@ -204,11 +204,70 @@ R4: O + O3 -> O2 + O2</code></pre>
     </article>
   </div>
 
+  <div class="panel">
+    <p class="section-label">Worked Conversion</p>
+    <p>
+      For a simple exercise, take a representative isoprene emission flux from the order of magnitude shown in the paper:
+      \(E_{\mathrm{mass}} = 1.0 \times 10^{-3}\) g m\(^{-2}\) h\(^{-1}\) for <code>C5H8</code>.
+      This is a surface mass flux. A chemistry model usually needs a number-based source term.
+    </p>
+    <p>
+      The map in Guion et al. (2023) is spatially variable. High-emission regions are on the order of
+      \(1.5 \times 10^{-3}\) g m\(^{-2}\) h\(^{-1}\), so students should first choose the grid cell,
+      region, or condition they want to represent before converting units.
+    </p>
+
+    \[
+    F_{\mathrm{num}}
+    =
+    E_{\mathrm{mass}}
+    \frac{N_A}{M_{\mathrm{C_5H_8}}}
+    \frac{1}{10^4}
+    \frac{1}{3600}
+    \]
+
+    <p>
+      Using \(N_A = 6.022 \times 10^{23}\) molecules mol\(^{-1}\) and
+      \(M_{\mathrm{C_5H_8}} = 68.12\) g mol\(^{-1}\):
+    </p>
+
+    \[
+    F_{\mathrm{num}}
+    \approx
+    2.46 \times 10^{11}
+    \ \mathrm{molecules\ cm^{-2}\ s^{-1}}
+    \]
+
+    <p>
+      If the lowest model layer thickness is \(\Delta z_1 = 100\) m \(= 1.0 \times 10^4\) cm,
+      convert the surface flux to a volume source term:
+    </p>
+
+    \[
+    S_{\mathrm{C_5H_8}}
+    =
+    \frac{F_{\mathrm{num}}}{\Delta z_1}
+    \approx
+    2.46 \times 10^7
+    \ \mathrm{molecules\ cm^{-3}\ s^{-1}}
+    \]
+
+    <p>
+      This final value is the type of number-density tendency that can be compared with chemical production and loss terms.
+      If students instead use \(1.5 \times 10^{-3}\) g m\(^{-2}\) h\(^{-1}\), the same calculation gives
+      \(F_{\mathrm{num}} \approx 3.69 \times 10^{11}\) molecules cm\(^{-2}\) s\(^{-1}\) and,
+      for \(\Delta z_1 = 100\) m, \(S_{\mathrm{C_5H_8}} \approx 3.69 \times 10^7\) molecules cm\(^{-3}\) s\(^{-1}\).
+      If students choose a different emission flux or a different lowest-layer thickness, they must redo this conversion.
+    </p>
+  </div>
+
   <div class="takeaway-box">
     <p class="section-label">Teaching Use In This Case</p>
     <p>
       For the Chapman exercise, keep direct <code>O3</code> emission at zero in the physical baseline.
-      Use the paper example to teach the search workflow: identify emitted species, source type, units, region, period, and whether the chemistry mechanism can actually use that emitted species.
+      Use the paper example to teach the search workflow: identify emitted species, source type, units, region, period,
+      convert the reported flux to molecules cm<sup>-2</sup> s<sup>-1</sup>, and then convert it to molecules cm<sup>-3</sup> s<sup>-1</sup>
+      using the thickness of the model layer receiving the emission.
     </p>
   </div>
 </section>
@@ -399,7 +458,7 @@ R4: O + O3 -> O2 + O2</code></pre>
     </p>
     <ol>
       <li>Keep the four Chapman chemical reactions unchanged.</li>
-      <li>For the physical baseline, set direct ozone emission to zero. Then use one paper, such as Guion et al. (2023), to explain how ozone-related precursor emission data are searched and recorded.</li>
+      <li>For the physical baseline, set direct ozone emission to zero. Then use one paper, such as Guion et al. (2023), to explain how ozone-related precursor emission data are searched, recorded, and converted from mass flux to molecules cm<sup>-3</sup> s<sup>-1</sup>.</li>
       <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper and record the deposition velocity, units, surface type, site, season, and whether the removal applies only to the lowest layer.</li>
       <li>Keep wet deposition off for the strict Chapman <code>O3</code> case and explain that wet removal is mainly useful for soluble or efficiently scavenged species.</li>
       <li>Submit the updated PATMO input files together with a short table listing each boundary process, species, value, units, and reason for using or not using it.</li>
