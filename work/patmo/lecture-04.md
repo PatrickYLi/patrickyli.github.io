@@ -239,7 +239,7 @@ R4: O + O3 -> O2 + O2</code></pre>
     \]
 
     <p>
-      If the lowest model layer thickness is \(\Delta z_1 = 100\) m \(= 1.0 \times 10^4\) cm,
+      If the lowest model layer thickness is \(\Delta z_1 = 1000\) m \(= 1.0 \times 10^5\) cm,
       convert the surface flux to a volume source term:
     </p>
 
@@ -248,7 +248,7 @@ R4: O + O3 -> O2 + O2</code></pre>
     =
     \frac{F_{\mathrm{num}}}{\Delta z_1}
     \approx
-    2.46 \times 10^7
+    2.46 \times 10^6
     \ \mathrm{molecules\ cm^{-3}\ s^{-1}}
     \]
 
@@ -256,7 +256,7 @@ R4: O + O3 -> O2 + O2</code></pre>
       This final value is the type of number-density tendency that can be compared with chemical production and loss terms.
       If students instead use \(1.5 \times 10^{-3}\) g m\(^{-2}\) h\(^{-1}\), the same calculation gives
       \(F_{\mathrm{num}} \approx 3.69 \times 10^{11}\) molecules cm\(^{-2}\) s\(^{-1}\) and,
-      for \(\Delta z_1 = 100\) m, \(S_{\mathrm{C_5H_8}} \approx 3.69 \times 10^7\) molecules cm\(^{-3}\) s\(^{-1}\).
+      for \(\Delta z_1 = 1000\) m, \(S_{\mathrm{C_5H_8}} \approx 3.69 \times 10^6\) molecules cm\(^{-3}\) s\(^{-1}\).
       If students choose a different emission flux or a different lowest-layer thickness, they must redo this conversion.
     </p>
   </div>
