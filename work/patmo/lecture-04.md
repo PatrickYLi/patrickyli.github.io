@@ -94,26 +94,26 @@ R4: O + O3 -> O2 + O2</code></pre>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label">What Is Realistic</p>
+      <p class="card-label">Dry Deposition</p>
       <p>
-        In this lecture, we choose vegetation as the realistic surface example.
-        A wheat canopy is useful because recent field studies report measured ozone deposition fluxes and deposition velocities.
+        Ozone dry deposition can occur on vegetation, soil, water, snow, building surfaces, and other lower-boundary surfaces.
+        The wheat-canopy paper below is only one literature example for learning how to find a deposition velocity.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">What Is Only Practice</p>
+      <p class="card-label">Emission</p>
       <p>
-        A direct ozone emission source is usually not the realistic baseline for a Chapman case.
-        If we add one in class, it should be labeled as an artificial training source for learning how an emission term works.
+        Surface ozone is usually not emitted directly. It is mainly produced photochemically from precursors such as
+        <code>NOx</code> and <code>VOCs</code>. In a Chapman-only exercise, direct <code>O3</code> emission is therefore an artificial training source.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">What Needs Care</p>
+      <p class="card-label">Wet Deposition</p>
       <p>
-        Wet deposition is most useful for soluble or scavenged species.
-        Ozone is not the cleanest wet-deposition example, so for a strict Chapman baseline it is reasonable to keep wet deposition off and explain why.
+        Wet deposition removes species by cloud water and precipitation.
+        It is important for soluble or efficiently scavenged species, but it is not a useful main sink for the simple Chapman <code>O3</code> example.
       </p>
     </article>
   </div>
@@ -149,6 +149,66 @@ R4: O + O3 -> O2 + O2</code></pre>
       For a physically clean Chapman baseline, set direct emissions of <code>O</code>, <code>O2</code>, and <code>O3</code> to zero.
       If the class adds an ozone emission term, treat it as a controlled numerical experiment:
       the purpose is to learn how a source term changes the ozone budget, not to claim ozone is normally emitted this way.
+    </p>
+  </div>
+</section>
+
+<section id="emission-paper-example" class="section-block">
+  <div class="section-heading">
+    <h2>Finding Emission Data From A Paper</h2>
+  </div>
+
+  <div class="panel">
+    <p>
+      When students search for <code>ozone emission</code>, they should quickly check whether the paper is talking about direct <code>O3</code>
+      emission or emissions of ozone precursors. In most lower-atmosphere cases, the useful search target is precursor emission.
+    </p>
+    <p>
+      A good example is
+      <a href="https://doi.org/10.5194/acp-23-1043-2023" target="_blank" rel="noreferrer">Guion et al. (2023)</a>,
+      which connects biogenic isoprene emissions, ozone dry deposition velocity, and surface ozone in southwestern Europe.
+    </p>
+  </div>
+
+  <div class="lesson-grid">
+    <article class="entry-card">
+      <p class="card-label">Step 1: Search The Right Species</p>
+      <p>
+        Use keywords such as <code>ozone precursor emissions</code>, <code>isoprene emissions surface ozone</code>,
+        <code>VOC emissions ozone formation</code>, or <code>NOx emissions ozone</code>.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Step 2: Identify The Emitted Species</p>
+      <p>
+        In Guion et al. (2023), the emission variable is biogenic isoprene, written as <code>C5H8</code>, not <code>O3</code>.
+        Students should copy the emitted species name before copying any number.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Step 3: Copy Units And Source Type</p>
+      <p>
+        Emission data may be reported as a flux, for example mass per area per time.
+        Record whether the source is biogenic, anthropogenic, biomass burning, oceanic, volcanic, or another category.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Step 4: Decide If Chapman Can Use It</p>
+      <p>
+        A pure Chapman network has only <code>O2</code>, <code>O</code>, <code>O3</code>, photons, and a third body <code>M</code>.
+        If the paper reports <code>VOC</code> or <code>NOx</code> emissions, the data are useful for learning emission lookup, but they require a larger chemical mechanism.
+      </p>
+    </article>
+  </div>
+
+  <div class="takeaway-box">
+    <p class="section-label">Teaching Use In This Case</p>
+    <p>
+      For the Chapman exercise, keep direct <code>O3</code> emission at zero in the physical baseline.
+      Use the paper example to teach the search workflow: identify emitted species, source type, units, region, period, and whether the chemistry mechanism can actually use that emitted species.
     </p>
   </div>
 </section>
@@ -312,12 +372,12 @@ R4: O + O3 -> O2 + O2</code></pre>
       <tr>
         <td>Emission</td>
         <td>Species, source type, flux or rate, units, layer</td>
-        <td>Baseline: set direct ozone emission to zero; optional: artificial O3 source for testing</td>
+        <td>Baseline: set direct O3 emission to zero; use precursor-emission papers only as a lookup example</td>
       </tr>
       <tr>
         <td>Dry deposition</td>
         <td>Species, deposition velocity, units, surface-layer treatment</td>
-        <td>Add dry deposition for O3 using vegetation as the example surface</td>
+        <td>Add dry deposition for O3; vegetation is one example surface, not the only possible surface</td>
       </tr>
       <tr>
         <td>Wet deposition</td>
@@ -339,9 +399,9 @@ R4: O + O3 -> O2 + O2</code></pre>
     </p>
     <ol>
       <li>Keep the four Chapman chemical reactions unchanged.</li>
-      <li>Decide whether the case uses any emission term. For the physical baseline, set direct ozone emission to zero. If you add an artificial O3 source, label it clearly as a training experiment.</li>
+      <li>For the physical baseline, set direct ozone emission to zero. Then use one paper, such as Guion et al. (2023), to explain how ozone-related precursor emission data are searched and recorded.</li>
       <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper and record the deposition velocity, units, surface type, site, season, and whether the removal applies only to the lowest layer.</li>
-      <li>Decide whether wet deposition is off or included. For a strict Chapman case, keep it off and explain that O3 is not the main wet-deposition example.</li>
+      <li>Keep wet deposition off for the strict Chapman <code>O3</code> case and explain that wet removal is mainly useful for soluble or efficiently scavenged species.</li>
       <li>Submit the updated PATMO input files together with a short table listing each boundary process, species, value, units, and reason for using or not using it.</li>
     </ol>
   </div>
