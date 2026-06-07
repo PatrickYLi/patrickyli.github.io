@@ -393,28 +393,20 @@ R4: O + O3 -> O2 + O2</code></pre>
     \]
 
     <p>
-      The volume loss term is then this first-order rate multiplied by the lowest-layer ozone number density:
+      The volume loss term is then this first-order rate multiplied by the lowest-layer ozone number density, written as \([\mathrm{O_3}]\):
     </p>
 
     \[
     L_{\mathrm{dry,O_3}}
     =
-    k_{\mathrm{dep,O_3}} n_{\mathrm{O_3}}(z_1)
-    \]
-
-    <p>
-      For example, if \(n_{\mathrm{O_3}}(z_1) = 1.0 \times 10^{12}\) molecules cm\(^{-3}\), then
-    </p>
-
-    \[
-    L_{\mathrm{dry,O_3}}
-    \approx
-    2.9 \times 10^6\ \mathrm{molecules\ cm^{-3}\ s^{-1}}
+    k_{\mathrm{dep,O_3}} [\mathrm{O_3}]
+    =
+    2.9 \times 10^{-6} [\mathrm{O_3}]
     \]
 
     <p>
       In the model tendency equation, dry deposition is a sink, so it is subtracted from the <code>O3</code> budget.
-      If students use a different \(V_d\), layer thickness, or ozone number density, they must redo this conversion.
+      If students use a different \(V_d\) or layer thickness, they must redo the \(k_{\mathrm{dep,O_3}}\) conversion.
     </p>
   </div>
 
@@ -512,7 +504,7 @@ R4: O + O3 -> O2 + O2</code></pre>
     <ol>
       <li>Keep the four Chapman chemical reactions unchanged.</li>
       <li>For the physical baseline, set direct ozone emission to zero. Then create a demonstration case using the Link et al. (2023) value \(R_{\mathrm{mass}} = 1.22\) mg h\(^{-1}\), assume \(A = 1\) m\(^2\), and convert it to molecules cm\(^{-3}\) s\(^{-1}\) using \(\Delta z_1 = 1000\) m.</li>
-      <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper. Record the deposition velocity, units, surface type, site, and season, then convert it to \(k_{\mathrm{dep}}\) for \(\Delta z_1 = 1000\) m and calculate one example volume loss term.</li>
+      <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper. Record the deposition velocity, units, surface type, site, and season, then convert it to \(k_{\mathrm{dep}}\) for \(\Delta z_1 = 1000\) m and write the dry-deposition loss term using \([\mathrm{O_3}]\).</li>
       <li>Keep wet deposition off for the strict Chapman <code>O3</code> case and explain that wet removal is mainly useful for soluble or efficiently scavenged species.</li>
       <li>Submit the updated PATMO input files together with a short table listing each boundary process, species, value, units, and reason for using or not using it.</li>
     </ol>
