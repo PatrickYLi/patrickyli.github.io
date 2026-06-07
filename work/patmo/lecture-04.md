@@ -364,11 +364,66 @@ R4: O + O3 -> O2 + O2</code></pre>
     </article>
   </div>
 
+  <div class="panel">
+    <p class="section-label">Worked Conversion For Model</p>
+    <p>
+      The reported value \(V_d = 0.29\) cm s\(^{-1}\) is already a deposition velocity.
+      If PATMO asks directly for a dry-deposition velocity, students can enter:
+    </p>
+
+    \[
+    v_{d,\mathrm{O_3}}
+    =
+    0.29\ \mathrm{cm\ s^{-1}}
+    \]
+
+    <p>
+      If the model setup needs a lowest-layer first-order loss rate, divide by the lowest-layer thickness.
+      With \(\Delta z_1 = 1000\) m \(= 1.0 \times 10^5\) cm:
+    </p>
+
+    \[
+    k_{\mathrm{dep,O_3}}
+    =
+    \frac{v_{d,\mathrm{O_3}}}{\Delta z_1}
+    =
+    \frac{0.29}{1.0 \times 10^5}
+    \approx
+    2.9 \times 10^{-6}\ \mathrm{s^{-1}}
+    \]
+
+    <p>
+      The volume loss term is then this first-order rate multiplied by the lowest-layer ozone number density:
+    </p>
+
+    \[
+    L_{\mathrm{dry,O_3}}
+    =
+    k_{\mathrm{dep,O_3}} n_{\mathrm{O_3}}(z_1)
+    \]
+
+    <p>
+      For example, if \(n_{\mathrm{O_3}}(z_1) = 1.0 \times 10^{12}\) molecules cm\(^{-3}\), then
+    </p>
+
+    \[
+    L_{\mathrm{dry,O_3}}
+    \approx
+    2.9 \times 10^6\ \mathrm{molecules\ cm^{-3}\ s^{-1}}
+    \]
+
+    <p>
+      In the model tendency equation, dry deposition is a sink, so it is subtracted from the <code>O3</code> budget.
+      If students use a different \(V_d\), layer thickness, or ozone number density, they must redo this conversion.
+    </p>
+  </div>
+
   <div class="takeaway-box">
     <p class="section-label">Teaching Use In This Case</p>
     <p>
       For a first Chapman dry-deposition exercise, students may use \(v_{d,\mathrm{O_3}} = 0.29\) cm s\(^{-1}\)
       as a demonstration value for ozone deposition to a wheat canopy.
+      They should also calculate \(k_{\mathrm{dep,O_3}} = 2.9 \times 10^{-6}\) s\(^{-1}\) for a 1000 m lowest layer.
       The submission must cite the paper and state that this value is surface-, season-, and method-dependent.
     </p>
   </div>
@@ -457,7 +512,7 @@ R4: O + O3 -> O2 + O2</code></pre>
     <ol>
       <li>Keep the four Chapman chemical reactions unchanged.</li>
       <li>For the physical baseline, set direct ozone emission to zero. Then create a demonstration case using the Link et al. (2023) value \(R_{\mathrm{mass}} = 1.22\) mg h\(^{-1}\), assume \(A = 1\) m\(^2\), and convert it to molecules cm\(^{-3}\) s\(^{-1}\) using \(\Delta z_1 = 1000\) m.</li>
-      <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper and record the deposition velocity, units, surface type, site, season, and whether the removal applies only to the lowest layer.</li>
+      <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper. Record the deposition velocity, units, surface type, site, and season, then convert it to \(k_{\mathrm{dep}}\) for \(\Delta z_1 = 1000\) m and calculate one example volume loss term.</li>
       <li>Keep wet deposition off for the strict Chapman <code>O3</code> case and explain that wet removal is mainly useful for soluble or efficiently scavenged species.</li>
       <li>Submit the updated PATMO input files together with a short table listing each boundary process, species, value, units, and reason for using or not using it.</li>
     </ol>
