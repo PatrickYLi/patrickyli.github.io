@@ -96,8 +96,8 @@ R4: O + O3 -> O2 + O2</code></pre>
     <article class="entry-card">
       <p class="card-label">What Is Realistic</p>
       <p>
-        Ozone dry deposition is a meaningful surface sink.
-        Near the surface, ozone can be removed by uptake on soil, vegetation, water, and other surfaces.
+        In this lecture, we choose vegetation as the realistic surface example.
+        A wheat canopy is useful because recent field studies report measured ozone deposition fluxes and deposition velocities.
       </p>
     </article>
 
@@ -195,6 +195,68 @@ R4: O + O3 -> O2 + O2</code></pre>
   </div>
 </section>
 
+<section id="deposition-paper-example" class="section-block">
+  <div class="section-heading">
+    <h2>Finding A Deposition Value From A Paper</h2>
+  </div>
+
+  <div class="panel">
+    <p>
+      Use vegetation as the example surface and search for a recent paper with these keywords:
+      <code>ozone dry deposition velocity wheat field</code>, <code>O3 deposition flux vegetation</code>, or
+      <code>Vd ozone cropland</code>.
+    </p>
+    <p>
+      A good example is
+      <a href="https://doi.org/10.5194/acp-24-12323-2024" target="_blank" rel="noreferrer">Zhang et al. (2024)</a>,
+      which measured ozone deposition over wheat fields in the North China Plain during the 2023 wheat growing season.
+    </p>
+  </div>
+
+  <div class="lesson-grid">
+    <article class="entry-card">
+      <p class="card-label">Step 1: Identify The Surface</p>
+      <p>
+        Record the land surface before copying any number.
+        In this paper, the surface is a wheat canopy, not bare soil, open water, or forest.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Step 2: Find The Variable</p>
+      <p>
+        Search inside the paper for <code>deposition velocity</code>, <code>Vd</code>, and <code>flux</code>.
+        For PATMO, the number we need for the simple dry-deposition setting is usually a deposition velocity.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Step 3: Copy Units</p>
+      <p>
+        Zhang et al. report deposition velocity in cm s\(^{-1}\).
+        The reported mean value for the main wheat growing season is \(V_d = 0.29 \pm 0.33\) cm s\(^{-1}\).
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Step 4: Keep Context</p>
+      <p>
+        The same paper reports higher daytime \(V_d\) than nighttime \(V_d\).
+        Do not treat one value as universal: record site, season, vegetation type, method, and whether the value is daytime, nighttime, or all-period average.
+      </p>
+    </article>
+  </div>
+
+  <div class="takeaway-box">
+    <p class="section-label">Teaching Use In This Case</p>
+    <p>
+      For a first Chapman dry-deposition exercise, students may use \(v_{d,\mathrm{O_3}} = 0.29\) cm s\(^{-1}\)
+      as a demonstration value for ozone deposition to a wheat canopy.
+      The submission must cite the paper and state that this value is surface-, season-, and method-dependent.
+    </p>
+  </div>
+</section>
+
 <section id="wet-deposition" class="section-block">
   <div class="section-heading">
     <h2>Wet Deposition</h2>
@@ -255,7 +317,7 @@ R4: O + O3 -> O2 + O2</code></pre>
       <tr>
         <td>Dry deposition</td>
         <td>Species, deposition velocity, units, surface-layer treatment</td>
-        <td>Add dry deposition for O3</td>
+        <td>Add dry deposition for O3 using vegetation as the example surface</td>
       </tr>
       <tr>
         <td>Wet deposition</td>
@@ -278,7 +340,7 @@ R4: O + O3 -> O2 + O2</code></pre>
     <ol>
       <li>Keep the four Chapman chemical reactions unchanged.</li>
       <li>Decide whether the case uses any emission term. For the physical baseline, set direct ozone emission to zero. If you add an artificial O3 source, label it clearly as a training experiment.</li>
-      <li>Add dry deposition for <code>O3</code>. Record the deposition velocity, units, and whether the removal applies only to the lowest layer.</li>
+      <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper and record the deposition velocity, units, surface type, site, season, and whether the removal applies only to the lowest layer.</li>
       <li>Decide whether wet deposition is off or included. For a strict Chapman case, keep it off and explain that O3 is not the main wet-deposition example.</li>
       <li>Submit the updated PATMO input files together with a short table listing each boundary process, species, value, units, and reason for using or not using it.</li>
     </ol>
