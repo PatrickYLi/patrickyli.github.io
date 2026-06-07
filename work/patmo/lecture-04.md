@@ -104,8 +104,8 @@ R4: O + O3 -> O2 + O2</code></pre>
     <article class="entry-card">
       <p class="card-label">Emission</p>
       <p>
-        Surface ozone is usually not emitted directly. It is mainly produced photochemically from precursors such as
-        <code>NOx</code> and <code>VOCs</code>. In a Chapman-only exercise, direct <code>O3</code> emission is therefore an artificial training source.
+        For a simple classroom demonstration, use a direct artificial <code>O3</code> emission flux.
+        This makes the input format and unit conversion easy to see, even though real lower-atmosphere ozone is usually produced photochemically.
       </p>
     </article>
 
@@ -153,58 +153,57 @@ R4: O + O3 -> O2 + O2</code></pre>
   </div>
 </section>
 
-<section id="emission-paper-example" class="section-block">
+<section id="o3-emission-demonstration" class="section-block">
   <div class="section-heading">
-    <h2>Finding Emission Data From A Paper</h2>
+    <h2>Finding O3 Emission Data From A Paper</h2>
   </div>
 
   <div class="panel">
     <p>
-      When students search for <code>ozone emission</code>, they should quickly check whether the paper is talking about direct <code>O3</code>
-      emission or emissions of ozone precursors. In most lower-atmosphere cases, the useful search target is precursor emission.
+      In this lecture, use a direct <code>O3</code> emission only as a training source.
+      The goal is not to claim that surface ozone is normally emitted this way.
+      The goal is to show how students can find a reported <code>O3</code> emission rate in the literature,
+      convert its units, and place it into the lowest model layer.
     </p>
     <p>
-      A good example is
-      <a href="https://doi.org/10.5194/acp-23-1043-2023" target="_blank" rel="noreferrer">Guion et al. (2023)</a>,
-      which connects biogenic isoprene emissions, ozone dry deposition velocity, and surface ozone in southwestern Europe.
+      A useful example is
+      <a href="https://doi.org/10.1021/acs.estlett.3c00318" target="_blank" rel="noreferrer">Link et al. (2023)</a>,
+      which reports ozone generation from a 222 nm germicidal ultraviolet lamp.
+      The paper gives an <code>O3</code> generation rate of 1.22 mg h<sup>-1</sup>.
     </p>
   </div>
 
   <div class="lesson-grid">
     <article class="entry-card">
-      <p class="card-label">Step 1: Search The Right Species</p>
+      <p class="card-label">Step 1: Search The Literature</p>
       <p>
-        Use keywords such as <code>ozone precursor emissions</code>, <code>isoprene emissions surface ozone</code>,
-        <code>VOC emissions ozone formation</code>, or <code>NOx emissions ozone</code>.
+        Use keywords such as <code>ozone emission rate mg h-1</code>, <code>O3 generation rate UV lamp</code>,
+        or <code>ozone generator emission rate</code>. Keep papers that report a direct <code>O3</code> rate with units.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">Step 2: Identify The Emitted Species</p>
+      <p class="card-label">Step 2: Copy The Reported Value</p>
       <p>
-        In Guion et al. (2023), the emission variable is biogenic isoprene, written as <code>C5H8</code>, not <code>O3</code>.
-        Students should copy the emitted species name before copying any number.
-      </p>
-      <p>
-        There is no direct stoichiometric conversion such as <code>1 C5H8 -> x O3</code>.
-        <code>C5H8</code> is an ozone precursor: it can affect <code>O3</code> only through a larger <code>VOC-NOx</code> photochemical mechanism.
-        In a Chapman-only network, <code>C5H8</code> cannot be converted into <code>O3</code> because the required precursor chemistry is not included.
+        From Link et al. (2023), copy the species, source type, value, and unit:
+        <code>O3</code>, UV lamp generation, \(R_{\mathrm{mass}} = 1.22\) mg h\(^{-1}\).
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">Step 3: Copy Units And Source Type</p>
+      <p class="card-label">Step 3: Choose Model Geometry</p>
       <p>
-        Guion et al. show daily mean <code>C5H8</code> emissions in units of g m<sup>-2</sup> h<sup>-1</sup>.
-        Record whether the source is biogenic, anthropogenic, biomass burning, oceanic, volcanic, or another category.
+        The paper reports a total generation rate, not an atmospheric surface flux.
+        For a 1D teaching column, assume a column area \(A = 1\) m\(^2\) and lowest-layer thickness
+        \(\Delta z_1 = 1000\) m.
       </p>
     </article>
 
     <article class="entry-card">
-      <p class="card-label">Step 4: Decide If Chapman Can Use It</p>
+      <p class="card-label">Step 4: Convert To Model Units</p>
       <p>
-        A pure Chapman network has only <code>O2</code>, <code>O</code>, <code>O3</code>, photons, and a third body <code>M</code>.
-        If the paper reports <code>VOC</code> or <code>NOx</code> emissions, the data are useful for learning emission lookup, but they require a larger chemical mechanism.
+        Convert mg h\(^{-1}\) to molecules cm\(^{-2}\) s\(^{-1}\), then divide by \(\Delta z_1\).
+        The final source term should be in molecules cm\(^{-3}\) s\(^{-1}\).
       </p>
     </article>
   </div>
@@ -212,68 +211,61 @@ R4: O + O3 -> O2 + O2</code></pre>
   <div class="panel">
     <p class="section-label">Worked Conversion</p>
     <p>
-      For a simple exercise, take a representative isoprene emission flux from the order of magnitude shown in the paper:
-      \(E_{\mathrm{mass}} = 1.0 \times 10^{-3}\) g m\(^{-2}\) h\(^{-1}\) for <code>C5H8</code>.
-      This is a surface mass flux. A chemistry model usually needs a number-based source term.
-    </p>
-    <p>
-      The map in Guion et al. (2023) is spatially variable. High-emission regions are on the order of
-      \(1.5 \times 10^{-3}\) g m\(^{-2}\) h\(^{-1}\), so students should first choose the grid cell,
-      region, or condition they want to represent before converting units.
+      First convert the total mass rate to a mass flux over the chosen model column area:
     </p>
 
     \[
-    F_{\mathrm{num}}
-    =
     E_{\mathrm{mass}}
-    \frac{N_A}{M_{\mathrm{C_5H_8}}}
-    \frac{1}{10^4}
-    \frac{1}{3600}
+    =
+    \frac{R_{\mathrm{mass}}}{A}
+    =
+    \frac{1.22 \times 10^{-3}\ \mathrm{g\ h^{-1}}}{1\ \mathrm{m^2}}
+    =
+    1.22 \times 10^{-3}\ \mathrm{g\ m^{-2}\ h^{-1}}
     \]
 
     <p>
-      Using \(N_A = 6.022 \times 10^{23}\) molecules mol\(^{-1}\) and
-      \(M_{\mathrm{C_5H_8}} = 68.12\) g mol\(^{-1}\):
+      Then convert the mass flux to a number flux using \(M_{\mathrm{O_3}} = 48.00\) g mol\(^{-1}\):
     </p>
 
     \[
-    F_{\mathrm{num}}
+    F_{\mathrm{O_3}}
+    =
+    E_{\mathrm{mass}}
+    \frac{N_A}{M_{\mathrm{O_3}}}
+    \frac{1}{10^4}
+    \frac{1}{3600}
     \approx
-    2.46 \times 10^{11}
+    4.25 \times 10^{11}
     \ \mathrm{molecules\ cm^{-2}\ s^{-1}}
     \]
 
     <p>
-      If the lowest model layer thickness is \(\Delta z_1 = 1000\) m \(= 1.0 \times 10^5\) cm,
-      convert the surface flux to a volume source term:
+      Finally divide by the layer thickness \(\Delta z_1 = 1000\) m \(= 1.0 \times 10^5\) cm:
     </p>
 
     \[
-    S_{\mathrm{C_5H_8}}
+    S_{\mathrm{O_3}}
     =
-    \frac{F_{\mathrm{num}}}{\Delta z_1}
+    \frac{F_{\mathrm{O_3}}}{\Delta z_1}
+    =
+    \frac{4.25 \times 10^{11}}{1.0 \times 10^5}
     \approx
-    2.46 \times 10^6
+    4.25 \times 10^6
     \ \mathrm{molecules\ cm^{-3}\ s^{-1}}
     \]
 
     <p>
-      This final value is the type of number-density tendency that can be compared with chemical production and loss terms.
-      If students instead use \(1.5 \times 10^{-3}\) g m\(^{-2}\) h\(^{-1}\), the same calculation gives
-      \(F_{\mathrm{num}} \approx 3.69 \times 10^{11}\) molecules cm\(^{-2}\) s\(^{-1}\) and,
-      for \(\Delta z_1 = 1000\) m, \(S_{\mathrm{C_5H_8}} \approx 3.69 \times 10^6\) molecules cm\(^{-3}\) s\(^{-1}\).
-      If students choose a different emission flux or a different lowest-layer thickness, they must redo this conversion.
+      This is the value students can place into the <code>O3</code> source term for the artificial emission demonstration.
+      If they choose a different paper value, column area, or model-layer thickness, they must redo the conversion.
     </p>
   </div>
 
   <div class="takeaway-box">
     <p class="section-label">Teaching Use In This Case</p>
     <p>
-      For the Chapman exercise, keep direct <code>O3</code> emission at zero in the physical baseline.
-      Use the paper example to teach the search workflow: identify emitted species, source type, units, region, period,
-      convert the reported flux to molecules cm<sup>-2</sup> s<sup>-1</sup>, and then convert it to molecules cm<sup>-3</sup> s<sup>-1</sup>
-      using the thickness of the model layer receiving the emission.
-      Do not reinterpret the resulting <code>C5H8</code> source term as an <code>O3</code> source term unless a separate ozone-production yield is explicitly defined for a larger chemical mechanism.
+      Use this direct <code>O3</code> emission only to teach how a source term is written in PATMO.
+      In the physical baseline, the teacher may still set direct <code>O3</code> emission to zero and then turn on this artificial source as a sensitivity test.
     </p>
   </div>
 </section>
@@ -437,7 +429,7 @@ R4: O + O3 -> O2 + O2</code></pre>
       <tr>
         <td>Emission</td>
         <td>Species, source type, flux or rate, units, layer</td>
-        <td>Baseline: set direct O3 emission to zero; use precursor-emission papers only as a lookup example</td>
+        <td>Baseline: set direct O3 emission to zero; demonstration: add an artificial O3 surface flux</td>
       </tr>
       <tr>
         <td>Dry deposition</td>
@@ -464,7 +456,7 @@ R4: O + O3 -> O2 + O2</code></pre>
     </p>
     <ol>
       <li>Keep the four Chapman chemical reactions unchanged.</li>
-      <li>For the physical baseline, set direct ozone emission to zero. Then use one paper, such as Guion et al. (2023), to explain how ozone-related precursor emission data are searched, recorded, and converted from mass flux to molecules cm<sup>-3</sup> s<sup>-1</sup>.</li>
+      <li>For the physical baseline, set direct ozone emission to zero. Then create a demonstration case using the Link et al. (2023) value \(R_{\mathrm{mass}} = 1.22\) mg h\(^{-1}\), assume \(A = 1\) m\(^2\), and convert it to molecules cm\(^{-3}\) s\(^{-1}\) using \(\Delta z_1 = 1000\) m.</li>
       <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper and record the deposition velocity, units, surface type, site, season, and whether the removal applies only to the lowest layer.</li>
       <li>Keep wet deposition off for the strict Chapman <code>O3</code> case and explain that wet removal is mainly useful for soluble or efficiently scavenged species.</li>
       <li>Submit the updated PATMO input files together with a short table listing each boundary process, species, value, units, and reason for using or not using it.</li>
