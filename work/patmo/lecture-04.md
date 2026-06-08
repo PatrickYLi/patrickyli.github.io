@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Lecture 4: Emission and Deposition"
-subtitle: Adding emission, dry deposition, and wet deposition around the Chapman cycle.
+title: "Lecture 4: Emission and Dry Deposition"
+subtitle: Adding emission and dry deposition around the Chapman cycle.
 permalink: /work/patmo/lecture-04/
 body_class: patmo-reading-theme
 head-extra:
   - patmo-reading-theme.html
   - mathjax.html
-description: Lecture 4 of the PATMO student course, introducing emission, dry deposition, and wet deposition as source and sink processes around the Chapman cycle.
+description: Lecture 4 of the PATMO student course, introducing emission and dry deposition as source and sink processes around the Chapman cycle.
 ---
 
 <div class="patmo-course">
@@ -35,8 +35,8 @@ R3: O3 + hv -> O2 + O
 R4: O + O3 -> O2 + O2</code></pre>
 
   <p>
-    In this lecture, we keep that same Chapman network and add three processes around it:
-    emission, dry deposition, and wet deposition.
+    In this lecture, we keep that same Chapman network and add two processes around it:
+    emission and dry deposition.
     These are not new Chapman chemical reactions. They are source and sink terms that add or remove species from the model column.
   </p>
 
@@ -66,14 +66,12 @@ R4: O + O3 -> O2 + O2</code></pre>
     S_i^{\mathrm{emission}}
     -
     L_i^{\mathrm{dry}}
-    -
-    L_i^{\mathrm{wet}}
     \]
 
     <p>
       The Chapman cycle gives the chemical production and loss terms.
-      Emission adds material. Dry deposition and wet deposition remove material.
-      In a pure Chapman-only exercise, the last three terms can be set to zero.
+      Emission adds material. Dry deposition removes material at the lower boundary.
+      In a pure Chapman-only exercise, these two extra terms can be set to zero.
     </p>
   </div>
 
@@ -106,14 +104,6 @@ R4: O + O3 -> O2 + O2</code></pre>
       <p>
         For a simple classroom demonstration, use a direct artificial <code>O3</code> emission flux.
         This makes the input format and unit conversion easy to see, even though real lower-atmosphere ozone is usually produced photochemically.
-      </p>
-    </article>
-
-    <article class="entry-card">
-      <p class="card-label">Wet Deposition</p>
-      <p>
-        Wet deposition removes species by cloud water and precipitation.
-        It is important for soluble or efficiently scavenged species, but it is not a useful main sink for the simple Chapman <code>O3</code> example.
       </p>
     </article>
   </div>
@@ -421,39 +411,6 @@ R4: O + O3 -> O2 + O2</code></pre>
   </div>
 </section>
 
-<section id="wet-deposition" class="section-block">
-  <div class="section-heading">
-    <h2>Wet Deposition</h2>
-  </div>
-
-  <div class="panel">
-    <p>
-      Wet deposition is removal by cloud water, rainout, or washout.
-      In a simple model exercise, it can be represented as a first-order loss:
-    </p>
-
-    \[
-    L_i^{\mathrm{wet}}
-    =
-    k_{i}^{\mathrm{wet}} n_i
-    \]
-
-    <p>
-      \(k_i^{\mathrm{wet}}\) is a wet-removal rate with units of s\(^{-1}\).
-      It summarizes how efficiently the species is scavenged by cloud or precipitation processes.
-    </p>
-  </div>
-
-  <div class="takeaway-box">
-    <p class="section-label">Chapman Example</p>
-    <p>
-      For a strict Chapman ozone baseline, wet deposition can be turned off and documented as
-      <code>not used for this simple O3 example</code>.
-      The formula is still worth learning now because it becomes important for soluble sulfur species later in the course.
-    </p>
-  </div>
-</section>
-
 <section id="class-setup" class="section-block">
   <div class="section-heading">
     <h2>Class Setup</h2>
@@ -483,11 +440,6 @@ R4: O + O3 -> O2 + O2</code></pre>
         <td>Species, deposition velocity, units, surface-layer treatment</td>
         <td>Add dry deposition for O3; vegetation is one example surface, not the only possible surface</td>
       </tr>
-      <tr>
-        <td>Wet deposition</td>
-        <td>Species, wet-removal rate or scavenging setting, units</td>
-        <td>Baseline: keep off for O3 and explain why</td>
-      </tr>
     </tbody>
   </table>
 </section>
@@ -505,7 +457,6 @@ R4: O + O3 -> O2 + O2</code></pre>
       <li>Keep the four Chapman chemical reactions unchanged.</li>
       <li>For the physical baseline, set direct ozone emission to zero. Then create a demonstration case using the Link et al. (2023) value \(R_{\mathrm{mass}} = 1.22\) mg h\(^{-1}\), assume \(A = 1\) m\(^2\), and convert it to molecules cm\(^{-3}\) s\(^{-1}\) using \(\Delta z_1 = 1000\) m.</li>
       <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper. Record the deposition velocity, units, surface type, site, and season, then convert it to \(k_{\mathrm{dep}}\) for \(\Delta z_1 = 1000\) m and write the dry-deposition loss term using \([\mathrm{O_3}]\).</li>
-      <li>Keep wet deposition off for the strict Chapman <code>O3</code> case and explain that wet removal is mainly useful for soluble or efficiently scavenged species.</li>
       <li>Submit the updated PATMO input files together with a short table listing each boundary process, species, value, units, and reason for using or not using it.</li>
     </ol>
   </div>
