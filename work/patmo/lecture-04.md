@@ -409,65 +409,6 @@ R4: O + O3 -> O2 + O2</code></pre>
       The submission must cite the paper and state that this value is surface-, season-, and method-dependent.
     </p>
   </div>
-</section>
-
-<section id="class-setup" class="section-block">
-  <div class="section-heading">
-    <h2>Class Setup</h2>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Model part</th>
-        <th>What students should specify</th>
-        <th>Chapman teaching choice</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Chemical network</td>
-        <td>Reaction equations and rate information</td>
-        <td>Keep the four Chapman reactions from Lectures 2 and 3</td>
-      </tr>
-      <tr>
-        <td>Emission</td>
-        <td>Species, source type, flux or rate, units, layer</td>
-        <td>Baseline: set direct O3 emission to zero; demonstration: add an artificial O3 surface flux</td>
-      </tr>
-      <tr>
-        <td>Dry deposition</td>
-        <td>Species, deposition velocity, units, surface-layer treatment</td>
-        <td>Add dry deposition for O3; vegetation is one example surface, not the only possible surface</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="after-class-task" class="section-block">
-  <div class="section-heading">
-    <h2>After-Class Task</h2>
-  </div>
-
-  <div class="panel">
-    <p>
-      Starting from your Chapman reaction network, prepare a boundary-process version of the case.
-    </p>
-    <ol>
-      <li>Keep the four Chapman chemical reactions unchanged.</li>
-      <li>For the physical baseline, set direct ozone emission to zero. Then create a demonstration case using the Link et al. (2023) value \(R_{\mathrm{mass}} = 1.22\) mg h\(^{-1}\), assume \(A = 1\) m\(^2\), and convert it to molecules cm\(^{-3}\) s\(^{-1}\) using \(\Delta z_1 = 1000\) m.</li>
-      <li>Add dry deposition for <code>O3</code>. Use the vegetation example from Zhang et al. (2024), or find another paper. Record the deposition velocity, units, surface type, site, and season, then convert it to \(k_{\mathrm{dep}}\) for \(\Delta z_1 = 1000\) m and write the dry-deposition loss term using \([\mathrm{O_3}]\).</li>
-      <li>Submit the updated PATMO input files together with a short table listing each boundary process, species, value, units, and reason for using or not using it.</li>
-    </ol>
-  </div>
-
-  <div class="takeaway-box">
-    <p class="section-label">Final Output</p>
-    <p>
-      The result should show both parts of the model setup:
-      the gas-phase Chapman reaction network and the external source/sink settings.
-    </p>
-  </div>
 
   <div class="hero-actions">
     <a class="pixel-button ghost" href="{{ '/work/patmo/' | relative_url }}">Back to course hub</a>
