@@ -97,6 +97,9 @@ R4: O + O3 -> O2 + O2</code></pre>
         Ozone dry deposition can occur on vegetation, soil, water, snow, building surfaces, and other lower-boundary surfaces.
         The wheat-canopy paper below is only one literature example for learning how to find a deposition velocity.
       </p>
+      <figure>
+        <img src="{{ '/assets/img/patmo/o3-dry-deposition-pathways.png' | relative_url }}" alt="Scientific diagram showing ozone dry deposition from the lowest model layer to vegetation, soil, water, snow or ice, and building materials.">
+      </figure>
     </article>
 
     <article class="entry-card">
@@ -105,6 +108,9 @@ R4: O + O3 -> O2 + O2</code></pre>
         For a simple classroom demonstration, use a direct artificial <code>O3</code> emission flux.
         This makes the input format and unit conversion easy to see, even though real lower-atmosphere ozone is usually produced photochemically.
       </p>
+      <figure>
+        <img src="{{ '/assets/img/patmo/o3-emission-column-source.png' | relative_url }}" alt="Scientific diagram showing ozone emission from a surface source into the lowest model layer of a one-dimensional atmospheric column.">
+      </figure>
     </article>
   </div>
 </section>
