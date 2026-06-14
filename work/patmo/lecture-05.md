@@ -160,6 +160,13 @@ end do</code></pre>
     </p>
   </div>
 
+  <figure class="panel">
+    <img src="{{ '/assets/img/patmo/wetdep-vertical-transfer.png' | relative_url }}" alt="Scientific diagram showing PATMO wet deposition vertical transfer from upper layers to lower layers and final removal from the bottom layer.">
+    <figcaption>
+      Wet deposition in PATMO acts as vertical transfer in upper layers and final removal from the bottom layer.
+    </figcaption>
+  </figure>
+
   <div class="lesson-grid">
     <article class="entry-card">
       <p class="card-label">Upper Layers</p>
