@@ -545,16 +545,16 @@ description: Lecture 1 of the PATMO student course, introducing PATMO and the ro
 
     <article class="entry-card flow-step">
       <p class="card-label">Lecture 4</p>
-      <h3>How the <code>modern sulfur cycle</code> Case Is Written into <code>PATMO</code></h3>
-      <p>Connect the scientific case to model-ready inputs.</p>
+      <h3>Emission and Dry Deposition</h3>
+      <p>Use the Chapman cycle to learn how emission and dry deposition enter as source and sink terms.</p>
     </article>
 
     <div class="flow-arrow" aria-hidden="true">↓</div>
 
     <article class="entry-card flow-step">
       <p class="card-label">Lecture 5</p>
-      <h3>The Runtime Workflow and Output System of <code>PATMO</code></h3>
-      <p>Understand what happens when the model runs and where the outputs appear.</p>
+      <h3>Wet Deposition In <code>PATMO</code></h3>
+      <p>Use the modern sulfur cycle to learn how rainout rates and the <code>wetdep</code> array enter the model equations.</p>
     </article>
 
     <div class="flow-arrow" aria-hidden="true">↓</div>
