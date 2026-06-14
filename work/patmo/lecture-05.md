@@ -111,6 +111,14 @@ description: Lecture 5 of the PATMO student course, introducing wet deposition t
       </tr>
     </tbody>
   </table>
+
+  <figure class="panel">
+    <img src="{{ '/assets/img/patmo/rainout-so2-profile.svg' | relative_url }}" alt="Line plot of SO2 rainout rate K_RAIN versus altitude from Rainout-SO2.txt, showing K_RAIN decreasing with altitude.">
+    <figcaption>
+      SO<sub>2</sub> rainout-rate profile generated from <code>Rainout-SO2.txt</code>.
+      The legend identifies <code>K_RAIN</code> as the first-order wet-deposition rate used by <code>wetdep(j,i)</code>.
+    </figcaption>
+  </figure>
 </section>
 
 <section id="model-equation" class="section-block">
