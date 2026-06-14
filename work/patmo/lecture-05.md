@@ -128,6 +128,22 @@ description: Lecture 5 of the PATMO student course, introducing wet deposition t
 
   <div class="panel">
     <p>
+      The original PATMO ODE code applies wet deposition like this:
+    </p>
+
+    <pre class="lesson-flow"><code>! Wet Deposition
+do j = 12, 2, -1
+    do i = 1, chemSpeciesNumber
+        dn(j,     i) = dn(j,     i) - wetdep(j, i) * n(j, i)
+        dn(j - 1, i) = dn(j - 1, i) + wetdep(j, i) * n(j, i)
+    end do
+end do
+
+do i = 1, chemSpeciesNumber
+    dn(1, i) = dn(1, i) - wetdep(1, i) * n(1, i)
+end do</code></pre>
+
+    <p>
       In the code, wet deposition is a first-order process. For species <code>i</code> in layer <code>j</code>:
     </p>
 
@@ -142,6 +158,25 @@ description: Lecture 5 of the PATMO student course, introducing wet deposition t
       The unit is \(\mathrm{s^{-1}}\). The product <code>wetdep(j,i) * n(j,i)</code>
       has units of molecules cm\(^{-3}\) s\(^{-1}\).
     </p>
+  </div>
+
+  <div class="lesson-grid">
+    <article class="entry-card">
+      <p class="card-label">Upper Layers</p>
+      <p>
+        For <code>j = 12</code> down to <code>2</code>, PATMO subtracts <code>wetdep(j,i) * n(j,i)</code>
+        from the current layer and adds the same amount to the layer below.
+        This represents rainout moving material downward through the column.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Bottom Layer</p>
+      <p>
+        For <code>j = 1</code>, there is no lower atmospheric layer.
+        The code subtracts <code>wetdep(1,i) * n(1,i)</code> from the model column, so the bottom-layer term is the final removal by wet deposition.
+      </p>
+    </article>
   </div>
 
   <div class="takeaway-box">
