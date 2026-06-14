@@ -241,7 +241,46 @@ call computewetdep(19, 5.0d14)  ! SO4</code></pre>
 
   <div class="panel">
     <p>
-      The subroutine <code>computewetdep</code> first estimates a layer-dependent removal frequency:
+      This calculation answers one question:
+      <strong>how fast should species <code>i</code> be removed by rainout in layer <code>j</code>?</strong>
+      The answer is a first-order rate constant called <code>K_RAIN</code>.
+    </p>
+    <p>
+      Read the calculation in three steps: estimate contact with water, correct for precipitation timing, then convert the result into a first-order loss rate.
+    </p>
+  </div>
+
+  <div class="lesson-grid">
+    <article class="entry-card">
+      <p class="card-label">1. Water Available</p>
+      <p>
+        <code>WH2O</code> represents the layer-dependent water removal term used by the rainout calculation.
+        More available liquid-water removal generally gives stronger wet deposition.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">2. Solubility</p>
+      <p>
+        <code>Heff</code> is the effective Henry constant for the species.
+        A more soluble species is more easily transferred into water and can rain out faster.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">3. Timing</p>
+      <p>
+        <code>gamma</code> is a precipitation/non-precipitation time factor, and <code>fz</code> is an altitude-dependent factor.
+        Together they prevent the simple removal frequency from being used too directly.
+      </p>
+    </article>
+  </div>
+
+  <div class="panel">
+    <p>
+      First, <code>computewetdep</code> estimates a raw layer-dependent removal frequency \(r_{j,i}\).
+      This is not the final rainout rate yet. It is an intermediate estimate of how quickly species <code>i</code>
+      can be transferred into water in layer <code>j</code>:
     </p>
 
     \[
@@ -251,7 +290,14 @@ call computewetdep(19, 5.0d14)  ! SO4</code></pre>
     \]
 
     <p>
-      Then it corrects that removal frequency using the precipitation-time factor \(\gamma_j\) and the altitude-dependent factor \(f_z\):
+      In this expression, \(W_{\mathrm{H2O},j}\) comes from the vertical water profile,
+      \(H_{\mathrm{eff},i}\) is species-specific, \(T_j\) is the layer temperature,
+      and \(R\) is the gas constant in the unit system used by the code.
+    </p>
+
+    <p>
+      Second, the code computes a correction factor \(Q_j\).
+      This correction accounts for the fact that rainout is not simply continuous removal at the raw frequency \(r_{j,i}\):
     </p>
 
     \[
@@ -263,6 +309,10 @@ call computewetdep(19, 5.0d14)  ! SO4</code></pre>
     \left(1 - e^{-r_{j,i}\gamma_j}\right)
     \]
 
+    <p>
+      Third, the corrected first-order rainout rate is calculated as:
+    </p>
+
     \[
     K_{\mathrm{RAIN},j,i}
     =
@@ -271,6 +321,18 @@ call computewetdep(19, 5.0d14)  ! SO4</code></pre>
 
     <p>
       This <code>K_RAIN</code> value is what becomes <code>wetdep(j,i)</code> in the ODE system.
+      Once it is stored there, PATMO uses it exactly like any other first-order sink:
+      <code>K_RAIN * [species]</code>.
+    </p>
+  </div>
+
+  <div class="takeaway-box">
+    <p class="section-label">Reading Shortcut</p>
+    <p>
+      You do not need to memorize every term in the rainout formula.
+      For this lecture, remember the workflow:
+      choose a species, provide <code>Heff</code>, let <code>computewetdep</code> calculate <code>K_RAIN(z)</code>,
+      and use <code>K_RAIN</code> as the first-order wet-deposition rate in each layer.
     </p>
   </div>
 </section>
