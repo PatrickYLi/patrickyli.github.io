@@ -337,31 +337,120 @@ call computewetdep(19, 5.0d14)  ! SO4</code></pre>
   </div>
 </section>
 
-<section id="output-file" class="section-block">
+<section id="modern-sulfur-code" class="section-block">
   <div class="section-heading">
-    <h2>Reading A Rainout File</h2>
+    <h2>Actual Wet Deposition Code In The Modern Sulfur Cycle</h2>
   </div>
 
   <div class="panel">
     <p>
-      A generated rainout file contains altitude and the first-order rainout rate.
-      For <code>SO2</code>, the file <code>Rainout-SO2.txt</code> starts like this:
+      In the modern sulfur cycle test, wet deposition is assigned directly in
+      <code>tests/modern_sulfur_cycle/test.f90</code>. The model first clears all wet-deposition rates,
+      then assigns rainout to selected sulfur species.
     </p>
 
-    <pre class="lesson-flow"><code>ZKM      1.0
-K_RAIN   6.2733022012625560E-007
-ZKM      2.0
-K_RAIN   4.6111370206485505E-007
-ZKM      3.0
-K_RAIN   3.1999166103882194E-007</code></pre>
+    <pre class="lesson-flow"><code>wetdep(:,:) = 0d0
+
+! calculate wet deposition
+call computewetdep(1,  2.0d-2)  ! OCS
+call computewetdep(11, 5.0d-2)  ! CS2
+call computewetdep(28, 1.0d-1)  ! H2S
+call computewetdep(18, 4.0d3)   ! SO2
+! call computewetdep(26, 5d14)  ! H2SO4
+call computewetdep(19, 5d14)    ! SO4
+
+! Turco H2SO4
+wetdep(12,26) = 1.77E-06
+wetdep(11,26) = 3.54E-06
+wetdep(10,26) = 5.31E-06
+wetdep(9,26)  = 7.08E-06
+wetdep(8,26)  = 8.85E-06
+wetdep(7,26)  = 1.06E-05
+wetdep(6,26)  = 1.24E-05
+wetdep(5,26)  = 1.42E-05
+wetdep(4,26)  = 1.59E-05
+wetdep(3,26)  = 1.77E-05
+wetdep(2,26)  = 1.95E-05
+wetdep(1,26)  = 2.12E-05</code></pre>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Species</th>
+          <th>PATMO index</th>
+          <th>How wet deposition is assigned</th>
+          <th>What students should notice</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>OCS</code></td>
+          <td><code>1</code></td>
+          <td><code>computewetdep(1, 2.0d-2)</code></td>
+          <td>The second argument is the effective Henry constant used to calculate <code>K_RAIN(z)</code>.</td>
+        </tr>
+        <tr>
+          <td><code>CS2</code></td>
+          <td><code>11</code></td>
+          <td><code>computewetdep(11, 5.0d-2)</code></td>
+          <td>Less soluble species receive smaller rainout rates than highly soluble sulfur species.</td>
+        </tr>
+        <tr>
+          <td><code>H2S</code></td>
+          <td><code>28</code></td>
+          <td><code>computewetdep(28, 1.0d-1)</code></td>
+          <td>The species index must match the generated PATMO mechanism.</td>
+        </tr>
+        <tr>
+          <td><code>SO2</code></td>
+          <td><code>18</code></td>
+          <td><code>computewetdep(18, 4.0d3)</code></td>
+          <td>This is the example connected to the <code>Rainout-SO2.txt</code> profile shown above.</td>
+        </tr>
+        <tr>
+          <td><code>SO4</code></td>
+          <td><code>19</code></td>
+          <td><code>computewetdep(19, 5d14)</code></td>
+          <td>A very large effective Henry constant makes sulfate strongly coupled to wet removal.</td>
+        </tr>
+        <tr>
+          <td><code>H2SO4</code></td>
+          <td><code>26</code></td>
+          <td>Manual values: <code>wetdep(layer,26)</code></td>
+          <td>The <code>computewetdep</code> call is commented out, so this test prescribes an H2SO4 vertical profile directly.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="lesson-grid">
+    <article class="entry-card">
+      <p class="card-label">Computed Species</p>
+      <p>
+        For <code>OCS</code>, <code>CS2</code>, <code>H2S</code>, <code>SO2</code>, and <code>SO4</code>, the code supplies
+        <code>computewetdep</code> with a species index and an effective Henry constant.
+        PATMO then calculates the layer-dependent <code>wetdep(j,i)</code> profile.
+      </p>
+    </article>
+
+    <article class="entry-card">
+      <p class="card-label">Prescribed H2SO4</p>
+      <p>
+        For <code>H2SO4</code>, the code uses explicit values from layer <code>12</code> to layer <code>1</code>.
+        These numbers are already first-order wet-deposition rates in <code>s-1</code>, so they can be placed directly into
+        <code>wetdep(layer,26)</code>.
+      </p>
+    </article>
   </div>
 
   <div class="takeaway-box">
-    <p class="section-label">How To Use It</p>
+    <p class="section-label">Model Meaning</p>
     <p>
-      At 1 km, this example gives \(K_{\mathrm{RAIN}} = 6.27 \times 10^{-7}\ \mathrm{s^{-1}}\).
-      The wet-deposition loss term for <code>SO2</code> in that layer is therefore
-      \(6.27 \times 10^{-7} [\mathrm{SO_2}]\).
+      Once these lines are executed, each value of <code>wetdep(j,i)</code> is used by the ODE as a first-order term.
+      For example, the <code>SO2</code> loss or transfer rate in layer <code>j</code> is
+      <code>wetdep(j,18) * n(j,18)</code>.
     </p>
   </div>
 </section>
@@ -384,7 +473,7 @@ K_RAIN   3.1999166103882194E-007</code></pre>
 
     <article class="entry-card">
       <p class="card-label">3. Compute K_RAIN</p>
-      <p>Use <code>computewetdep(idx, Heff)</code> or a prepared <code>Rainout-*.txt</code> file to obtain the layer-dependent rainout rate.</p>
+      <p>Use <code>computewetdep(idx, Heff)</code> or assign <code>wetdep(layer,idx)</code> directly when a prescribed vertical profile is used.</p>
     </article>
 
     <article class="entry-card">
@@ -394,6 +483,7 @@ K_RAIN   3.1999166103882194E-007</code></pre>
   </div>
 
   <div class="hero-actions">
+    <a class="pixel-button" href="{{ '/work/patmo/lecture-06/' | relative_url }}">Continue to Lecture 6</a>
     <a class="pixel-button ghost" href="{{ '/work/patmo/' | relative_url }}">Back to course hub</a>
   </div>
 </section>
